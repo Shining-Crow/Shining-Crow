@@ -6,30 +6,46 @@
 | --- | --- |
 | `npm run build` | Fetches live GitHub data and regenerates every slide and `README.md` |
 | `npm run build:offline` | Same, but reuses `data/github.json` (no network) |
-| `npm install && npm run video` | Renders the real-time 3D scene: `crow-realm.webp` (square loop), `crow-realm-wide.webp` (wide loop), `showreel.mp4` (1080p cinematic) and `showreel.jpg` |
+| `npm install && npm run video` | Renders the 3D assets: hero crow portrait, `crow-realm.webp` (square loop), `crow-realm-wide.webp` (wide loop), `showreel.mp4` (1080p) and `showreel.jpg`. Run `npm run build` afterwards so the new crow lands in the slides |
 | `npm run preview` | Writes 3D preview stills to `.preview/` |
+
+## Design: "Iridescent"
+
+Crow feathers aren't black: they shimmer violet, blue, green and gold. The whole dashboard uses that idea: a near-black canvas, one iridescent spectrum, and **one colour per specialty**:
+
+| Specialty | Colour | Accent key |
+| --- | --- | --- |
+| AI | violet `#a78bfa` | `ai` |
+| Web | cyan `#22d3ee` | `web` |
+| Mobile | pink `#f472b6` | `mobile` |
+| Games | amber `#fbbf24` | `game` |
+| Availability / status | lime `#a3e635` | `lime` |
+
+Anything in the config that takes an `accent` uses those keys. Headlines can colour individual words with `{ai:word}`, `{web:word}` and so on.
 
 ## The slides (`assets/slides/`)
 
-Every slide is a 1664×936 animated SVG in an emerald HUD style. Because they're pure SVG with CSS and SMIL animation, they play directly on GitHub.
+The README is ordered like a pitch: who you are, then what you build, then how you work, then proof, then contact. Every slide is a 1664×936 animated SVG that plays directly on GitHub.
 
-| Slide | Content | Data |
+| Slide | Purpose | Data |
 | --- | --- | --- |
-| `hero.svg` | Crow emblem, title lockup, live code, GitHub activity, projects, mini-game | **live** |
-| `universe.svg` | Technology Universe: 4 domain columns | config |
+| `hero.svg` | Value proposition, availability, CTAs, live stats, 3D iridescent crow | **live** |
+| `services.svg` | What I Build: outcome, deliverables and stack per specialty | config |
+| `process.svg` | How I Work: delivery timeline and working principles | config |
 | `ai.svg` | AI Engineering: LLM apps and RAG systems | config |
-| `game.svg` | Game Development: arcade viewport, systems, release pipeline | config |
-| `architecture.svg` | System Architecture: request flow, service bus, domain cards | config |
-| `activity.svg` | Contribution telemetry heatmap, streaks and focus | **live** |
-| `projects.svg` | Featured projects and language wall | **live** |
+| `game.svg` | Game Development: arcade viewport, systems and pipeline | config |
+| `architecture.svg` | System Architecture: request flow and service layers | config |
+| `projects.svg` | Selected Work and language wall | **live** |
+| `activity.svg` | Contribution heatmap, streaks and current focus | **live** |
+| `cta.svg` | "Let's build something remarkable" with contact cards | config |
 
-The workflow in `.github/workflows/dashboard.yml` rebuilds the live slides every 6 hours.
+The hero and CTA slides link to your first contact in `cta.contacts` (your email). The workflow in `.github/workflows/dashboard.yml` rebuilds the live slides every 6 hours.
 
-## 3D video (`scripts/3d/`)
+## 3D (`scripts/3d/`)
 
-`scripts/3d/scene.js` is a Three.js scene, "Crow's Realm". It has a procedural low-poly crow with flapping wings and light trails, an endless neon canyon under an aurora, a moon and a hex portal, voxel space invaders, a combat sequence with laser bolts and explosions, and an extruded 3D title, all rendered with bloom. Every element is a pure function of time. `scripts/render-3d.mjs` drives headless Chrome (WebGL) frame by frame and encodes with ffmpeg, so the 8-second loop is seamless.
+`scripts/3d/scene.js` is a Three.js scene. It has a low-poly crow with physically based iridescent feathers (lit by a neon "studio" environment so the black plumage reflects every specialty colour) flying through a synthwave canyon under an aurora, past a striped sun, voxel invaders in the four colours, and a combat sequence ending on a chrome 3D title. Everything is a pure function of time. `scripts/render-3d.mjs` renders it frame by frame in headless Chrome and encodes with ffmpeg, so the 8-second loops are seamless. A transparent portrait of the crow is also rendered and embedded into the hero and CTA slides.
 
-The square loop sits in the intro, next to your bio. The wide loop animates in the Showreel section and links to the full MP4. To get an **inline video player** on GitHub:
+To get an **inline video player** on GitHub:
 
 1. On github.com, open `README.md` → ✏️ Edit, and drag `assets/video/showreel.mp4` into the editor.
 2. Copy the `https://github.com/user-attachments/assets/...` URL that GitHub inserts, then cancel the edit.
@@ -37,6 +53,6 @@ The square loop sits in the intro, next to your bio. The wide loop animates in t
 
 ## Customising
 
-- **Text on every slide**: change it in `profile.config.json`. That covers roles, nav, code panel, tech lists, AI/game/architecture copy, focus cards, featured projects and socials. Social buttons with an empty `url` are hidden.
-- **Colours and shared components**: `scripts/lib/ui.mjs`.
-- **Video scenes and durations**: `SCENES` in `scripts/render-video.mjs`.
+- **All copy**: `profile.config.json`. That covers hero headline, availability, services, process, principles, projects and contacts. Contacts with an empty `value` are hidden. The process and principles are sensible defaults; rewrite them in your own words.
+- **Palette and shared components**: `scripts/lib/ui.mjs`.
+- **3D scene, camera shots and colours**: `scripts/3d/scene.js` (`SHOTS` and `REEL`).

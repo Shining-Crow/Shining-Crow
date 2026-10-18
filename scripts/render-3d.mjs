@@ -95,7 +95,24 @@ async function renderSeq({ w, h, fps, dur, fn, out, encode }) {
 const outDir = join(ROOT, 'assets', 'video');
 await mkdir(outDir, { recursive: true });
 
-if (PREVIEW) {
+// Hero portrait: transparent PNG → WebP with alpha, embedded into hero.svg by the build.
+async function renderHero() {
+  const dir = join(ROOT, 'assets', '3d');
+  await mkdir(dir, { recursive: true });
+  const page = await open(1000, 1000);
+  await page.evaluate(() => window.STAGE.heroStill());
+  const png = join(dir, 'crow-hero.png');
+  await page.screenshot({ path: png, omitBackground: true });
+  await page.close();
+  const webp = join(dir, 'crow-hero.webp');
+  await ffmpeg(['-i', png, '-c:v', 'libwebp', '-quality', '90', '-lossless', '0', webp]).done;
+  console.log(`  ✓ ${webp.replace(ROOT, '.')}  ${((await stat(webp)).size / 1024).toFixed(0)} KB`);
+}
+
+if (ONLY === 'hero') {
+  console.log('» hero portrait (transparent)');
+  await renderHero();
+} else if (PREVIEW) {
   const dir = join(ROOT, '.preview');
   await mkdir(dir, { recursive: true });
   const sq = await open(960, 960);
@@ -104,6 +121,7 @@ if (PREVIEW) {
   for (const t of [3, 8, 13, 19, 21.5, 27]) { await wide.evaluate((t) => window.STAGE.reel(t), t); await wide.screenshot({ path: join(dir, `3d-reel-${t}.png`) }); }
   console.log('  ✓ previews in .preview/');
 } else {
+  if (!ONLY) await renderHero();
   if (!ONLY || ONLY === 'loop') {
     console.log('» seamless loop → animated WebP (640×640)');
     const LOOP = 8;

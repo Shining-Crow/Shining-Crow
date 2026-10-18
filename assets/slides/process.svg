@@ -1,0 +1,149 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1664" height="936" viewBox="0 0 1664 936">
+  <style>
+  @keyframes tw{0%,100%{opacity:.15}50%{opacity:1}}
+  @keyframes pulse{0%,100%{opacity:.45}50%{opacity:1}}
+  @keyframes beat{0%,100%{transform:scale(1)}50%{transform:scale(1.35)}}
+  @keyframes blink{0%,49%{opacity:1}50%,100%{opacity:0}}
+  @keyframes spin{to{transform:rotate(360deg)}}
+  @keyframes spinr{to{transform:rotate(-360deg)}}
+  @keyframes float{0%,100%{transform:translateY(-6px)}50%{transform:translateY(6px)}}
+  @keyframes grow{from{transform:scaleX(0)}to{transform:scaleX(1)}}
+  @keyframes dash{to{stroke-dashoffset:-1000}}
+  @keyframes sweepX{0%{transform:translateX(-400px)}100%{transform:translateX(2064px)}}
+  @keyframes fadeUp{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+  @keyframes orbA{0%,100%{transform:translate(0,0)}50%{transform:translate(120px,60px)}}
+  @keyframes orbB{0%,100%{transform:translate(0,0)}50%{transform:translate(-140px,-50px)}}
+  @keyframes orbC{0%,100%{transform:translate(0,0)}50%{transform:translate(80px,-90px)}}
+  @keyframes hue{0%{stop-color:#22d3ee}25%{stop-color:#a78bfa}50%{stop-color:#f472b6}75%{stop-color:#fbbf24}100%{stop-color:#22d3ee}}
+  .tw{animation:tw 3s ease-in-out infinite}
+  .pulse{animation:pulse 2.4s ease-in-out infinite}
+  .beat{animation:beat 2s ease-in-out infinite;transform-box:fill-box;transform-origin:center}
+  .blink{animation:blink 1.1s steps(1) infinite}
+  .spin{animation:spin 30s linear infinite}
+  .spinr{animation:spinr 20s linear infinite}
+  .float{animation:float 6s ease-in-out infinite}
+  .grow{animation:grow 1.6s cubic-bezier(.2,.8,.2,1) both;transform-box:fill-box;transform-origin:left center}
+  .dash{animation:dash 14s linear infinite}
+  .sweep{animation:sweepX 8s linear infinite}
+  .in{animation:fadeUp .9s ease-out both}
+</style>
+  <defs>
+  <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#05040b"/><stop offset=".55" stop-color="#0b0a1a"/><stop offset="1" stop-color="#110a1e"/></linearGradient>
+  <radialGradient id="vignette" cx=".5" cy=".5" r=".75"><stop offset=".55" stop-color="#000" stop-opacity="0"/><stop offset="1" stop-color="#000" stop-opacity=".6"/></radialGradient>
+  <linearGradient id="panel" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#15132b" stop-opacity=".88"/><stop offset="1" stop-color="#0b0a17" stop-opacity=".88"/></linearGradient>
+  <linearGradient id="glassSheen" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fff" stop-opacity=".07"/><stop offset=".35" stop-color="#fff" stop-opacity="0"/></linearGradient>
+  <linearGradient id="iri" x1="0" y1="0" x2="1" y2="0"><stop offset="0.00" stop-color="#22d3ee" stop-opacity="1"/><stop offset="0.25" stop-color="#818cf8" stop-opacity="1"/><stop offset="0.50" stop-color="#c084fc" stop-opacity="1"/><stop offset="0.75" stop-color="#f472b6" stop-opacity="1"/><stop offset="1.00" stop-color="#fbbf24" stop-opacity="1"/></linearGradient>
+  <linearGradient id="iriFade" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#22d3ee" stop-opacity="0"/><stop offset=".25" stop-color="#818cf8"/><stop offset=".5" stop-color="#c084fc"/><stop offset=".75" stop-color="#f472b6"/><stop offset="1" stop-color="#fbbf24" stop-opacity="0"/></linearGradient>
+  <linearGradient id="shine" gradientUnits="userSpaceOnUse" x1="-300" y1="0" x2="0" y2="0">
+    <stop offset="0" stop-color="#fff" stop-opacity="0"/><stop offset=".5" stop-color="#fff" stop-opacity=".9"/><stop offset="1" stop-color="#fff" stop-opacity="0"/>
+    <animateTransform attributeName="gradientTransform" type="translate" values="0 0;1964 0;1964 0" keyTimes="0;.45;1" dur="7s" repeatCount="indefinite"/>
+  </linearGradient>
+  <linearGradient id="g-ai" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#a78bfa"/><stop offset="1" stop-color="#ddd6fe"/></linearGradient><linearGradient id="g-web" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#22d3ee"/><stop offset="1" stop-color="#a5f3fc"/></linearGradient><linearGradient id="g-mobile" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#f472b6"/><stop offset="1" stop-color="#fbcfe8"/></linearGradient><linearGradient id="g-game" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#fbbf24"/><stop offset="1" stop-color="#fde68a"/></linearGradient><linearGradient id="g-lime" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#a3e635"/><stop offset="1" stop-color="#d9f99d"/></linearGradient><linearGradient id="g-white" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#ffffff"/><stop offset="1" stop-color="#ffffff"/></linearGradient>
+  <radialGradient id="rg-ai" cx="0" cy="0" r="1"><stop offset="0" stop-color="#a78bfa" stop-opacity=".22"/><stop offset="1" stop-color="#a78bfa" stop-opacity="0"/></radialGradient><radialGradient id="rg-web" cx="0" cy="0" r="1"><stop offset="0" stop-color="#22d3ee" stop-opacity=".22"/><stop offset="1" stop-color="#22d3ee" stop-opacity="0"/></radialGradient><radialGradient id="rg-mobile" cx="0" cy="0" r="1"><stop offset="0" stop-color="#f472b6" stop-opacity=".22"/><stop offset="1" stop-color="#f472b6" stop-opacity="0"/></radialGradient><radialGradient id="rg-game" cx="0" cy="0" r="1"><stop offset="0" stop-color="#fbbf24" stop-opacity=".22"/><stop offset="1" stop-color="#fbbf24" stop-opacity="0"/></radialGradient><radialGradient id="rg-lime" cx="0" cy="0" r="1"><stop offset="0" stop-color="#a3e635" stop-opacity=".22"/><stop offset="1" stop-color="#a3e635" stop-opacity="0"/></radialGradient><radialGradient id="rg-white" cx="0" cy="0" r="1"><stop offset="0" stop-color="#ffffff" stop-opacity=".22"/><stop offset="1" stop-color="#ffffff" stop-opacity="0"/></radialGradient>
+  <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M40 0H0V40" fill="none" stroke="#fff" stroke-opacity=".035"/></pattern>
+  <pattern id="dots" width="22" height="22" patternUnits="userSpaceOnUse"><circle cx="1" cy="1" r="1" fill="#fff" fill-opacity=".06"/></pattern>
+  <filter id="glow" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="4" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  <filter id="softGlow" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="12"/></filter>
+  <filter id="orb" x="-100%" y="-100%" width="300%" height="300%"><feGaussianBlur stdDeviation="70"/></filter>
+<clipPath id="frameClip"><rect width="1664" height="936" rx="28"/></clipPath></defs>
+  <g clip-path="url(#frameClip)">
+  <rect width="1664" height="936" fill="url(#bg)"/>
+  <circle cx="200" cy="260" r="230" fill="#22d3ee" opacity=".26" filter="url(#orb)" style="animation:orbA 18s ease-in-out infinite"/><circle cx="1450" cy="300" r="240" fill="#f472b6" opacity=".26" filter="url(#orb)" style="animation:orbB 22s ease-in-out infinite"/><circle cx="830" cy="860" r="260" fill="#a78bfa" opacity=".26" filter="url(#orb)" style="animation:orbC 26s ease-in-out infinite"/>
+  <rect width="1664" height="936" fill="url(#grid)"/>
+  <g><circle cx="417.0" cy="666.7" r="0.89" fill="#a78bfa" style="animation:tw 3s ease-in-out -2.56s infinite"/><circle cx="1174.8" cy="348.5" r="1.30" fill="#22d3ee" style="animation:tw 4s ease-in-out -0.88s infinite"/><circle cx="121.3" cy="783.9" r="0.60" fill="#f472b6" style="animation:tw 6s ease-in-out -0.97s infinite"/><circle cx="829.0" cy="591.4" r="0.74" fill="#fbbf24" style="animation:tw 3s ease-in-out -2.54s infinite"/><circle cx="790.0" cy="371.9" r="1.90" fill="#fff" style="animation:tw 4s ease-in-out -0.31s infinite"/><circle cx="1592.8" cy="344.6" r="1.70" fill="#a78bfa" style="animation:tw 6s ease-in-out -3.63s infinite"/><circle cx="989.5" cy="446.2" r="2.07" fill="#22d3ee" style="animation:tw 3s ease-in-out -1.34s infinite"/><circle cx="835.7" cy="228.5" r="0.95" fill="#f472b6" style="animation:tw 4s ease-in-out -3.19s infinite"/><circle cx="336.8" cy="389.9" r="2.06" fill="#fbbf24" style="animation:tw 6s ease-in-out -1.43s infinite"/><circle cx="1453.6" cy="281.7" r="1.25" fill="#fff" style="animation:tw 3s ease-in-out -0.89s infinite"/><circle cx="1446.2" cy="496.7" r="1.13" fill="#a78bfa" style="animation:tw 4s ease-in-out -2.39s infinite"/><circle cx="201.4" cy="176.9" r="0.63" fill="#22d3ee" style="animation:tw 6s ease-in-out -0.85s infinite"/><circle cx="1281.2" cy="286.7" r="0.66" fill="#f472b6" style="animation:tw 3s ease-in-out -1.38s infinite"/><circle cx="282.1" cy="345.9" r="0.50" fill="#fbbf24" style="animation:tw 4s ease-in-out -2.68s infinite"/><circle cx="427.4" cy="301.0" r="1.41" fill="#fff" style="animation:tw 6s ease-in-out -4.27s infinite"/><circle cx="669.9" cy="590.1" r="0.73" fill="#a78bfa" style="animation:tw 3s ease-in-out -0.70s infinite"/><circle cx="186.8" cy="524.8" r="1.97" fill="#22d3ee" style="animation:tw 4s ease-in-out -3.79s infinite"/><circle cx="184.8" cy="456.9" r="0.75" fill="#f472b6" style="animation:tw 6s ease-in-out -2.71s infinite"/><circle cx="168.4" cy="576.3" r="1.77" fill="#fbbf24" style="animation:tw 3s ease-in-out -2.26s infinite"/><circle cx="478.2" cy="525.2" r="1.99" fill="#fff" style="animation:tw 4s ease-in-out -0.24s infinite"/><circle cx="1124.4" cy="805.4" r="0.57" fill="#a78bfa" style="animation:tw 6s ease-in-out -3.41s infinite"/><circle cx="1593.1" cy="320.9" r="2.08" fill="#22d3ee" style="animation:tw 3s ease-in-out -0.85s infinite"/><circle cx="363.0" cy="877.2" r="0.83" fill="#f472b6" style="animation:tw 4s ease-in-out -0.47s infinite"/><circle cx="1187.7" cy="565.2" r="1.41" fill="#fbbf24" style="animation:tw 6s ease-in-out -4.84s infinite"/><circle cx="326.8" cy="121.6" r="1.83" fill="#fff" style="animation:tw 3s ease-in-out -1.17s infinite"/><circle cx="590.0" cy="340.8" r="1.53" fill="#a78bfa" style="animation:tw 4s ease-in-out -1.14s infinite"/><circle cx="242.7" cy="504.6" r="1.44" fill="#22d3ee" style="animation:tw 6s ease-in-out -1.17s infinite"/><circle cx="258.9" cy="304.0" r="1.56" fill="#f472b6" style="animation:tw 3s ease-in-out -1.26s infinite"/><circle cx="939.5" cy="236.1" r="0.82" fill="#fbbf24" style="animation:tw 4s ease-in-out -1.06s infinite"/><circle cx="493.3" cy="813.1" r="0.74" fill="#fff" style="animation:tw 6s ease-in-out -3.69s infinite"/></g>
+  <g class="in">
+    <text x="832" y="92" text-anchor="middle" font-family="'Segoe UI Black', 'Arial Black', 'Segoe UI', Arial, sans-serif" font-size="62" font-weight="900" letter-spacing="-1" fill="url(#iri)" opacity=".35" filter="url(#softGlow)">HOW I WORK</text>
+    <text x="832" y="92" text-anchor="middle" font-family="'Segoe UI Black', 'Arial Black', 'Segoe UI', Arial, sans-serif" font-size="62" font-weight="900" letter-spacing="-1" fill="url(#iri)">HOW I WORK</text>
+    <text x="832" y="92" text-anchor="middle" font-family="'Segoe UI Black', 'Arial Black', 'Segoe UI', Arial, sans-serif" font-size="62" font-weight="900" letter-spacing="-1" fill="url(#shine)" opacity=".55">HOW I WORK</text>
+    <text x="832" y="132" text-anchor="middle" font-family="'JetBrains Mono', 'Cascadia Code', 'SF Mono', Consolas, 'Liberation Mono', Menlo, monospace" font-size="15" letter-spacing="6" fill="#b8b3d9">FROM IDEA TO PRODUCTION — WITHOUT THE CHAOS</text>
+    <rect x="572" y="152" width="520" height="2" rx="1" fill="url(#iriFade)"/>
+  </g>
+    
+    <rect x="180" y="266" width="1304" height="4" rx="2" fill="#fff" fill-opacity=".08"/>
+    <rect x="180" y="266" width="1304" height="4" rx="2" fill="url(#iri)" class="grow" style="animation-duration:2.4s"/>
+    <circle r="9" fill="#fff" filter="url(#glow)"><animateMotion dur="7.5s" repeatCount="indefinite" path="M180,268 H1484"/></circle>
+    <g class="in" style="animation-delay:0.2s">
+        <circle cx="180" cy="268" r="34" fill="#0b0a1a" stroke="#22d3ee" stroke-width="2.5"/>
+        <circle cx="180" cy="268" r="34" fill="#22d3ee" opacity=".12"><animate attributeName="opacity" values=".12;.12;.55;.12" keyTimes="0;0.001;0.040;1" dur="7.5s" repeatCount="indefinite"/></circle>
+        <text x="180" y="277" text-anchor="middle" font-family="'Segoe UI Black', 'Arial Black', 'Segoe UI', Arial, sans-serif" font-size="24" font-weight="900" fill="#22d3ee">1</text>
+        <text x="180" y="346" text-anchor="middle" font-family="'Segoe UI', Inter, 'Helvetica Neue', Arial, sans-serif" font-size="24" font-weight="800" letter-spacing="0" fill="#f5f3ff" >Discover</text>
+        <text x="180" y="376" text-anchor="middle" font-family="'Segoe UI', Inter, 'Helvetica Neue', Arial, sans-serif" font-size="15.5" font-weight="400" letter-spacing="0" fill="#b8b3d9" >Goals, users and</text><text x="180" y="399" text-anchor="middle" font-family="'Segoe UI', Inter, 'Helvetica Neue', Arial, sans-serif" font-size="15.5" font-weight="400" letter-spacing="0" fill="#b8b3d9" >constraints — clear before</text><text x="180" y="422" text-anchor="middle" font-family="'Segoe UI', Inter, 'Helvetica Neue', Arial, sans-serif" font-size="15.5" font-weight="400" letter-spacing="0" fill="#b8b3d9" >any code.</text>
+      </g><g class="in" style="animation-delay:0.32s">
+        <circle cx="506" cy="268" r="34" fill="#0b0a1a" stroke="#a78bfa" stroke-width="2.5"/>
+        <circle cx="506" cy="268" r="34" fill="#a78bfa" opacity=".12"><animate attributeName="opacity" values=".12;.12;.55;.12" keyTimes="0;0.248;0.290;1" dur="7.5s" repeatCount="indefinite"/></circle>
+        <text x="506" y="277" text-anchor="middle" font-family="'Segoe UI Black', 'Arial Black', 'Segoe UI', Arial, sans-serif" font-size="24" font-weight="900" fill="#a78bfa">2</text>
+        <text x="506" y="346" text-anchor="middle" font-family="'Segoe UI', Inter, 'Helvetica Neue', Arial, sans-serif" font-size="24" font-weight="800" letter-spacing="0" fill="#f5f3ff" >Design</text>
+        <text x="506" y="376" text-anchor="middle" font-family="'Segoe UI', Inter, 'Helvetica Neue', Arial, sans-serif" font-size="15.5" font-weight="400" letter-spacing="0" fill="#b8b3d9" >Architecture and clickable</text><text x="506" y="399" text-anchor="middle" font-family="'Segoe UI', Inter, 'Helvetica Neue', Arial, sans-serif" font-size="15.5" font-weight="400" letter-spacing="0" fill="#b8b3d9" >UX prototypes.</text>
+      </g><g class="in" style="animation-delay:0.44s">
+        <circle cx="832" cy="268" r="34" fill="#0b0a1a" stroke="#f472b6" stroke-width="2.5"/>
+        <circle cx="832" cy="268" r="34" fill="#f472b6" opacity=".12"><animate attributeName="opacity" values=".12;.12;.55;.12" keyTimes="0;0.498;0.540;1" dur="7.5s" repeatCount="indefinite"/></circle>
+        <text x="832" y="277" text-anchor="middle" font-family="'Segoe UI Black', 'Arial Black', 'Segoe UI', Arial, sans-serif" font-size="24" font-weight="900" fill="#f472b6">3</text>
+        <text x="832" y="346" text-anchor="middle" font-family="'Segoe UI', Inter, 'Helvetica Neue', Arial, sans-serif" font-size="24" font-weight="800" letter-spacing="0" fill="#f5f3ff" >Build</text>
+        <text x="832" y="376" text-anchor="middle" font-family="'Segoe UI', Inter, 'Helvetica Neue', Arial, sans-serif" font-size="15.5" font-weight="400" letter-spacing="0" fill="#b8b3d9" >Weekly demos. Typed,</text><text x="832" y="399" text-anchor="middle" font-family="'Segoe UI', Inter, 'Helvetica Neue', Arial, sans-serif" font-size="15.5" font-weight="400" letter-spacing="0" fill="#b8b3d9" >tested, reviewed code.</text>
+      </g><g class="in" style="animation-delay:0.56s">
+        <circle cx="1158" cy="268" r="34" fill="#0b0a1a" stroke="#fbbf24" stroke-width="2.5"/>
+        <circle cx="1158" cy="268" r="34" fill="#fbbf24" opacity=".12"><animate attributeName="opacity" values=".12;.12;.55;.12" keyTimes="0;0.748;0.790;1" dur="7.5s" repeatCount="indefinite"/></circle>
+        <text x="1158" y="277" text-anchor="middle" font-family="'Segoe UI Black', 'Arial Black', 'Segoe UI', Arial, sans-serif" font-size="24" font-weight="900" fill="#fbbf24">4</text>
+        <text x="1158" y="346" text-anchor="middle" font-family="'Segoe UI', Inter, 'Helvetica Neue', Arial, sans-serif" font-size="24" font-weight="800" letter-spacing="0" fill="#f5f3ff" >Ship</text>
+        <text x="1158" y="376" text-anchor="middle" font-family="'Segoe UI', Inter, 'Helvetica Neue', Arial, sans-serif" font-size="15.5" font-weight="400" letter-spacing="0" fill="#b8b3d9" >CI/CD, monitoring and a</text><text x="1158" y="399" text-anchor="middle" font-family="'Segoe UI', Inter, 'Helvetica Neue', Arial, sans-serif" font-size="15.5" font-weight="400" letter-spacing="0" fill="#b8b3d9" >smooth launch.</text>
+      </g><g class="in" style="animation-delay:0.6799999999999999s">
+        <circle cx="1484" cy="268" r="34" fill="#0b0a1a" stroke="#a3e635" stroke-width="2.5"/>
+        <circle cx="1484" cy="268" r="34" fill="#a3e635" opacity=".12"><animate attributeName="opacity" values=".12;.12;.55;.12" keyTimes="0;0.998;0.998;1" dur="7.5s" repeatCount="indefinite"/></circle>
+        <text x="1484" y="277" text-anchor="middle" font-family="'Segoe UI Black', 'Arial Black', 'Segoe UI', Arial, sans-serif" font-size="24" font-weight="900" fill="#a3e635">5</text>
+        <text x="1484" y="346" text-anchor="middle" font-family="'Segoe UI', Inter, 'Helvetica Neue', Arial, sans-serif" font-size="24" font-weight="800" letter-spacing="0" fill="#f5f3ff" >Scale</text>
+        <text x="1484" y="376" text-anchor="middle" font-family="'Segoe UI', Inter, 'Helvetica Neue', Arial, sans-serif" font-size="15.5" font-weight="400" letter-spacing="0" fill="#b8b3d9" >Measure, optimise and grow</text><text x="1484" y="399" text-anchor="middle" font-family="'Segoe UI', Inter, 'Helvetica Neue', Arial, sans-serif" font-size="15.5" font-weight="400" letter-spacing="0" fill="#b8b3d9" >with you.</text>
+      </g>
+    <text x="832" y="528" text-anchor="middle" font-family="'JetBrains Mono', 'Cascadia Code', 'SF Mono', Consolas, 'Liberation Mono', Menlo, monospace" font-size="13" font-weight="700" letter-spacing="8" fill="#a78bfa">PRINCIPLES</text>
+    <g class="in" style="animation-delay:0.5s">
+    <rect x="96" y="560" width="350" height="270" rx="20" fill="url(#panel)" stroke="#22d3ee" stroke-opacity=".22" stroke-width="1.5"/>
+    <rect x="96" y="560" width="350" height="270" rx="20" fill="url(#rg-web)"/>
+    <rect x="96" y="560" width="350" height="270" rx="20" fill="url(#glassSheen)"/>
+    <rect x="116" y="558.5" width="310" height="3" rx="1.5" fill="url(#g-web)" filter="url(#glow)"/>
+  </g>
+      <g class="in" style="animation-delay:0.6s">
+        <circle cx="154" cy="624" r="32" fill="#22d3ee" fill-opacity=".12" stroke="#22d3ee" stroke-opacity=".4"/>
+        <g transform="translate(154 624) scale(0.46)" fill="none" stroke="currentColor" color="#22d3ee" stroke-width="4"><g stroke-width="2.2" stroke-linejoin="round"><path d="M-36 -26H36V14H-6L-22 28V14H-36Z"/><circle cx="-14" cy="-6" r="3.5" fill="currentColor"/><circle cy="-6" r="3.5" fill="currentColor"/><circle cx="14" cy="-6" r="3.5" fill="currentColor"/></g></g>
+        <text x="124" y="700" text-anchor="start" font-family="'Segoe UI', Inter, 'Helvetica Neue', Arial, sans-serif" font-size="25" font-weight="800" letter-spacing="0" fill="#f5f3ff" >Clear communication</text>
+        <text x="124" y="734" text-anchor="start" font-family="'Segoe UI', Inter, 'Helvetica Neue', Arial, sans-serif" font-size="16.5" font-weight="400" letter-spacing="0" fill="#b8b3d9" >Async updates and weekly demos.</text><text x="124" y="759" text-anchor="start" font-family="'Segoe UI', Inter, 'Helvetica Neue', Arial, sans-serif" font-size="16.5" font-weight="400" letter-spacing="0" fill="#b8b3d9" >You always know where things</text><text x="124" y="784" text-anchor="start" font-family="'Segoe UI', Inter, 'Helvetica Neue', Arial, sans-serif" font-size="16.5" font-weight="400" letter-spacing="0" fill="#b8b3d9" >stand.</text>
+      </g><g class="in" style="animation-delay:0.6s">
+    <rect x="470" y="560" width="350" height="270" rx="20" fill="url(#panel)" stroke="#a78bfa" stroke-opacity=".22" stroke-width="1.5"/>
+    <rect x="470" y="560" width="350" height="270" rx="20" fill="url(#rg-ai)"/>
+    <rect x="470" y="560" width="350" height="270" rx="20" fill="url(#glassSheen)"/>
+    <rect x="490" y="558.5" width="310" height="3" rx="1.5" fill="url(#g-ai)" filter="url(#glow)"/>
+  </g>
+      <g class="in" style="animation-delay:0.7s">
+        <circle cx="528" cy="624" r="32" fill="#a78bfa" fill-opacity=".12" stroke="#a78bfa" stroke-opacity=".4"/>
+        <g transform="translate(528 624) scale(0.46)" fill="none" stroke="currentColor" color="#a78bfa" stroke-width="4"><g stroke-width="2.2" stroke-linejoin="round"><path d="M0 -36L30 -24V0Q30 24 0 36Q-30 24 -30 0V-24Z"/><path d="M-12 0L-3 9L14 -10" stroke-width="3.5" stroke-linecap="round"/></g></g>
+        <text x="498" y="700" text-anchor="start" font-family="'Segoe UI', Inter, 'Helvetica Neue', Arial, sans-serif" font-size="25" font-weight="800" letter-spacing="0" fill="#f5f3ff" >Production quality</text>
+        <text x="498" y="734" text-anchor="start" font-family="'Segoe UI', Inter, 'Helvetica Neue', Arial, sans-serif" font-size="16.5" font-weight="400" letter-spacing="0" fill="#b8b3d9" >Typed, tested, documented and</text><text x="498" y="759" text-anchor="start" font-family="'Segoe UI', Inter, 'Helvetica Neue', Arial, sans-serif" font-size="16.5" font-weight="400" letter-spacing="0" fill="#b8b3d9" >observable. Built to be</text><text x="498" y="784" text-anchor="start" font-family="'Segoe UI', Inter, 'Helvetica Neue', Arial, sans-serif" font-size="16.5" font-weight="400" letter-spacing="0" fill="#b8b3d9" >maintained.</text>
+      </g><g class="in" style="animation-delay:0.7s">
+    <rect x="844" y="560" width="350" height="270" rx="20" fill="url(#panel)" stroke="#f472b6" stroke-opacity=".22" stroke-width="1.5"/>
+    <rect x="844" y="560" width="350" height="270" rx="20" fill="url(#rg-mobile)"/>
+    <rect x="844" y="560" width="350" height="270" rx="20" fill="url(#glassSheen)"/>
+    <rect x="864" y="558.5" width="310" height="3" rx="1.5" fill="url(#g-mobile)" filter="url(#glow)"/>
+  </g>
+      <g class="in" style="animation-delay:0.8s">
+        <circle cx="902" cy="624" r="32" fill="#f472b6" fill-opacity=".12" stroke="#f472b6" stroke-opacity=".4"/>
+        <g transform="translate(902 624) scale(0.46)" fill="none" stroke="currentColor" color="#f472b6" stroke-width="4"><g stroke-width="2.2" stroke-linejoin="round"><path d="M0 -38Q20 -20 16 14H-16Q-20 -20 0 -38Z"/><circle cy="-10" r="7"/><path d="M-16 0L-28 18L-16 14M16 0L28 18L16 14"/>
+    <path d="M-8 20L0 36L8 20" fill="currentColor" fill-opacity=".5" class="pulse"/></g></g>
+        <text x="872" y="700" text-anchor="start" font-family="'Segoe UI', Inter, 'Helvetica Neue', Arial, sans-serif" font-size="25" font-weight="800" letter-spacing="0" fill="#f5f3ff" >Ship early, iterate</text>
+        <text x="872" y="734" text-anchor="start" font-family="'Segoe UI', Inter, 'Helvetica Neue', Arial, sans-serif" font-size="16.5" font-weight="400" letter-spacing="0" fill="#b8b3d9" >Working software fast, refined</text><text x="872" y="759" text-anchor="start" font-family="'Segoe UI', Inter, 'Helvetica Neue', Arial, sans-serif" font-size="16.5" font-weight="400" letter-spacing="0" fill="#b8b3d9" >with real user feedback.</text>
+      </g><g class="in" style="animation-delay:0.8s">
+    <rect x="1218" y="560" width="350" height="270" rx="20" fill="url(#panel)" stroke="#fbbf24" stroke-opacity=".22" stroke-width="1.5"/>
+    <rect x="1218" y="560" width="350" height="270" rx="20" fill="url(#rg-game)"/>
+    <rect x="1218" y="560" width="350" height="270" rx="20" fill="url(#glassSheen)"/>
+    <rect x="1238" y="558.5" width="310" height="3" rx="1.5" fill="url(#g-game)" filter="url(#glow)"/>
+  </g>
+      <g class="in" style="animation-delay:0.9s">
+        <circle cx="1276" cy="624" r="32" fill="#fbbf24" fill-opacity=".12" stroke="#fbbf24" stroke-opacity=".4"/>
+        <g transform="translate(1276 624) scale(0.46)" fill="none" stroke="currentColor" color="#fbbf24" stroke-width="4"><g stroke-width="2.2" stroke-linejoin="round"><path d="M6 -38L-22 6H0L-6 38L22 -6H0Z" fill="currentColor" fill-opacity=".2"/></g></g>
+        <text x="1246" y="700" text-anchor="start" font-family="'Segoe UI', Inter, 'Helvetica Neue', Arial, sans-serif" font-size="25" font-weight="800" letter-spacing="0" fill="#f5f3ff" >Full ownership</text>
+        <text x="1246" y="734" text-anchor="start" font-family="'Segoe UI', Inter, 'Helvetica Neue', Arial, sans-serif" font-size="16.5" font-weight="400" letter-spacing="0" fill="#b8b3d9" >I own outcomes end to end — from</text><text x="1246" y="759" text-anchor="start" font-family="'Segoe UI', Inter, 'Helvetica Neue', Arial, sans-serif" font-size="16.5" font-weight="400" letter-spacing="0" fill="#b8b3d9" >first idea to production.</text>
+      </g>
+  <text x="832" y="896" text-anchor="middle" font-family="'JetBrains Mono', 'Cascadia Code', 'SF Mono', Consolas, 'Liberation Mono', Menlo, monospace" font-size="12" letter-spacing="5" fill="#6f6a93">TRANSPARENT · PRAGMATIC · QUALITY-FIRST</text>
+  
+  
+  <rect width="1664" height="936" fill="url(#vignette)"/>
+  </g>
+  <rect x="1" y="1" width="1662" height="934" rx="28" fill="none" stroke="url(#iri)" stroke-opacity=".35" stroke-width="2"/>
+</svg>

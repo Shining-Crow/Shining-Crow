@@ -1,19 +1,20 @@
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1664" height="936" viewBox="0 0 1664 936">
   <style>
   @keyframes tw{0%,100%{opacity:.15}50%{opacity:1}}
-  @keyframes rise{0%{transform:translateY(0);opacity:0}20%{opacity:.9}100%{transform:translateY(-160px);opacity:0}}
   @keyframes pulse{0%,100%{opacity:.45}50%{opacity:1}}
   @keyframes beat{0%,100%{transform:scale(1)}50%{transform:scale(1.35)}}
   @keyframes blink{0%,49%{opacity:1}50%,100%{opacity:0}}
   @keyframes spin{to{transform:rotate(360deg)}}
   @keyframes spinr{to{transform:rotate(-360deg)}}
-  @keyframes float{0%,100%{transform:translateY(-5px)}50%{transform:translateY(5px)}}
+  @keyframes float{0%,100%{transform:translateY(-6px)}50%{transform:translateY(6px)}}
   @keyframes grow{from{transform:scaleX(0)}to{transform:scaleX(1)}}
   @keyframes dash{to{stroke-dashoffset:-1000}}
   @keyframes sweepX{0%{transform:translateX(-400px)}100%{transform:translateX(2064px)}}
-  @keyframes scanY{0%{transform:translateY(-60px)}100%{transform:translateY(996px)}}
   @keyframes fadeUp{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
-  @keyframes wave{0%{transform:scale(.3);opacity:.8}100%{transform:scale(1);opacity:0}}
+  @keyframes orbA{0%,100%{transform:translate(0,0)}50%{transform:translate(120px,60px)}}
+  @keyframes orbB{0%,100%{transform:translate(0,0)}50%{transform:translate(-140px,-50px)}}
+  @keyframes orbC{0%,100%{transform:translate(0,0)}50%{transform:translate(80px,-90px)}}
+  @keyframes hue{0%{stop-color:#22d3ee}25%{stop-color:#a78bfa}50%{stop-color:#f472b6}75%{stop-color:#fbbf24}100%{stop-color:#22d3ee}}
   .tw{animation:tw 3s ease-in-out infinite}
   .pulse{animation:pulse 2.4s ease-in-out infinite}
   .beat{animation:beat 2s ease-in-out infinite;transform-box:fill-box;transform-origin:center}
@@ -23,143 +24,140 @@
   .float{animation:float 6s ease-in-out infinite}
   .grow{animation:grow 1.6s cubic-bezier(.2,.8,.2,1) both;transform-box:fill-box;transform-origin:left center}
   .dash{animation:dash 14s linear infinite}
-  .sweep{animation:sweepX 7s linear infinite}
-  .scan{animation:scanY 9s linear infinite}
+  .sweep{animation:sweepX 8s linear infinite}
   .in{animation:fadeUp .9s ease-out both}
 </style>
   <defs>
-  <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#020a06"/><stop offset=".48" stop-color="#071b10"/><stop offset="1" stop-color="#020d08"/></linearGradient>
-  <radialGradient id="topGlow" cx=".5" cy=".1" r=".6"><stop offset="0" stop-color="#3dff86" stop-opacity=".16"/><stop offset="1" stop-color="#3dff86" stop-opacity="0"/></radialGradient>
-  <radialGradient id="midGlow" cx=".5" cy=".5" r=".5"><stop offset="0" stop-color="#3dff86" stop-opacity=".12"/><stop offset="1" stop-color="#3dff86" stop-opacity="0"/></radialGradient>
-  <radialGradient id="vignette" cx=".5" cy=".5" r=".75"><stop offset=".6" stop-color="#000" stop-opacity="0"/><stop offset="1" stop-color="#000" stop-opacity=".55"/></radialGradient>
-  <linearGradient id="panel" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#0f2a1b" stop-opacity=".92"/><stop offset="1" stop-color="#06150d" stop-opacity=".92"/></linearGradient>
-  <linearGradient id="glass" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0c2418" stop-opacity=".9"/><stop offset="1" stop-color="#030d08" stop-opacity=".88"/></linearGradient>
-  <linearGradient id="title" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#3dff86"/><stop offset=".5" stop-color="#d5ffe2"/><stop offset="1" stop-color="#3dff86"/></linearGradient>
+  <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#05040b"/><stop offset=".55" stop-color="#0b0a1a"/><stop offset="1" stop-color="#110a1e"/></linearGradient>
+  <radialGradient id="vignette" cx=".5" cy=".5" r=".75"><stop offset=".55" stop-color="#000" stop-opacity="0"/><stop offset="1" stop-color="#000" stop-opacity=".6"/></radialGradient>
+  <linearGradient id="panel" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#15132b" stop-opacity=".88"/><stop offset="1" stop-color="#0b0a17" stop-opacity=".88"/></linearGradient>
+  <linearGradient id="glassSheen" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fff" stop-opacity=".07"/><stop offset=".35" stop-color="#fff" stop-opacity="0"/></linearGradient>
+  <linearGradient id="iri" x1="0" y1="0" x2="1" y2="0"><stop offset="0.00" stop-color="#22d3ee" stop-opacity="1"/><stop offset="0.25" stop-color="#818cf8" stop-opacity="1"/><stop offset="0.50" stop-color="#c084fc" stop-opacity="1"/><stop offset="0.75" stop-color="#f472b6" stop-opacity="1"/><stop offset="1.00" stop-color="#fbbf24" stop-opacity="1"/></linearGradient>
+  <linearGradient id="iriFade" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#22d3ee" stop-opacity="0"/><stop offset=".25" stop-color="#818cf8"/><stop offset=".5" stop-color="#c084fc"/><stop offset=".75" stop-color="#f472b6"/><stop offset="1" stop-color="#fbbf24" stop-opacity="0"/></linearGradient>
   <linearGradient id="shine" gradientUnits="userSpaceOnUse" x1="-300" y1="0" x2="0" y2="0">
-    <stop offset="0" stop-color="#fff" stop-opacity="0"/><stop offset=".5" stop-color="#fff" stop-opacity=".85"/><stop offset="1" stop-color="#fff" stop-opacity="0"/>
-    <animateTransform attributeName="gradientTransform" type="translate" values="0 0;1964 0;1964 0" keyTimes="0;.5;1" dur="7s" repeatCount="indefinite"/>
+    <stop offset="0" stop-color="#fff" stop-opacity="0"/><stop offset=".5" stop-color="#fff" stop-opacity=".9"/><stop offset="1" stop-color="#fff" stop-opacity="0"/>
+    <animateTransform attributeName="gradientTransform" type="translate" values="0 0;1964 0;1964 0" keyTimes="0;.45;1" dur="7s" repeatCount="indefinite"/>
   </linearGradient>
-  <linearGradient id="bar" x1="0" x2="1"><stop offset="0" stop-color="#22c55e"/><stop offset="1" stop-color="#7dffae"/></linearGradient>
-  <linearGradient id="hline" x1="0" x2="1"><stop offset="0" stop-color="#3dff86" stop-opacity="0"/><stop offset=".5" stop-color="#3dff86" stop-opacity=".9"/><stop offset="1" stop-color="#3dff86" stop-opacity="0"/></linearGradient>
-  <linearGradient id="sweepG" x1="0" x2="1"><stop offset="0" stop-color="#3dff86" stop-opacity="0"/><stop offset=".5" stop-color="#3dff86" stop-opacity=".07"/><stop offset="1" stop-color="#3dff86" stop-opacity="0"/></linearGradient>
-  <linearGradient id="scanG" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#3dff86" stop-opacity="0"/><stop offset=".5" stop-color="#3dff86" stop-opacity=".06"/><stop offset="1" stop-color="#3dff86" stop-opacity="0"/></linearGradient>
-  <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse"><path d="M32 0H0V32" fill="none" stroke="#3dff86" stroke-opacity=".05"/></pattern>
+  <linearGradient id="g-ai" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#a78bfa"/><stop offset="1" stop-color="#ddd6fe"/></linearGradient><linearGradient id="g-web" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#22d3ee"/><stop offset="1" stop-color="#a5f3fc"/></linearGradient><linearGradient id="g-mobile" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#f472b6"/><stop offset="1" stop-color="#fbcfe8"/></linearGradient><linearGradient id="g-game" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#fbbf24"/><stop offset="1" stop-color="#fde68a"/></linearGradient><linearGradient id="g-lime" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#a3e635"/><stop offset="1" stop-color="#d9f99d"/></linearGradient><linearGradient id="g-white" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#ffffff"/><stop offset="1" stop-color="#ffffff"/></linearGradient>
+  <radialGradient id="rg-ai" cx="0" cy="0" r="1"><stop offset="0" stop-color="#a78bfa" stop-opacity=".22"/><stop offset="1" stop-color="#a78bfa" stop-opacity="0"/></radialGradient><radialGradient id="rg-web" cx="0" cy="0" r="1"><stop offset="0" stop-color="#22d3ee" stop-opacity=".22"/><stop offset="1" stop-color="#22d3ee" stop-opacity="0"/></radialGradient><radialGradient id="rg-mobile" cx="0" cy="0" r="1"><stop offset="0" stop-color="#f472b6" stop-opacity=".22"/><stop offset="1" stop-color="#f472b6" stop-opacity="0"/></radialGradient><radialGradient id="rg-game" cx="0" cy="0" r="1"><stop offset="0" stop-color="#fbbf24" stop-opacity=".22"/><stop offset="1" stop-color="#fbbf24" stop-opacity="0"/></radialGradient><radialGradient id="rg-lime" cx="0" cy="0" r="1"><stop offset="0" stop-color="#a3e635" stop-opacity=".22"/><stop offset="1" stop-color="#a3e635" stop-opacity="0"/></radialGradient><radialGradient id="rg-white" cx="0" cy="0" r="1"><stop offset="0" stop-color="#ffffff" stop-opacity=".22"/><stop offset="1" stop-color="#ffffff" stop-opacity="0"/></radialGradient>
+  <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M40 0H0V40" fill="none" stroke="#fff" stroke-opacity=".035"/></pattern>
+  <pattern id="dots" width="22" height="22" patternUnits="userSpaceOnUse"><circle cx="1" cy="1" r="1" fill="#fff" fill-opacity=".06"/></pattern>
   <filter id="glow" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="4" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
-  <filter id="softGlow" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="10"/></filter>
-  <filter id="blur2"><feGaussianBlur stdDeviation="2"/></filter>
-<clipPath id="frameClip"><rect width="1664" height="936"/></clipPath></defs>
+  <filter id="softGlow" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="12"/></filter>
+  <filter id="orb" x="-100%" y="-100%" width="300%" height="300%"><feGaussianBlur stdDeviation="70"/></filter>
+<clipPath id="frameClip"><rect width="1664" height="936" rx="28"/></clipPath></defs>
   <g clip-path="url(#frameClip)">
   <rect width="1664" height="936" fill="url(#bg)"/>
+  <circle cx="300" cy="440" r="260" fill="#a78bfa" opacity=".26" filter="url(#orb)" style="animation:orbA 18s ease-in-out infinite"/><circle cx="1350" cy="440" r="260" fill="#22d3ee" opacity=".26" filter="url(#orb)" style="animation:orbB 22s ease-in-out infinite"/><circle cx="830" cy="880" r="200" fill="#f472b6" opacity=".26" filter="url(#orb)" style="animation:orbC 26s ease-in-out infinite"/>
   <rect width="1664" height="936" fill="url(#grid)"/>
-  <rect width="1664" height="936" fill="url(#topGlow)"/>
-  <g><circle cx="422.5" cy="509.4" r="1.33" fill="#d5ffe2" style="animation:tw 3s ease-in-out -0.56s infinite"/><circle cx="1171.9" cy="116.8" r="1.28" fill="#3dff86" style="animation:tw 4s ease-in-out -1.86s infinite"/><circle cx="1037.6" cy="370.5" r="0.87" fill="#3dff86" style="animation:tw 6s ease-in-out -1.95s infinite"/><circle cx="499.2" cy="220.2" r="0.97" fill="#3dff86" style="animation:tw 3s ease-in-out -0.12s infinite"/><circle cx="1389.4" cy="489.0" r="1.62" fill="#d5ffe2" style="animation:tw 4s ease-in-out -0.24s infinite"/><circle cx="356.9" cy="400.6" r="2.01" fill="#3dff86" style="animation:tw 6s ease-in-out -1.51s infinite"/><circle cx="1079.1" cy="425.9" r="1.27" fill="#3dff86" style="animation:tw 3s ease-in-out -1.05s infinite"/><circle cx="1293.0" cy="704.2" r="1.63" fill="#3dff86" style="animation:tw 4s ease-in-out -0.78s infinite"/><circle cx="1397.8" cy="781.6" r="1.60" fill="#d5ffe2" style="animation:tw 6s ease-in-out -3.26s infinite"/><circle cx="992.9" cy="622.4" r="1.60" fill="#3dff86" style="animation:tw 3s ease-in-out -1.85s infinite"/><circle cx="800.7" cy="502.4" r="1.37" fill="#3dff86" style="animation:tw 4s ease-in-out -2.43s infinite"/><circle cx="891.1" cy="170.1" r="1.78" fill="#3dff86" style="animation:tw 6s ease-in-out -4.92s infinite"/><circle cx="775.6" cy="446.6" r="2.10" fill="#d5ffe2" style="animation:tw 3s ease-in-out -0.59s infinite"/><circle cx="1001.1" cy="375.7" r="0.85" fill="#3dff86" style="animation:tw 4s ease-in-out -1.48s infinite"/></g>
-  <rect x="22" y="22" width="1620" height="892" rx="26" fill="none" stroke="#3dff86" stroke-opacity=".16" stroke-width="1.5"/>
-  
-  <g fill="none" stroke="#3dff86" stroke-opacity=".55" stroke-width="2">
-    <path d="M36 76V36H76"/><path d="M1588 36H1628V76"/>
-    <path d="M36 860V900H76"/><path d="M1588 900H1628V860"/>
-  </g>
+  <g><circle cx="422.5" cy="509.4" r="1.15" fill="#a78bfa" style="animation:tw 3s ease-in-out -0.56s infinite"/><circle cx="1171.9" cy="116.8" r="1.11" fill="#22d3ee" style="animation:tw 4s ease-in-out -1.86s infinite"/><circle cx="1037.6" cy="370.5" r="0.74" fill="#f472b6" style="animation:tw 6s ease-in-out -1.95s infinite"/><circle cx="499.2" cy="220.2" r="0.83" fill="#fbbf24" style="animation:tw 3s ease-in-out -0.12s infinite"/><circle cx="1389.4" cy="489.0" r="1.40" fill="#fff" style="animation:tw 4s ease-in-out -0.24s infinite"/><circle cx="356.9" cy="400.6" r="1.75" fill="#a78bfa" style="animation:tw 6s ease-in-out -1.51s infinite"/><circle cx="1079.1" cy="425.9" r="1.10" fill="#22d3ee" style="animation:tw 3s ease-in-out -1.05s infinite"/><circle cx="1293.0" cy="704.2" r="1.41" fill="#f472b6" style="animation:tw 4s ease-in-out -0.78s infinite"/><circle cx="1397.8" cy="781.6" r="1.39" fill="#fbbf24" style="animation:tw 6s ease-in-out -3.26s infinite"/><circle cx="992.9" cy="622.4" r="1.39" fill="#fff" style="animation:tw 3s ease-in-out -1.85s infinite"/><circle cx="800.7" cy="502.4" r="1.19" fill="#a78bfa" style="animation:tw 4s ease-in-out -2.43s infinite"/><circle cx="891.1" cy="170.1" r="1.54" fill="#22d3ee" style="animation:tw 6s ease-in-out -4.92s infinite"/><circle cx="775.6" cy="446.6" r="1.83" fill="#f472b6" style="animation:tw 3s ease-in-out -0.59s infinite"/><circle cx="1001.1" cy="375.7" r="0.72" fill="#fbbf24" style="animation:tw 4s ease-in-out -1.48s infinite"/><circle cx="1514.8" cy="370.2" r="1.01" fill="#fff" style="animation:tw 6s ease-in-out -3.11s infinite"/><circle cx="389.5" cy="614.3" r="0.73" fill="#a78bfa" style="animation:tw 3s ease-in-out -1.89s infinite"/></g>
   <g class="in">
-    <text x="832" y="84" text-anchor="middle" font-family="'Arial Black', 'Segoe UI Black', 'Segoe UI', Arial, sans-serif" font-size="60" font-weight="900" fill="#3dff86" opacity=".35" filter="url(#softGlow)">FEATURED PROJECTS</text>
-    <text x="832" y="84" text-anchor="middle" font-family="'Arial Black', 'Segoe UI Black', 'Segoe UI', Arial, sans-serif" font-size="60" font-weight="900" fill="url(#title)">FEATURED PROJECTS</text>
-    <text x="832" y="84" text-anchor="middle" font-family="'Arial Black', 'Segoe UI Black', 'Segoe UI', Arial, sans-serif" font-size="60" font-weight="900" fill="url(#shine)" opacity=".7">FEATURED PROJECTS</text>
-    <text x="832" y="122" text-anchor="middle" font-family="'JetBrains Mono', 'Cascadia Code', 'SF Mono', Consolas, 'Liberation Mono', Menlo, monospace" font-size="15" letter-spacing="6" fill="#3dff86" opacity=".85">QUEST LOG / SHIPPED / IN PROGRESS</text>
-    <rect x="532" y="140" width="600" height="1.5" fill="url(#hline)"/>
+    <text x="832" y="84" text-anchor="middle" font-family="'Segoe UI Black', 'Arial Black', 'Segoe UI', Arial, sans-serif" font-size="60" font-weight="900" letter-spacing="-1" fill="url(#iri)" opacity=".35" filter="url(#softGlow)">SELECTED WORK</text>
+    <text x="832" y="84" text-anchor="middle" font-family="'Segoe UI Black', 'Arial Black', 'Segoe UI', Arial, sans-serif" font-size="60" font-weight="900" letter-spacing="-1" fill="url(#iri)">SELECTED WORK</text>
+    <text x="832" y="84" text-anchor="middle" font-family="'Segoe UI Black', 'Arial Black', 'Segoe UI', Arial, sans-serif" font-size="60" font-weight="900" letter-spacing="-1" fill="url(#shine)" opacity=".55">SELECTED WORK</text>
+    <text x="832" y="124" text-anchor="middle" font-family="'JetBrains Mono', 'Cascadia Code', 'SF Mono', Consolas, 'Liberation Mono', Menlo, monospace" font-size="15" letter-spacing="6" fill="#b8b3d9">SHIPPED / IN PROGRESS / OPEN SOURCE</text>
+    <rect x="572" y="144" width="520" height="2" rx="1" fill="url(#iriFade)"/>
   </g>
     <g class="in" style="animation-delay:0.1s">
-    <rect x="100" y="314" width="716" height="252" rx="18" fill="url(#panel)" stroke="#3dff86" stroke-opacity=".28" stroke-width="1.5"/>
-    <rect x="106" y="312" width="704" height="5" rx="2.5" fill="#3dff86" filter="url(#glow)" opacity=".9"/>
+    <rect x="100" y="314" width="716" height="252" rx="20" fill="url(#panel)" stroke="#a78bfa" stroke-opacity=".22" stroke-width="1.5"/>
+    <rect x="100" y="314" width="716" height="252" rx="20" fill="url(#rg-ai)"/>
+    <rect x="100" y="314" width="716" height="252" rx="20" fill="url(#glassSheen)"/>
+    <rect x="120" y="312.5" width="676" height="3" rx="1.5" fill="url(#g-ai)" filter="url(#glow)"/>
   </g>
       <g class="in" style="animation-delay:0.2s">
-        <clipPath id="pa1"><rect x="118" y="334" width="236" height="212" rx="12"/></clipPath>
+        <clipPath id="pa1"><rect x="118" y="334" width="236" height="212" rx="14"/></clipPath>
     <g clip-path="url(#pa1)">
-      <rect x="118" y="334" width="236" height="212" fill="#04140b"/>
+      <rect x="118" y="334" width="236" height="212" fill="#07060d"/>
+      <circle cx="259.6" cy="423.03999999999996" r="141.6" fill="url(#rg-ai)" transform="translate(0 0)"/>
       <rect x="118" y="334" width="236" height="212" fill="url(#grid)"/>
-      <circle cx="264.32" cy="423.03999999999996" r="30" fill="none" stroke="#3dff86" stroke-opacity="0.40" stroke-dasharray="2 4" style="animation:spin 18s linear infinite ;transform-box:fill-box;transform-origin:center"/><circle cx="264.32" cy="423.03999999999996" r="56" fill="none" stroke="#3dff86" stroke-opacity="0.32" stroke-dasharray="5 8" style="animation:spin 26s linear infinite reverse;transform-box:fill-box;transform-origin:center"/><circle cx="264.32" cy="423.03999999999996" r="82" fill="none" stroke="#3dff86" stroke-opacity="0.24" stroke-dasharray="8 12" style="animation:spin 34s linear infinite ;transform-box:fill-box;transform-origin:center"/><circle cx="264.32" cy="423.03999999999996" r="108" fill="none" stroke="#3dff86" stroke-opacity="0.16" stroke-dasharray="11 16" style="animation:spin 42s linear infinite reverse;transform-box:fill-box;transform-origin:center"/><rect x="134" y="507.52248961059377" width="8" height="24" rx="2" fill="#3dff86" opacity="0.60"/><rect x="148" y="506.5362328574993" width="8" height="25" rx="2" fill="#3dff86" opacity="0.59"/><rect x="162" y="504.17895285924897" width="8" height="28" rx="2" fill="#3dff86" opacity="0.60"/><rect x="176" y="480.6581807699986" width="8" height="51" rx="2" fill="#3dff86" opacity="0.23"/><rect x="190" y="486.47667431784794" width="8" height="46" rx="2" fill="#3dff86" opacity="0.45"/><rect x="204" y="501.4567517586984" width="8" height="31" rx="2" fill="#3dff86" opacity="0.32"/><rect x="218" y="500.96601132815704" width="8" height="31" rx="2" fill="#3dff86" opacity="0.32"/><rect x="232" y="496.20844986336306" width="8" height="36" rx="2" fill="#3dff86" opacity="0.62"/><rect x="246" y="479.8492911416106" width="8" height="52" rx="2" fill="#3dff86" opacity="0.40"/>
-      <circle cx="264.32" cy="423.03999999999996" r="30" fill="#04110a" stroke="#3dff86" stroke-width="1.5"/>
-      <g transform="translate(264.32 423.03999999999996) scale(0.42)" fill="none" stroke="#3dff86" stroke-width="4.5"><g stroke-width="2"><circle r="38" stroke-dasharray="4 6" class="spin"/>
+      <circle cx="259.6" cy="423.03999999999996" r="30" fill="none" stroke="#a78bfa" stroke-opacity="0.45" stroke-dasharray="2 4" style="animation:spin 18s linear infinite ;transform-box:fill-box;transform-origin:center"/><circle cx="259.6" cy="423.03999999999996" r="56" fill="none" stroke="#fff" stroke-opacity="0.37" stroke-dasharray="5 8" style="animation:spin 26s linear infinite reverse;transform-box:fill-box;transform-origin:center"/><circle cx="259.6" cy="423.03999999999996" r="82" fill="none" stroke="#a78bfa" stroke-opacity="0.29" stroke-dasharray="8 12" style="animation:spin 34s linear infinite ;transform-box:fill-box;transform-origin:center"/><circle cx="259.6" cy="423.03999999999996" r="108" fill="none" stroke="#fff" stroke-opacity="0.21" stroke-dasharray="11 16" style="animation:spin 42s linear infinite reverse;transform-box:fill-box;transform-origin:center"/><rect x="134" y="507.52248961059377" width="8" height="24" rx="2" fill="url(#g-ai)" opacity="0.75"/><rect x="148" y="506.5362328574993" width="8" height="25" rx="2" fill="url(#g-ai)" opacity="0.74"/><rect x="162" y="504.17895285924897" width="8" height="28" rx="2" fill="url(#g-ai)" opacity="0.75"/><rect x="176" y="480.6581807699986" width="8" height="51" rx="2" fill="url(#g-ai)" opacity="0.38"/><rect x="190" y="486.47667431784794" width="8" height="46" rx="2" fill="url(#g-ai)" opacity="0.60"/><rect x="204" y="501.4567517586984" width="8" height="31" rx="2" fill="url(#g-ai)" opacity="0.47"/><rect x="218" y="500.96601132815704" width="8" height="31" rx="2" fill="url(#g-ai)" opacity="0.47"/><rect x="232" y="496.20844986336306" width="8" height="36" rx="2" fill="url(#g-ai)" opacity="0.77"/><rect x="246" y="479.8492911416106" width="8" height="52" rx="2" fill="url(#g-ai)" opacity="0.55"/>
+      <circle cx="259.6" cy="423.03999999999996" r="30" fill="#07060d" stroke="#a78bfa" stroke-width="1.5"/>
+      <g transform="translate(259.6 423.03999999999996) scale(0.42)" fill="none" stroke="currentColor" color="#a78bfa" stroke-width="4.5"><g stroke-width="2"><circle r="38" stroke-dasharray="4 6" class="spin"/>
     <path d="M-22 -14L0 -26L22 -14M-22 -14L-26 10L0 24L26 10L22 -14M-22 -14L0 0L22 -14M-26 10L0 0L26 10M0 0L0 24M0 -26L0 0"/>
-    <circle cx="-22" cy="-14" r="4" fill="#3dff86" style="animation:pulse 1.8s ease-in-out 0s infinite"/><circle cx="0" cy="-26" r="4" fill="#3dff86" style="animation:pulse 1.8s ease-in-out -0.3s infinite"/><circle cx="22" cy="-14" r="4" fill="#3dff86" style="animation:pulse 1.8s ease-in-out -0.6s infinite"/><circle cx="-26" cy="10" r="4" fill="#3dff86" style="animation:pulse 1.8s ease-in-out -0.8999999999999999s infinite"/><circle cx="0" cy="24" r="4" fill="#3dff86" style="animation:pulse 1.8s ease-in-out -1.2s infinite"/><circle cx="26" cy="10" r="4" fill="#3dff86" style="animation:pulse 1.8s ease-in-out -1.5s infinite"/>
-    <circle r="9" fill="#04110a"/><text y="4" text-anchor="middle" font-family="'JetBrains Mono', 'Cascadia Code', 'SF Mono', Consolas, 'Liberation Mono', Menlo, monospace" font-size="10" font-weight="700" fill="#d5ffe2" stroke="none">AI</text></g></g>
-      <rect x="118" y="334" width="50" height="212" fill="url(#sweepG)" style="animation:sweepX 6s linear -1.3s infinite"/>
+    <circle cx="-22" cy="-14" r="4" fill="currentColor" style="animation:pulse 1.8s ease-in-out 0s infinite"/><circle cx="0" cy="-26" r="4" fill="currentColor" style="animation:pulse 1.8s ease-in-out -0.3s infinite"/><circle cx="22" cy="-14" r="4" fill="currentColor" style="animation:pulse 1.8s ease-in-out -0.6s infinite"/><circle cx="-26" cy="10" r="4" fill="currentColor" style="animation:pulse 1.8s ease-in-out -0.8999999999999999s infinite"/><circle cx="0" cy="24" r="4" fill="currentColor" style="animation:pulse 1.8s ease-in-out -1.2s infinite"/><circle cx="26" cy="10" r="4" fill="currentColor" style="animation:pulse 1.8s ease-in-out -1.5s infinite"/>
+    <circle r="9" fill="#07060d"/><text y="4" text-anchor="middle" font-family="'JetBrains Mono', 'Cascadia Code', 'SF Mono', Consolas, 'Liberation Mono', Menlo, monospace" font-size="10" font-weight="700" fill="#fff" stroke="none">AI</text></g></g>
     </g>
-    <rect x="118" y="334" width="236" height="212" rx="12" fill="none" stroke="#3dff86" stroke-opacity=".3"/>
-        <text x="380" y="358" text-anchor="start" font-family="'JetBrains Mono', 'Cascadia Code', 'SF Mono', Consolas, 'Liberation Mono', Menlo, monospace" font-size="11.5" font-weight="700" letter-spacing="3" fill="#3dff86">QUEST 01 · AI HEALTH</text>
-        <text x="380" y="398" text-anchor="start" font-family="'Segoe UI', Inter, Arial, Helvetica, sans-serif" font-size="30" font-weight="800" letter-spacing="0" fill="#eafff1" >PocketCare</text>
-        <text x="380" y="430" text-anchor="start" font-family="'Segoe UI', Inter, Arial, Helvetica, sans-serif" font-size="16" font-weight="400" letter-spacing="0" fill="#a7d9b9" >AI-assisted healthcare platform with symptom</text><text x="380" y="454" text-anchor="start" font-family="'Segoe UI', Inter, Arial, Helvetica, sans-serif" font-size="16" font-weight="400" letter-spacing="0" fill="#a7d9b9" >analysis, doctor booking, and emergency</text><text x="380" y="478" text-anchor="start" font-family="'Segoe UI', Inter, Arial, Helvetica, sans-serif" font-size="16" font-weight="400" letter-spacing="0" fill="#a7d9b9" >features.</text>
-        <g font-family="'JetBrains Mono', 'Cascadia Code', 'SF Mono', Consolas, 'Liberation Mono', Menlo, monospace" font-size="13" fill="#a7d9b9">
-          <rect x="380" y="510" width="118" height="28" rx="14" fill="#04110a" stroke="#3dff86" stroke-opacity=".4"/>
-          <circle cx="396" cy="524" r="4.5" fill="#3dff86"/>
-          <text x="408" y="529" fill="#eafff1">JavaScript</text>
+    <rect x="118" y="334" width="236" height="212" rx="14" fill="none" stroke="#a78bfa" stroke-opacity=".35"/>
+        <text x="380" y="358" text-anchor="start" font-family="'JetBrains Mono', 'Cascadia Code', 'SF Mono', Consolas, 'Liberation Mono', Menlo, monospace" font-size="11.5" font-weight="700" letter-spacing="3" fill="#a78bfa">01 · AI HEALTH</text>
+        <text x="380" y="398" text-anchor="start" font-family="'Segoe UI', Inter, 'Helvetica Neue', Arial, sans-serif" font-size="30" font-weight="800" letter-spacing="-0.5" fill="#f5f3ff" >PocketCare</text>
+        <text x="380" y="430" text-anchor="start" font-family="'Segoe UI', Inter, 'Helvetica Neue', Arial, sans-serif" font-size="16" font-weight="400" letter-spacing="0" fill="#b8b3d9" >AI-assisted healthcare platform with symptom</text><text x="380" y="454" text-anchor="start" font-family="'Segoe UI', Inter, 'Helvetica Neue', Arial, sans-serif" font-size="16" font-weight="400" letter-spacing="0" fill="#b8b3d9" >analysis, doctor booking, and emergency</text><text x="380" y="478" text-anchor="start" font-family="'Segoe UI', Inter, 'Helvetica Neue', Arial, sans-serif" font-size="16" font-weight="400" letter-spacing="0" fill="#b8b3d9" >features.</text>
+        <g font-family="'JetBrains Mono', 'Cascadia Code', 'SF Mono', Consolas, 'Liberation Mono', Menlo, monospace" font-size="13" fill="#b8b3d9">
+          <rect x="380" y="510" width="118" height="28" rx="14" fill="#a78bfa" fill-opacity=".12" stroke="#a78bfa" stroke-opacity=".5"/>
+          <circle cx="396" cy="524" r="4.5" fill="#a78bfa"/>
+          <text x="408" y="529" fill="#f5f3ff">JavaScript</text>
           <text x="516" y="529">★ 0   ⑂ 0</text>
-          <text x="790" y="529" text-anchor="end" fill="#5f9c78">updated 20d ago</text>
+          <text x="790" y="529" text-anchor="end" fill="#6f6a93">updated 20d ago</text>
         </g>
-        <g transform="translate(776 356)"><circle r="15" fill="none" stroke="#3dff86" stroke-opacity=".5"/><path d="M-5 5L5 -5M-3 -5H5V3" stroke="#3dff86" stroke-width="2" fill="none"/></g>
+        <g transform="translate(776 356)"><circle r="16" fill="#a78bfa" fill-opacity=".12" stroke="#a78bfa" stroke-opacity=".6"/><path d="M-5 5L5 -5M-3 -5H5V3" stroke="#a78bfa" stroke-width="2" fill="none"/></g>
       </g><g class="in" style="animation-delay:0.2s">
-    <rect x="848" y="314" width="716" height="252" rx="18" fill="url(#panel)" stroke="#3dff86" stroke-opacity=".28" stroke-width="1.5"/>
-    <rect x="854" y="312" width="704" height="5" rx="2.5" fill="#3dff86" filter="url(#glow)" opacity=".9"/>
+    <rect x="848" y="314" width="716" height="252" rx="20" fill="url(#panel)" stroke="#22d3ee" stroke-opacity=".22" stroke-width="1.5"/>
+    <rect x="848" y="314" width="716" height="252" rx="20" fill="url(#rg-web)"/>
+    <rect x="848" y="314" width="716" height="252" rx="20" fill="url(#glassSheen)"/>
+    <rect x="868" y="312.5" width="676" height="3" rx="1.5" fill="url(#g-web)" filter="url(#glow)"/>
   </g>
       <g class="in" style="animation-delay:0.30000000000000004s">
-        <clipPath id="pa2"><rect x="866" y="334" width="236" height="212" rx="12"/></clipPath>
+        <clipPath id="pa2"><rect x="866" y="334" width="236" height="212" rx="14"/></clipPath>
     <g clip-path="url(#pa2)">
-      <rect x="866" y="334" width="236" height="212" fill="#04140b"/>
+      <rect x="866" y="334" width="236" height="212" fill="#07060d"/>
+      <circle cx="1007.6" cy="423.03999999999996" r="141.6" fill="url(#rg-web)" transform="translate(0 0)"/>
       <rect x="866" y="334" width="236" height="212" fill="url(#grid)"/>
-      <circle cx="1012.3199999999999" cy="423.03999999999996" r="30" fill="none" stroke="#3dff86" stroke-opacity="0.40" stroke-dasharray="2 4" style="animation:spin 18s linear infinite ;transform-box:fill-box;transform-origin:center"/><circle cx="1012.3199999999999" cy="423.03999999999996" r="56" fill="none" stroke="#3dff86" stroke-opacity="0.32" stroke-dasharray="5 8" style="animation:spin 26s linear infinite reverse;transform-box:fill-box;transform-origin:center"/><circle cx="1012.3199999999999" cy="423.03999999999996" r="82" fill="none" stroke="#3dff86" stroke-opacity="0.24" stroke-dasharray="8 12" style="animation:spin 34s linear infinite ;transform-box:fill-box;transform-origin:center"/><circle cx="1012.3199999999999" cy="423.03999999999996" r="108" fill="none" stroke="#3dff86" stroke-opacity="0.16" stroke-dasharray="11 16" style="animation:spin 42s linear infinite reverse;transform-box:fill-box;transform-origin:center"/><rect x="882" y="504.98402121290565" width="8" height="27" rx="2" fill="#3dff86" opacity="0.54"/><rect x="896" y="521.6970490319654" width="8" height="10" rx="2" fill="#3dff86" opacity="0.51"/><rect x="910" y="488.8249644804746" width="8" height="43" rx="2" fill="#3dff86" opacity="0.58"/><rect x="924" y="507.36561934743077" width="8" height="25" rx="2" fill="#3dff86" opacity="0.24"/><rect x="938" y="504.3925504460931" width="8" height="28" rx="2" fill="#3dff86" opacity="0.22"/><rect x="952" y="479.5537550961599" width="8" height="52" rx="2" fill="#3dff86" opacity="0.68"/><rect x="966" y="502.5249038618058" width="8" height="29" rx="2" fill="#3dff86" opacity="0.66"/><rect x="980" y="500.6686995299533" width="8" height="31" rx="2" fill="#3dff86" opacity="0.65"/><rect x="994" y="476.6892006881535" width="8" height="55" rx="2" fill="#3dff86" opacity="0.40"/>
-      <circle cx="1012.3199999999999" cy="423.03999999999996" r="30" fill="#04110a" stroke="#3dff86" stroke-width="1.5"/>
-      <g transform="translate(1012.3199999999999 423.03999999999996) scale(0.42)" fill="none" stroke="#3dff86" stroke-width="4.5"><g stroke-width="2.2"><rect x="-40" y="-30" width="80" height="60" rx="8"/><path d="M-40 -16H40"/>
-    <circle cx="-31" cy="-23" r="2.2" fill="#3dff86"/><circle cx="-24" cy="-23" r="2.2" fill="#3dff86"/>
+      <circle cx="1007.6" cy="423.03999999999996" r="30" fill="none" stroke="#22d3ee" stroke-opacity="0.45" stroke-dasharray="2 4" style="animation:spin 18s linear infinite ;transform-box:fill-box;transform-origin:center"/><circle cx="1007.6" cy="423.03999999999996" r="56" fill="none" stroke="#fff" stroke-opacity="0.37" stroke-dasharray="5 8" style="animation:spin 26s linear infinite reverse;transform-box:fill-box;transform-origin:center"/><circle cx="1007.6" cy="423.03999999999996" r="82" fill="none" stroke="#22d3ee" stroke-opacity="0.29" stroke-dasharray="8 12" style="animation:spin 34s linear infinite ;transform-box:fill-box;transform-origin:center"/><circle cx="1007.6" cy="423.03999999999996" r="108" fill="none" stroke="#fff" stroke-opacity="0.21" stroke-dasharray="11 16" style="animation:spin 42s linear infinite reverse;transform-box:fill-box;transform-origin:center"/><rect x="882" y="504.98402121290565" width="8" height="27" rx="2" fill="url(#g-web)" opacity="0.69"/><rect x="896" y="521.6970490319654" width="8" height="10" rx="2" fill="url(#g-web)" opacity="0.66"/><rect x="910" y="488.8249644804746" width="8" height="43" rx="2" fill="url(#g-web)" opacity="0.73"/><rect x="924" y="507.36561934743077" width="8" height="25" rx="2" fill="url(#g-web)" opacity="0.39"/><rect x="938" y="504.3925504460931" width="8" height="28" rx="2" fill="url(#g-web)" opacity="0.37"/><rect x="952" y="479.5537550961599" width="8" height="52" rx="2" fill="url(#g-web)" opacity="0.83"/><rect x="966" y="502.5249038618058" width="8" height="29" rx="2" fill="url(#g-web)" opacity="0.81"/><rect x="980" y="500.6686995299533" width="8" height="31" rx="2" fill="url(#g-web)" opacity="0.80"/><rect x="994" y="476.6892006881535" width="8" height="55" rx="2" fill="url(#g-web)" opacity="0.55"/>
+      <circle cx="1007.6" cy="423.03999999999996" r="30" fill="#07060d" stroke="#22d3ee" stroke-width="1.5"/>
+      <g transform="translate(1007.6 423.03999999999996) scale(0.42)" fill="none" stroke="currentColor" color="#22d3ee" stroke-width="4.5"><g stroke-width="2.2"><rect x="-40" y="-30" width="80" height="60" rx="8"/><path d="M-40 -16H40"/>
+    <circle cx="-31" cy="-23" r="2.2" fill="currentColor"/><circle cx="-24" cy="-23" r="2.2" fill="currentColor"/>
     <path d="M-26 -4H18M-26 6H8M-26 16H22" stroke-width="3.5" stroke-linecap="round" opacity=".8"/></g></g>
-      <rect x="866" y="334" width="50" height="212" fill="url(#sweepG)" style="animation:sweepX 6s linear -2.6s infinite"/>
     </g>
-    <rect x="866" y="334" width="236" height="212" rx="12" fill="none" stroke="#3dff86" stroke-opacity=".3"/>
-        <text x="1128" y="358" text-anchor="start" font-family="'JetBrains Mono', 'Cascadia Code', 'SF Mono', Consolas, 'Liberation Mono', Menlo, monospace" font-size="11.5" font-weight="700" letter-spacing="3" fill="#3dff86">QUEST 02 · WEB APP</text>
-        <text x="1128" y="398" text-anchor="start" font-family="'Segoe UI', Inter, Arial, Helvetica, sans-serif" font-size="30" font-weight="800" letter-spacing="0" fill="#eafff1" >Restaurant</text>
-        <text x="1128" y="430" text-anchor="start" font-family="'Segoe UI', Inter, Arial, Helvetica, sans-serif" font-size="16" font-weight="400" letter-spacing="0" fill="#a7d9b9" >Italia Restaurant — a modern, responsive</text><text x="1128" y="454" text-anchor="start" font-family="'Segoe UI', Inter, Arial, Helvetica, sans-serif" font-size="16" font-weight="400" letter-spacing="0" fill="#a7d9b9" >restaurant web experience built with</text><text x="1128" y="478" text-anchor="start" font-family="'Segoe UI', Inter, Arial, Helvetica, sans-serif" font-size="16" font-weight="400" letter-spacing="0" fill="#a7d9b9" >TypeScript.</text>
-        <g font-family="'JetBrains Mono', 'Cascadia Code', 'SF Mono', Consolas, 'Liberation Mono', Menlo, monospace" font-size="13" fill="#a7d9b9">
-          <rect x="1128" y="510" width="118" height="28" rx="14" fill="#04110a" stroke="#3dff86" stroke-opacity=".4"/>
-          <circle cx="1144" cy="524" r="4.5" fill="#3dff86"/>
-          <text x="1156" y="529" fill="#eafff1">TypeScript</text>
+    <rect x="866" y="334" width="236" height="212" rx="14" fill="none" stroke="#22d3ee" stroke-opacity=".35"/>
+        <text x="1128" y="358" text-anchor="start" font-family="'JetBrains Mono', 'Cascadia Code', 'SF Mono', Consolas, 'Liberation Mono', Menlo, monospace" font-size="11.5" font-weight="700" letter-spacing="3" fill="#22d3ee">02 · WEB APP</text>
+        <text x="1128" y="398" text-anchor="start" font-family="'Segoe UI', Inter, 'Helvetica Neue', Arial, sans-serif" font-size="30" font-weight="800" letter-spacing="-0.5" fill="#f5f3ff" >Restaurant</text>
+        <text x="1128" y="430" text-anchor="start" font-family="'Segoe UI', Inter, 'Helvetica Neue', Arial, sans-serif" font-size="16" font-weight="400" letter-spacing="0" fill="#b8b3d9" >Italia Restaurant — a modern, responsive</text><text x="1128" y="454" text-anchor="start" font-family="'Segoe UI', Inter, 'Helvetica Neue', Arial, sans-serif" font-size="16" font-weight="400" letter-spacing="0" fill="#b8b3d9" >restaurant web experience built with</text><text x="1128" y="478" text-anchor="start" font-family="'Segoe UI', Inter, 'Helvetica Neue', Arial, sans-serif" font-size="16" font-weight="400" letter-spacing="0" fill="#b8b3d9" >TypeScript.</text>
+        <g font-family="'JetBrains Mono', 'Cascadia Code', 'SF Mono', Consolas, 'Liberation Mono', Menlo, monospace" font-size="13" fill="#b8b3d9">
+          <rect x="1128" y="510" width="118" height="28" rx="14" fill="#22d3ee" fill-opacity=".12" stroke="#22d3ee" stroke-opacity=".5"/>
+          <circle cx="1144" cy="524" r="4.5" fill="#22d3ee"/>
+          <text x="1156" y="529" fill="#f5f3ff">TypeScript</text>
           <text x="1264" y="529">★ 0   ⑂ 0</text>
-          <text x="1538" y="529" text-anchor="end" fill="#5f9c78">updated 1mo ago</text>
+          <text x="1538" y="529" text-anchor="end" fill="#6f6a93">updated 1mo ago</text>
         </g>
-        <g transform="translate(1524 356)"><circle r="15" fill="none" stroke="#3dff86" stroke-opacity=".5"/><path d="M-5 5L5 -5M-3 -5H5V3" stroke="#3dff86" stroke-width="2" fill="none"/></g>
+        <g transform="translate(1524 356)"><circle r="16" fill="#22d3ee" fill-opacity=".12" stroke="#22d3ee" stroke-opacity=".6"/><path d="M-5 5L5 -5M-3 -5H5V3" stroke="#22d3ee" stroke-width="2" fill="none"/></g>
       </g>
     <g class="in" style="animation-delay:0.5s">
-    <rect x="100" y="726" width="1464" height="128" rx="18" fill="url(#panel)" stroke="#3dff86" stroke-opacity=".28" stroke-width="1.5"/>
+    <rect x="100" y="726" width="1464" height="128" rx="20" fill="url(#panel)" stroke="#a78bfa" stroke-opacity=".22" stroke-width="1.5"/>
+    <rect x="100" y="726" width="1464" height="128" rx="20" fill="url(#rg-ai)"/>
+    <rect x="100" y="726" width="1464" height="128" rx="20" fill="url(#glassSheen)"/>
     
   </g>
     <g class="in" style="animation-delay:.6s">
-      <text x="128" y="760" text-anchor="start" font-family="'JetBrains Mono', 'Cascadia Code', 'SF Mono', Consolas, 'Liberation Mono', Menlo, monospace" font-size="12" font-weight="700" letter-spacing="4" fill="#3dff86">LANGUAGE WALL</text>
-      <text x="1536" y="760" text-anchor="end" font-family="'JetBrains Mono', 'Cascadia Code', 'SF Mono', Consolas, 'Liberation Mono', Menlo, monospace" font-size="11" font-weight="400" letter-spacing="2" fill="#a7d9b9">7 LANGUAGES / 3 REPOS</text>
-      <rect x="128" y="776" width="1408" height="16" rx="4" fill="#0a1f14"/>
-      <rect x="128.0" y="776" width="794.3" height="16" rx="4" fill="#7dffae" class="grow" style="animation-delay:0.40s"/><rect x="925.3" y="776" width="356.4" height="16" rx="4" fill="#3dff86" class="grow" style="animation-delay:0.52s"/><rect x="1284.7" y="776" width="203.1" height="16" rx="4" fill="#22c55e" class="grow" style="animation-delay:0.64s"/><rect x="1490.8" y="776" width="35.6" height="16" rx="4" fill="#16a34a" class="grow" style="animation-delay:0.76s"/><rect x="1529.4" y="776" width="2.0" height="16" rx="4" fill="#15803d" class="grow" style="animation-delay:0.88s"/><rect x="1533.6" y="776" width="2.0" height="16" rx="4" fill="#166534" class="grow" style="animation-delay:1.00s"/><rect x="1535.4" y="776" width="2.0" height="16" rx="4" fill="#14532d" class="grow" style="animation-delay:1.12s"/>
+      <text x="128" y="760" text-anchor="start" font-family="'JetBrains Mono', 'Cascadia Code', 'SF Mono', Consolas, 'Liberation Mono', Menlo, monospace" font-size="12" font-weight="700" letter-spacing="4" fill="#a78bfa">LANGUAGE WALL</text>
+      <text x="1536" y="760" text-anchor="end" font-family="'JetBrains Mono', 'Cascadia Code', 'SF Mono', Consolas, 'Liberation Mono', Menlo, monospace" font-size="11" font-weight="400" letter-spacing="2" fill="#b8b3d9">7 LANGUAGES / 3 REPOS</text>
+      <rect x="128" y="776" width="1408" height="16" rx="5" fill="#fff" fill-opacity=".05"/>
+      <rect x="128.0" y="776" width="794.3" height="16" rx="5" fill="#22d3ee" class="grow" style="animation-delay:0.40s"/><rect x="925.3" y="776" width="356.4" height="16" rx="5" fill="#a78bfa" class="grow" style="animation-delay:0.52s"/><rect x="1284.7" y="776" width="203.1" height="16" rx="5" fill="#f472b6" class="grow" style="animation-delay:0.64s"/><rect x="1490.8" y="776" width="35.6" height="16" rx="5" fill="#fbbf24" class="grow" style="animation-delay:0.76s"/><rect x="1529.4" y="776" width="2.0" height="16" rx="5" fill="#a3e635" class="grow" style="animation-delay:0.88s"/><rect x="1533.6" y="776" width="2.0" height="16" rx="5" fill="#818cf8" class="grow" style="animation-delay:1.00s"/><rect x="1535.4" y="776" width="2.0" height="16" rx="5" fill="#c084fc" class="grow" style="animation-delay:1.12s"/>
       <g transform="translate(128 826)">
-      <rect y="-11" width="12" height="12" rx="3" fill="#7dffae"/>
-      <text x="20" y="0" font-family="'Segoe UI', Inter, Arial, Helvetica, sans-serif" font-size="15" font-weight="600" fill="#eafff1">JavaScript</text>
-      <text x="177.14285714285714" y="0" text-anchor="end" font-family="'JetBrains Mono', 'Cascadia Code', 'SF Mono', Consolas, 'Liberation Mono', Menlo, monospace" font-size="13" fill="#5f9c78">56.6%</text></g><g transform="translate(329.1428571428571 826)">
-      <rect y="-11" width="12" height="12" rx="3" fill="#3dff86"/>
-      <text x="20" y="0" font-family="'Segoe UI', Inter, Arial, Helvetica, sans-serif" font-size="15" font-weight="600" fill="#eafff1">Python</text>
-      <text x="177.14285714285714" y="0" text-anchor="end" font-family="'JetBrains Mono', 'Cascadia Code', 'SF Mono', Consolas, 'Liberation Mono', Menlo, monospace" font-size="13" fill="#5f9c78">25.5%</text></g><g transform="translate(530.2857142857142 826)">
-      <rect y="-11" width="12" height="12" rx="3" fill="#22c55e"/>
-      <text x="20" y="0" font-family="'Segoe UI', Inter, Arial, Helvetica, sans-serif" font-size="15" font-weight="600" fill="#eafff1">TypeScript</text>
-      <text x="177.14285714285714" y="0" text-anchor="end" font-family="'JetBrains Mono', 'Cascadia Code', 'SF Mono', Consolas, 'Liberation Mono', Menlo, monospace" font-size="13" fill="#5f9c78">14.6%</text></g><g transform="translate(731.4285714285714 826)">
-      <rect y="-11" width="12" height="12" rx="3" fill="#16a34a"/>
-      <text x="20" y="0" font-family="'Segoe UI', Inter, Arial, Helvetica, sans-serif" font-size="15" font-weight="600" fill="#eafff1">CSS</text>
-      <text x="177.14285714285714" y="0" text-anchor="end" font-family="'JetBrains Mono', 'Cascadia Code', 'SF Mono', Consolas, 'Liberation Mono', Menlo, monospace" font-size="13" fill="#5f9c78">2.7%</text></g><g transform="translate(932.5714285714286 826)">
-      <rect y="-11" width="12" height="12" rx="3" fill="#15803d"/>
-      <text x="20" y="0" font-family="'Segoe UI', Inter, Arial, Helvetica, sans-serif" font-size="15" font-weight="600" fill="#eafff1">PLpgSQL</text>
-      <text x="177.14285714285714" y="0" text-anchor="end" font-family="'JetBrains Mono', 'Cascadia Code', 'SF Mono', Consolas, 'Liberation Mono', Menlo, monospace" font-size="13" fill="#5f9c78">0.3%</text></g><g transform="translate(1133.7142857142858 826)">
-      <rect y="-11" width="12" height="12" rx="3" fill="#166534"/>
-      <text x="20" y="0" font-family="'Segoe UI', Inter, Arial, Helvetica, sans-serif" font-size="15" font-weight="600" fill="#eafff1">HTML</text>
-      <text x="177.14285714285714" y="0" text-anchor="end" font-family="'JetBrains Mono', 'Cascadia Code', 'SF Mono', Consolas, 'Liberation Mono', Menlo, monospace" font-size="13" fill="#5f9c78">0.1%</text></g><g transform="translate(1334.857142857143 826)">
-      <rect y="-11" width="12" height="12" rx="3" fill="#14532d"/>
-      <text x="20" y="0" font-family="'Segoe UI', Inter, Arial, Helvetica, sans-serif" font-size="15" font-weight="600" fill="#eafff1">PowerShell</text>
-      <text x="177.14285714285714" y="0" text-anchor="end" font-family="'JetBrains Mono', 'Cascadia Code', 'SF Mono', Consolas, 'Liberation Mono', Menlo, monospace" font-size="13" fill="#5f9c78">0.0%</text></g>
+      <rect y="-11" width="12" height="12" rx="3" fill="#22d3ee"/>
+      <text x="20" y="0" font-family="'Segoe UI', Inter, 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="600" fill="#f5f3ff">JavaScript</text>
+      <text x="177.14285714285714" y="0" text-anchor="end" font-family="'JetBrains Mono', 'Cascadia Code', 'SF Mono', Consolas, 'Liberation Mono', Menlo, monospace" font-size="13" fill="#6f6a93">56.6%</text></g><g transform="translate(329.1428571428571 826)">
+      <rect y="-11" width="12" height="12" rx="3" fill="#a78bfa"/>
+      <text x="20" y="0" font-family="'Segoe UI', Inter, 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="600" fill="#f5f3ff">Python</text>
+      <text x="177.14285714285714" y="0" text-anchor="end" font-family="'JetBrains Mono', 'Cascadia Code', 'SF Mono', Consolas, 'Liberation Mono', Menlo, monospace" font-size="13" fill="#6f6a93">25.5%</text></g><g transform="translate(530.2857142857142 826)">
+      <rect y="-11" width="12" height="12" rx="3" fill="#f472b6"/>
+      <text x="20" y="0" font-family="'Segoe UI', Inter, 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="600" fill="#f5f3ff">TypeScript</text>
+      <text x="177.14285714285714" y="0" text-anchor="end" font-family="'JetBrains Mono', 'Cascadia Code', 'SF Mono', Consolas, 'Liberation Mono', Menlo, monospace" font-size="13" fill="#6f6a93">14.6%</text></g><g transform="translate(731.4285714285714 826)">
+      <rect y="-11" width="12" height="12" rx="3" fill="#fbbf24"/>
+      <text x="20" y="0" font-family="'Segoe UI', Inter, 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="600" fill="#f5f3ff">CSS</text>
+      <text x="177.14285714285714" y="0" text-anchor="end" font-family="'JetBrains Mono', 'Cascadia Code', 'SF Mono', Consolas, 'Liberation Mono', Menlo, monospace" font-size="13" fill="#6f6a93">2.7%</text></g><g transform="translate(932.5714285714286 826)">
+      <rect y="-11" width="12" height="12" rx="3" fill="#a3e635"/>
+      <text x="20" y="0" font-family="'Segoe UI', Inter, 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="600" fill="#f5f3ff">PLpgSQL</text>
+      <text x="177.14285714285714" y="0" text-anchor="end" font-family="'JetBrains Mono', 'Cascadia Code', 'SF Mono', Consolas, 'Liberation Mono', Menlo, monospace" font-size="13" fill="#6f6a93">0.3%</text></g><g transform="translate(1133.7142857142858 826)">
+      <rect y="-11" width="12" height="12" rx="3" fill="#818cf8"/>
+      <text x="20" y="0" font-family="'Segoe UI', Inter, 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="600" fill="#f5f3ff">HTML</text>
+      <text x="177.14285714285714" y="0" text-anchor="end" font-family="'JetBrains Mono', 'Cascadia Code', 'SF Mono', Consolas, 'Liberation Mono', Menlo, monospace" font-size="13" fill="#6f6a93">0.1%</text></g><g transform="translate(1334.857142857143 826)">
+      <rect y="-11" width="12" height="12" rx="3" fill="#c084fc"/>
+      <text x="20" y="0" font-family="'Segoe UI', Inter, 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="600" fill="#f5f3ff">PowerShell</text>
+      <text x="177.14285714285714" y="0" text-anchor="end" font-family="'JetBrains Mono', 'Cascadia Code', 'SF Mono', Consolas, 'Liberation Mono', Menlo, monospace" font-size="13" fill="#6f6a93">0.0%</text></g>
     </g>
   
-  <text x="92" y="902" font-family="'JetBrains Mono', 'Cascadia Code', 'SF Mono', Consolas, 'Liberation Mono', Menlo, monospace" font-size="10.5" letter-spacing="1" fill="#5f9c78">SHIP // ITERATE // SCALE</text>
-  <text x="1572" y="902" text-anchor="end" font-family="'JetBrains Mono', 'Cascadia Code', 'SF Mono', Consolas, 'Liberation Mono', Menlo, monospace" font-size="10.5" letter-spacing="1" fill="#5f9c78">@SHINING-CROW<tspan fill="#3dff86" class="blink"> ●</tspan></text>
-  <rect class="scan" y="0" width="1664" height="60" fill="url(#scanG)"/>
+  <text x="56" y="896" font-family="'JetBrains Mono', 'Cascadia Code', 'SF Mono', Consolas, 'Liberation Mono', Menlo, monospace" font-size="11" letter-spacing="1.5" fill="#6f6a93">SHIP // ITERATE // SCALE</text>
+  <text x="1608" y="896" text-anchor="end" font-family="'JetBrains Mono', 'Cascadia Code', 'SF Mono', Consolas, 'Liberation Mono', Menlo, monospace" font-size="11" letter-spacing="1.5" fill="#6f6a93">@SHINING-CROW<tspan fill="#a3e635" class="blink"> ●</tspan></text>
   <rect width="1664" height="936" fill="url(#vignette)"/>
   </g>
+  <rect x="1" y="1" width="1662" height="934" rx="28" fill="none" stroke="url(#iri)" stroke-opacity=".35" stroke-width="2"/>
 </svg>
