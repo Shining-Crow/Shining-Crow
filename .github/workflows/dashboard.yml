@@ -1,0 +1,40 @@
+name: Refresh dashboard
+
+on:
+  schedule:
+    - cron: '17 */6 * * *' # every 6 hours
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths: ['profile.config.json', 'scripts/**']
+
+permissions:
+  contents: write
+
+concurrency:
+  group: dashboard
+  cancel-in-progress: true
+
+jobs:
+  slides:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      # The slide generators use only Node built-ins — no npm install needed.
+      - name: Rebuild slides + README with live GitHub data
+        run: node scripts/build.mjs
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Commit changes
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add README.md assets/slides data
+          git diff --staged --quiet || git commit -m "chore: refresh dashboard slides [skip ci]"
+          git push

@@ -1,0 +1,147 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="960" viewBox="0 0 960 960">
+  <title>Shining Crow — system core</title>
+  <style>
+  @keyframes tw{0%,100%{opacity:.15}50%{opacity:1}}
+  @keyframes rise{0%{transform:translateY(0);opacity:0}20%{opacity:.9}100%{transform:translateY(-160px);opacity:0}}
+  @keyframes pulse{0%,100%{opacity:.45}50%{opacity:1}}
+  @keyframes beat{0%,100%{transform:scale(1)}50%{transform:scale(1.35)}}
+  @keyframes blink{0%,49%{opacity:1}50%,100%{opacity:0}}
+  @keyframes spin{to{transform:rotate(360deg)}}
+  @keyframes spinr{to{transform:rotate(-360deg)}}
+  @keyframes float{0%,100%{transform:translateY(-5px)}50%{transform:translateY(5px)}}
+  @keyframes grow{from{transform:scaleX(0)}to{transform:scaleX(1)}}
+  @keyframes dash{to{stroke-dashoffset:-1000}}
+  @keyframes sweepX{0%{transform:translateX(-400px)}100%{transform:translateX(2064px)}}
+  @keyframes scanY{0%{transform:translateY(-60px)}100%{transform:translateY(996px)}}
+  @keyframes fadeUp{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+  @keyframes wave{0%{transform:scale(.3);opacity:.8}100%{transform:scale(1);opacity:0}}
+  .tw{animation:tw 3s ease-in-out infinite}
+  .pulse{animation:pulse 2.4s ease-in-out infinite}
+  .beat{animation:beat 2s ease-in-out infinite;transform-box:fill-box;transform-origin:center}
+  .blink{animation:blink 1.1s steps(1) infinite}
+  .spin{animation:spin 30s linear infinite}
+  .spinr{animation:spinr 20s linear infinite}
+  .float{animation:float 6s ease-in-out infinite}
+  .grow{animation:grow 1.6s cubic-bezier(.2,.8,.2,1) both;transform-box:fill-box;transform-origin:left center}
+  .dash{animation:dash 14s linear infinite}
+  .sweep{animation:sweepX 7s linear infinite}
+  .scan{animation:scanY 9s linear infinite}
+  .in{animation:fadeUp .9s ease-out both}
+</style>
+  <defs>
+  <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#020a06"/><stop offset=".48" stop-color="#071b10"/><stop offset="1" stop-color="#020d08"/></linearGradient>
+  <radialGradient id="topGlow" cx=".5" cy=".1" r=".6"><stop offset="0" stop-color="#3dff86" stop-opacity=".16"/><stop offset="1" stop-color="#3dff86" stop-opacity="0"/></radialGradient>
+  <radialGradient id="midGlow" cx=".5" cy=".5" r=".5"><stop offset="0" stop-color="#3dff86" stop-opacity=".12"/><stop offset="1" stop-color="#3dff86" stop-opacity="0"/></radialGradient>
+  <radialGradient id="vignette" cx=".5" cy=".5" r=".75"><stop offset=".6" stop-color="#000" stop-opacity="0"/><stop offset="1" stop-color="#000" stop-opacity=".55"/></radialGradient>
+  <linearGradient id="panel" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#0f2a1b" stop-opacity=".92"/><stop offset="1" stop-color="#06150d" stop-opacity=".92"/></linearGradient>
+  <linearGradient id="glass" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0c2418" stop-opacity=".9"/><stop offset="1" stop-color="#030d08" stop-opacity=".88"/></linearGradient>
+  <linearGradient id="title" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#3dff86"/><stop offset=".5" stop-color="#d5ffe2"/><stop offset="1" stop-color="#3dff86"/></linearGradient>
+  <linearGradient id="shine" gradientUnits="userSpaceOnUse" x1="-300" y1="0" x2="0" y2="0">
+    <stop offset="0" stop-color="#fff" stop-opacity="0"/><stop offset=".5" stop-color="#fff" stop-opacity=".85"/><stop offset="1" stop-color="#fff" stop-opacity="0"/>
+    <animateTransform attributeName="gradientTransform" type="translate" values="0 0;1964 0;1964 0" keyTimes="0;.5;1" dur="7s" repeatCount="indefinite"/>
+  </linearGradient>
+  <linearGradient id="bar" x1="0" x2="1"><stop offset="0" stop-color="#22c55e"/><stop offset="1" stop-color="#7dffae"/></linearGradient>
+  <linearGradient id="hline" x1="0" x2="1"><stop offset="0" stop-color="#3dff86" stop-opacity="0"/><stop offset=".5" stop-color="#3dff86" stop-opacity=".9"/><stop offset="1" stop-color="#3dff86" stop-opacity="0"/></linearGradient>
+  <linearGradient id="sweepG" x1="0" x2="1"><stop offset="0" stop-color="#3dff86" stop-opacity="0"/><stop offset=".5" stop-color="#3dff86" stop-opacity=".07"/><stop offset="1" stop-color="#3dff86" stop-opacity="0"/></linearGradient>
+  <linearGradient id="scanG" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#3dff86" stop-opacity="0"/><stop offset=".5" stop-color="#3dff86" stop-opacity=".06"/><stop offset="1" stop-color="#3dff86" stop-opacity="0"/></linearGradient>
+  <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse"><path d="M32 0H0V32" fill="none" stroke="#3dff86" stroke-opacity=".05"/></pattern>
+  <filter id="glow" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="4" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  <filter id="softGlow" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="10"/></filter>
+  <filter id="blur2"><feGaussianBlur stdDeviation="2"/></filter>
+
+    <radialGradient id="core" cx=".5" cy=".5" r=".5"><stop offset="0" stop-color="#3dff86" stop-opacity=".35"/><stop offset=".4" stop-color="#3dff86" stop-opacity=".1"/><stop offset="1" stop-color="#3dff86" stop-opacity="0"/></radialGradient>
+    <clipPath id="sq"><rect width="960" height="960" rx="36"/></clipPath>
+  </defs>
+  <g clip-path="url(#sq)">
+    <rect width="960" height="960" fill="url(#bg)"/>
+    <rect width="960" height="960" fill="url(#grid)"/>
+    <circle cx="480" cy="480" r="460" fill="url(#midGlow)"/>
+    <g><circle cx="244.7" cy="188.7" r="0.96" fill="#d5ffe2" style="animation:tw 3s ease-in-out -1.34s infinite"/><circle cx="369.5" cy="317.8" r="1.31" fill="#3dff86" style="animation:tw 4s ease-in-out -3.52s infinite"/><circle cx="195.5" cy="745.2" r="1.18" fill="#3dff86" style="animation:tw 6s ease-in-out -0.71s infinite"/><circle cx="137.7" cy="823.4" r="2.04" fill="#3dff86" style="animation:tw 3s ease-in-out -0.91s infinite"/><circle cx="870.1" cy="600.4" r="1.78" fill="#d5ffe2" style="animation:tw 4s ease-in-out -1.07s infinite"/><circle cx="54.7" cy="352.2" r="1.46" fill="#3dff86" style="animation:tw 6s ease-in-out -4.52s infinite"/><circle cx="459.5" cy="520.0" r="1.62" fill="#3dff86" style="animation:tw 3s ease-in-out -2.16s infinite"/><circle cx="443.2" cy="109.4" r="1.83" fill="#3dff86" style="animation:tw 4s ease-in-out -1.12s infinite"/><circle cx="572.4" cy="122.2" r="1.20" fill="#d5ffe2" style="animation:tw 6s ease-in-out -0.02s infinite"/><circle cx="569.8" cy="419.6" r="2.12" fill="#3dff86" style="animation:tw 3s ease-in-out -1.93s infinite"/><circle cx="579.1" cy="726.2" r="1.22" fill="#3dff86" style="animation:tw 4s ease-in-out -2.01s infinite"/><circle cx="723.6" cy="154.1" r="1.38" fill="#3dff86" style="animation:tw 6s ease-in-out -0.08s infinite"/><circle cx="525.5" cy="897.3" r="0.92" fill="#d5ffe2" style="animation:tw 3s ease-in-out -0.65s infinite"/><circle cx="903.1" cy="814.5" r="1.84" fill="#3dff86" style="animation:tw 4s ease-in-out -1.00s infinite"/><circle cx="652.3" cy="330.5" r="1.42" fill="#3dff86" style="animation:tw 6s ease-in-out -0.20s infinite"/><circle cx="709.7" cy="555.2" r="0.85" fill="#3dff86" style="animation:tw 3s ease-in-out -2.15s infinite"/><circle cx="283.4" cy="110.4" r="1.58" fill="#d5ffe2" style="animation:tw 4s ease-in-out -2.47s infinite"/><circle cx="449.7" cy="222.2" r="2.31" fill="#3dff86" style="animation:tw 6s ease-in-out -4.16s infinite"/><circle cx="680.9" cy="270.0" r="0.67" fill="#3dff86" style="animation:tw 3s ease-in-out -2.43s infinite"/><circle cx="682.9" cy="250.2" r="0.71" fill="#3dff86" style="animation:tw 4s ease-in-out -1.23s infinite"/><circle cx="827.8" cy="165.4" r="0.70" fill="#d5ffe2" style="animation:tw 6s ease-in-out -3.79s infinite"/><circle cx="219.3" cy="376.6" r="0.88" fill="#3dff86" style="animation:tw 3s ease-in-out -0.21s infinite"/><circle cx="858.2" cy="749.6" r="1.29" fill="#3dff86" style="animation:tw 4s ease-in-out -3.29s infinite"/><circle cx="843.0" cy="333.6" r="1.39" fill="#3dff86" style="animation:tw 6s ease-in-out -5.70s infinite"/><circle cx="255.3" cy="462.6" r="1.29" fill="#d5ffe2" style="animation:tw 3s ease-in-out -2.87s infinite"/><circle cx="363.7" cy="597.3" r="0.99" fill="#3dff86" style="animation:tw 4s ease-in-out -0.06s infinite"/><circle cx="936.2" cy="379.4" r="1.95" fill="#3dff86" style="animation:tw 6s ease-in-out -0.70s infinite"/><circle cx="675.5" cy="434.6" r="1.15" fill="#3dff86" style="animation:tw 3s ease-in-out -1.92s infinite"/><circle cx="505.2" cy="216.2" r="0.73" fill="#d5ffe2" style="animation:tw 4s ease-in-out -0.51s infinite"/><circle cx="463.9" cy="607.4" r="1.03" fill="#3dff86" style="animation:tw 6s ease-in-out -1.62s infinite"/><circle cx="513.5" cy="832.4" r="0.93" fill="#3dff86" style="animation:tw 3s ease-in-out -1.08s infinite"/><circle cx="159.2" cy="614.5" r="1.14" fill="#3dff86" style="animation:tw 4s ease-in-out -3.01s infinite"/><circle cx="287.2" cy="352.1" r="1.24" fill="#d5ffe2" style="animation:tw 6s ease-in-out -0.49s infinite"/><circle cx="738.2" cy="590.8" r="1.23" fill="#3dff86" style="animation:tw 3s ease-in-out -0.71s infinite"/><circle cx="242.4" cy="461.6" r="1.14" fill="#3dff86" style="animation:tw 4s ease-in-out -1.58s infinite"/><circle cx="53.4" cy="504.3" r="1.47" fill="#3dff86" style="animation:tw 6s ease-in-out -3.66s infinite"/><circle cx="888.2" cy="805.2" r="2.33" fill="#d5ffe2" style="animation:tw 3s ease-in-out -2.14s infinite"/><circle cx="489.2" cy="330.0" r="1.49" fill="#3dff86" style="animation:tw 4s ease-in-out -2.17s infinite"/><circle cx="276.6" cy="798.1" r="0.85" fill="#3dff86" style="animation:tw 6s ease-in-out -4.86s infinite"/><circle cx="346.0" cy="282.1" r="0.86" fill="#3dff86" style="animation:tw 3s ease-in-out -0.13s infinite"/></g>
+    <circle r="420" fill="none" stroke="#3dff86" stroke-width="2" style="animation:wave 4.5s ease-out 0s infinite;transform-box:view-box;transform-origin:480px 480px" cx="480" cy="480"/><circle r="420" fill="none" stroke="#3dff86" stroke-width="2" style="animation:wave 4.5s ease-out -1.5s infinite;transform-box:view-box;transform-origin:480px 480px" cx="480" cy="480"/><circle r="420" fill="none" stroke="#3dff86" stroke-width="2" style="animation:wave 4.5s ease-out -3s infinite;transform-box:view-box;transform-origin:480px 480px" cx="480" cy="480"/>
+    <g transform="translate(480 480)">
+      <circle r="372" fill="none" stroke="#3dff86" stroke-opacity=".14"/>
+      <g style="animation:spinr 70s linear infinite">
+        <circle r="372" fill="none" stroke="#3dff86" stroke-opacity=".5" stroke-width="2" stroke-dasharray="2 14"/>
+        <g transform="translate(372.0 0.0)"><g style="animation:spinr 70s linear infinite reverse">
+      <rect x="-26" y="-15" width="52" height="30" rx="9" fill="#04110a" stroke="#3dff86" stroke-opacity=".45"/>
+      <text y="5" text-anchor="middle" font-family="'Segoe UI', Inter, Arial, Helvetica, sans-serif" font-size="12.5" font-weight="800" fill="#7dffae">PY</text></g></g><g transform="translate(301.0 218.7)"><g style="animation:spinr 70s linear infinite reverse">
+      <rect x="-26" y="-15" width="52" height="30" rx="9" fill="#04110a" stroke="#3dff86" stroke-opacity=".45"/>
+      <text y="5" text-anchor="middle" font-family="'Segoe UI', Inter, Arial, Helvetica, sans-serif" font-size="12.5" font-weight="800" fill="#7dffae">TS</text></g></g><g transform="translate(115.0 353.8)"><g style="animation:spinr 70s linear infinite reverse">
+      <rect x="-26" y="-15" width="52" height="30" rx="9" fill="#04110a" stroke="#3dff86" stroke-opacity=".45"/>
+      <text y="5" text-anchor="middle" font-family="'Segoe UI', Inter, Arial, Helvetica, sans-serif" font-size="12.5" font-weight="800" fill="#7dffae">RN</text></g></g><g transform="translate(-115.0 353.8)"><g style="animation:spinr 70s linear infinite reverse">
+      <rect x="-26" y="-15" width="52" height="30" rx="9" fill="#04110a" stroke="#3dff86" stroke-opacity=".45"/>
+      <text y="5" text-anchor="middle" font-family="'Segoe UI', Inter, Arial, Helvetica, sans-serif" font-size="12.5" font-weight="800" fill="#7dffae">C#</text></g></g><g transform="translate(-301.0 218.7)"><g style="animation:spinr 70s linear infinite reverse">
+      <rect x="-26" y="-15" width="52" height="30" rx="9" fill="#04110a" stroke="#3dff86" stroke-opacity=".45"/>
+      <text y="5" text-anchor="middle" font-family="'Segoe UI', Inter, Arial, Helvetica, sans-serif" font-size="12.5" font-weight="800" fill="#7dffae">C++</text></g></g><g transform="translate(-372.0 0.0)"><g style="animation:spinr 70s linear infinite reverse">
+      <rect x="-26" y="-15" width="52" height="30" rx="9" fill="#04110a" stroke="#3dff86" stroke-opacity=".45"/>
+      <text y="5" text-anchor="middle" font-family="'Segoe UI', Inter, Arial, Helvetica, sans-serif" font-size="12.5" font-weight="800" fill="#7dffae">GO</text></g></g><g transform="translate(-301.0 -218.7)"><g style="animation:spinr 70s linear infinite reverse">
+      <rect x="-26" y="-15" width="52" height="30" rx="9" fill="#04110a" stroke="#3dff86" stroke-opacity=".45"/>
+      <text y="5" text-anchor="middle" font-family="'Segoe UI', Inter, Arial, Helvetica, sans-serif" font-size="12.5" font-weight="800" fill="#7dffae">SQL</text></g></g><g transform="translate(-115.0 -353.8)"><g style="animation:spinr 70s linear infinite reverse">
+      <rect x="-26" y="-15" width="52" height="30" rx="9" fill="#04110a" stroke="#3dff86" stroke-opacity=".45"/>
+      <text y="5" text-anchor="middle" font-family="'Segoe UI', Inter, Arial, Helvetica, sans-serif" font-size="12.5" font-weight="800" fill="#7dffae">GL</text></g></g><g transform="translate(115.0 -353.8)"><g style="animation:spinr 70s linear infinite reverse">
+      <rect x="-26" y="-15" width="52" height="30" rx="9" fill="#04110a" stroke="#3dff86" stroke-opacity=".45"/>
+      <text y="5" text-anchor="middle" font-family="'Segoe UI', Inter, Arial, Helvetica, sans-serif" font-size="12.5" font-weight="800" fill="#7dffae">LLM</text></g></g><g transform="translate(301.0 -218.7)"><g style="animation:spinr 70s linear infinite reverse">
+      <rect x="-26" y="-15" width="52" height="30" rx="9" fill="#04110a" stroke="#3dff86" stroke-opacity=".45"/>
+      <text y="5" text-anchor="middle" font-family="'Segoe UI', Inter, Arial, Helvetica, sans-serif" font-size="12.5" font-weight="800" fill="#7dffae">K8S</text></g></g>
+      </g>
+      <g style="animation:spin 40s linear infinite">
+        <circle r="238" fill="none" stroke="#3dff86" stroke-opacity=".35" stroke-width="1.5"/>
+        <circle r="238" fill="none" stroke="#7dffae" stroke-width="3" stroke-dasharray="120 1375" filter="url(#glow)"/>
+        <line x1="0" y1="0" x2="0.0" y2="-238.0" stroke="#3dff86" stroke-opacity=".18" stroke-dasharray="3 6"/>
+      <circle r="4" fill="#d5ffe2" filter="url(#glow)"><animateMotion dur="2.4s" repeatCount="indefinite" path="M0,0 L0.0,-238.0"/></circle>
+      <g transform="translate(0.0 -238.0)"><g style="animation:spin 40s linear infinite reverse">
+        <circle r="56" fill="#04110a" stroke="#3dff86" stroke-opacity=".55" stroke-width="2"/>
+        <circle r="56" fill="none" stroke="#7dffae" stroke-width="2.5" stroke-dasharray="40 312" class="dash" style="animation-duration:4s"/>
+        <g transform="translate(0 -10) scale(0.42)" fill="none" stroke="#3dff86" stroke-width="4.5"><g stroke-width="2"><circle r="38" stroke-dasharray="4 6" class="spin"/>
+    <path d="M-22 -14L0 -26L22 -14M-22 -14L-26 10L0 24L26 10L22 -14M-22 -14L0 0L22 -14M-26 10L0 0L26 10M0 0L0 24M0 -26L0 0"/>
+    <circle cx="-22" cy="-14" r="4" fill="#3dff86" style="animation:pulse 1.8s ease-in-out 0s infinite"/><circle cx="0" cy="-26" r="4" fill="#3dff86" style="animation:pulse 1.8s ease-in-out -0.3s infinite"/><circle cx="22" cy="-14" r="4" fill="#3dff86" style="animation:pulse 1.8s ease-in-out -0.6s infinite"/><circle cx="-26" cy="10" r="4" fill="#3dff86" style="animation:pulse 1.8s ease-in-out -0.8999999999999999s infinite"/><circle cx="0" cy="24" r="4" fill="#3dff86" style="animation:pulse 1.8s ease-in-out -1.2s infinite"/><circle cx="26" cy="10" r="4" fill="#3dff86" style="animation:pulse 1.8s ease-in-out -1.5s infinite"/>
+    <circle r="9" fill="#04110a"/><text y="4" text-anchor="middle" font-family="'JetBrains Mono', 'Cascadia Code', 'SF Mono', Consolas, 'Liberation Mono', Menlo, monospace" font-size="10" font-weight="700" fill="#d5ffe2" stroke="none">AI</text></g></g>
+        <text y="34" text-anchor="middle" font-family="'JetBrains Mono', 'Cascadia Code', 'SF Mono', Consolas, 'Liberation Mono', Menlo, monospace" font-size="13" font-weight="700" letter-spacing="2" fill="#d5ffe2">AI</text>
+      </g></g><line x1="0" y1="0" x2="238.0" y2="0.0" stroke="#3dff86" stroke-opacity=".18" stroke-dasharray="3 6"/>
+      <circle r="4" fill="#d5ffe2" filter="url(#glow)"><animateMotion dur="2.6999999999999997s" repeatCount="indefinite" path="M0,0 L238.0,0.0"/></circle>
+      <g transform="translate(238.0 0.0)"><g style="animation:spin 40s linear infinite reverse">
+        <circle r="56" fill="#04110a" stroke="#3dff86" stroke-opacity=".55" stroke-width="2"/>
+        <circle r="56" fill="none" stroke="#7dffae" stroke-width="2.5" stroke-dasharray="40 312" class="dash" style="animation-duration:4s"/>
+        <g transform="translate(0 -10) scale(0.42)" fill="none" stroke="#3dff86" stroke-width="4.5"><g stroke-width="2.2"><rect x="-40" y="-30" width="80" height="60" rx="8"/><path d="M-40 -16H40"/>
+    <circle cx="-31" cy="-23" r="2.2" fill="#3dff86"/><circle cx="-24" cy="-23" r="2.2" fill="#3dff86"/>
+    <path d="M-26 -4H18M-26 6H8M-26 16H22" stroke-width="3.5" stroke-linecap="round" opacity=".8"/></g></g>
+        <text y="34" text-anchor="middle" font-family="'JetBrains Mono', 'Cascadia Code', 'SF Mono', Consolas, 'Liberation Mono', Menlo, monospace" font-size="13" font-weight="700" letter-spacing="2" fill="#d5ffe2">WEB</text>
+      </g></g><line x1="0" y1="0" x2="0.0" y2="238.0" stroke="#3dff86" stroke-opacity=".18" stroke-dasharray="3 6"/>
+      <circle r="4" fill="#d5ffe2" filter="url(#glow)"><animateMotion dur="3s" repeatCount="indefinite" path="M0,0 L0.0,238.0"/></circle>
+      <g transform="translate(0.0 238.0)"><g style="animation:spin 40s linear infinite reverse">
+        <circle r="56" fill="#04110a" stroke="#3dff86" stroke-opacity=".55" stroke-width="2"/>
+        <circle r="56" fill="none" stroke="#7dffae" stroke-width="2.5" stroke-dasharray="40 312" class="dash" style="animation-duration:4s"/>
+        <g transform="translate(0 -10) scale(0.42)" fill="none" stroke="#3dff86" stroke-width="4.5"><g stroke-width="2.2"><rect x="-22" y="-38" width="44" height="76" rx="9"/><path d="M-6 -31H6" stroke-linecap="round"/>
+    <circle cy="30" r="3"/><rect x="-14" y="-22" width="28" height="42" rx="3" opacity=".5"/>
+    <path d="M-8 -6L0 -14L8 -6M0 -14V10" stroke-linecap="round" stroke-linejoin="round"/></g></g>
+        <text y="34" text-anchor="middle" font-family="'JetBrains Mono', 'Cascadia Code', 'SF Mono', Consolas, 'Liberation Mono', Menlo, monospace" font-size="13" font-weight="700" letter-spacing="2" fill="#d5ffe2">MOBILE</text>
+      </g></g><line x1="0" y1="0" x2="-238.0" y2="0.0" stroke="#3dff86" stroke-opacity=".18" stroke-dasharray="3 6"/>
+      <circle r="4" fill="#d5ffe2" filter="url(#glow)"><animateMotion dur="3.3s" repeatCount="indefinite" path="M0,0 L-238.0,0.0"/></circle>
+      <g transform="translate(-238.0 0.0)"><g style="animation:spin 40s linear infinite reverse">
+        <circle r="56" fill="#04110a" stroke="#3dff86" stroke-opacity=".55" stroke-width="2"/>
+        <circle r="56" fill="none" stroke="#7dffae" stroke-width="2.5" stroke-dasharray="40 312" class="dash" style="animation-duration:4s"/>
+        <g transform="translate(0 -10) scale(0.42)" fill="none" stroke="#3dff86" stroke-width="4.5"><g stroke-width="2.2"><path d="M-36 -8Q-36 -22 -22 -22H22Q36 -22 36 -8L42 14Q44 28 31 28Q23 28 18 16H-18Q-23 28 -31 28Q-44 28 -42 14Z" stroke-linejoin="round"/>
+    <path d="M-22 -6V10M-30 2H-14" stroke-width="3.5" stroke-linecap="round"/>
+    <circle cx="18" cy="-4" r="4" fill="#3dff86"/><circle cx="27" cy="5" r="4"/></g></g>
+        <text y="34" text-anchor="middle" font-family="'JetBrains Mono', 'Cascadia Code', 'SF Mono', Consolas, 'Liberation Mono', Menlo, monospace" font-size="13" font-weight="700" letter-spacing="2" fill="#d5ffe2">GAMES</text>
+      </g></g>
+      </g>
+      <circle r="160" fill="url(#core)"/>
+      <g class="spin" style="animation-duration:18s"><polygon points="0.0,-150.0 129.9,-75.0 129.9,75.0 0.0,150.0 -129.9,75.0 -129.9,-75.0" fill="none" stroke="#3dff86" stroke-width="2" stroke-opacity=".6" stroke-dasharray="20 8 4 8"/></g>
+      <g class="spinr" style="animation-duration:12s"><polygon points="0.0,-132.0 114.3,-66.0 114.3,66.0 0.0,132.0 -114.3,66.0 -114.3,-66.0" fill="#03100a" fill-opacity=".85" stroke="#3dff86" stroke-opacity=".4"/></g>
+      <g transform="translate(-18 -8)"><g class="float"><g transform="scale(1.05)">
+    <polyline points="-58,-18 -22,-62 26,-52 48,-24 116,-4 48,12 32,42 8,72" fill="none" stroke="#3dff86" stroke-width="4.76" opacity=".35" filter="url(#softGlow)"/>
+    <polygon points="-60,72 -58,-18 -12,-6" fill="#0b2416" stroke="#3dff86" stroke-opacity=".55" stroke-width="0.95" stroke-linejoin="round"/><polygon points="-58,-18 -22,-62 -12,-6" fill="#12301f" stroke="#3dff86" stroke-opacity=".55" stroke-width="0.95" stroke-linejoin="round"/><polygon points="-22,-62 20,-16 -12,-6" fill="#1a4029" stroke="#3dff86" stroke-opacity=".55" stroke-width="0.95" stroke-linejoin="round"/><polygon points="-22,-62 26,-52 20,-16" fill="#215034" stroke="#3dff86" stroke-opacity=".55" stroke-width="0.95" stroke-linejoin="round"/><polygon points="26,-52 48,-24 20,-16" fill="#2a5f3e" stroke="#3dff86" stroke-opacity=".55" stroke-width="0.95" stroke-linejoin="round"/><polygon points="48,-24 48,12 20,-16" fill="#1a4229" stroke="#3dff86" stroke-opacity=".55" stroke-width="0.95" stroke-linejoin="round"/><polygon points="-12,-6 20,-16 32,42" fill="#14361f" stroke="#3dff86" stroke-opacity=".55" stroke-width="0.95" stroke-linejoin="round"/><polygon points="20,-16 48,12 32,42" fill="#183b25" stroke="#3dff86" stroke-opacity=".55" stroke-width="0.95" stroke-linejoin="round"/><polygon points="-12,-6 32,42 8,72" fill="#0e2818" stroke="#3dff86" stroke-opacity=".55" stroke-width="0.95" stroke-linejoin="round"/><polygon points="-12,-6 8,72 -60,72" fill="#051009" stroke="#3dff86" stroke-opacity=".55" stroke-width="0.95" stroke-linejoin="round"/><polygon points="-60,72 -84,104 -40,84" fill="#06140c" stroke="#3dff86" stroke-opacity=".55" stroke-width="0.95" stroke-linejoin="round"/><polygon points="-40,84 -44,118 -10,86" fill="#081a10" stroke="#3dff86" stroke-opacity=".55" stroke-width="0.95" stroke-linejoin="round"/><polygon points="-10,86 -6,112 8,72" fill="#06140c" stroke="#3dff86" stroke-opacity=".55" stroke-width="0.95" stroke-linejoin="round"/><polygon points="-60,72 -40,84 8,72" fill="#05100a" stroke="#3dff86" stroke-opacity=".55" stroke-width="0.95" stroke-linejoin="round"/><polygon points="-40,84 -10,86 8,72" fill="#071810" stroke="#3dff86" stroke-opacity=".55" stroke-width="0.95" stroke-linejoin="round"/>
+    <polygon points="48,-24 116,-4 48,12" fill="#0b1f14" stroke="#7dffae" stroke-width="1.33"/>
+    <polyline points="-58,-18 -22,-62 26,-52 48,-24 116,-4 48,12 32,42 8,72" fill="none" stroke="#7dffae" stroke-width="1.71" stroke-dasharray="60 500" class="dash" style="animation-duration:6s" id="core-rim"/>
+    <circle cx="14" cy="-27" r="9" fill="#3dff86" opacity=".5" filter="url(#softGlow)" class="pulse"/>
+    <circle cx="14" cy="-27" r="6" fill="#3dff86"/><circle cx="15.5" cy="-28.5" r="2.4" fill="#fff"/>
+  </g></g></g>
+    </g>
+    <text x="480" y="62" text-anchor="middle" font-family="'JetBrains Mono', 'Cascadia Code', 'SF Mono', Consolas, 'Liberation Mono', Menlo, monospace" font-size="15" font-weight="700" letter-spacing="7" fill="#3dff86">SYSTEM CORE <tspan fill="#5f9c78">·</tspan> ONLINE<tspan class="blink"> ●</tspan></text>
+    <text x="480" y="914" text-anchor="middle" font-family="'JetBrains Mono', 'Cascadia Code', 'SF Mono', Consolas, 'Liberation Mono', Menlo, monospace" font-size="13" letter-spacing="5" fill="#5f9c78">SHINING CROW // AI · WEB · MOBILE · GAMES</text>
+    <rect class="scan" width="960" height="60" fill="url(#scanG)"/>
+    <rect width="960" height="960" fill="url(#vignette)"/>
+  </g>
+  <rect x="1" y="1" width="958" height="958" rx="36" fill="none" stroke="#3dff86" stroke-opacity=".3" stroke-width="2"/>
+</svg>

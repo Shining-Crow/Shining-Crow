@@ -1,0 +1,19 @@
+{
+  "name": "shining-crow-profile",
+  "private": true,
+  "type": "module",
+  "description": "Self-updating, animated GitHub profile dashboard for Shining-Crow",
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "build:offline": "node scripts/build.mjs --offline",
+    "video": "node scripts/render-video.mjs",
+    "preview": "node scripts/render-video.mjs --preview"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "devDependencies": {
+    "ffmpeg-static": "^5.2.0",
+    "puppeteer-core": "^23.11.1"
+  }
+}

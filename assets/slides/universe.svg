@@ -1,0 +1,274 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1664" height="936" viewBox="0 0 1664 936">
+  <style>
+  @keyframes tw{0%,100%{opacity:.15}50%{opacity:1}}
+  @keyframes rise{0%{transform:translateY(0);opacity:0}20%{opacity:.9}100%{transform:translateY(-160px);opacity:0}}
+  @keyframes pulse{0%,100%{opacity:.45}50%{opacity:1}}
+  @keyframes beat{0%,100%{transform:scale(1)}50%{transform:scale(1.35)}}
+  @keyframes blink{0%,49%{opacity:1}50%,100%{opacity:0}}
+  @keyframes spin{to{transform:rotate(360deg)}}
+  @keyframes spinr{to{transform:rotate(-360deg)}}
+  @keyframes float{0%,100%{transform:translateY(-5px)}50%{transform:translateY(5px)}}
+  @keyframes grow{from{transform:scaleX(0)}to{transform:scaleX(1)}}
+  @keyframes dash{to{stroke-dashoffset:-1000}}
+  @keyframes sweepX{0%{transform:translateX(-400px)}100%{transform:translateX(2064px)}}
+  @keyframes scanY{0%{transform:translateY(-60px)}100%{transform:translateY(996px)}}
+  @keyframes fadeUp{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+  @keyframes wave{0%{transform:scale(.3);opacity:.8}100%{transform:scale(1);opacity:0}}
+  .tw{animation:tw 3s ease-in-out infinite}
+  .pulse{animation:pulse 2.4s ease-in-out infinite}
+  .beat{animation:beat 2s ease-in-out infinite;transform-box:fill-box;transform-origin:center}
+  .blink{animation:blink 1.1s steps(1) infinite}
+  .spin{animation:spin 30s linear infinite}
+  .spinr{animation:spinr 20s linear infinite}
+  .float{animation:float 6s ease-in-out infinite}
+  .grow{animation:grow 1.6s cubic-bezier(.2,.8,.2,1) both;transform-box:fill-box;transform-origin:left center}
+  .dash{animation:dash 14s linear infinite}
+  .sweep{animation:sweepX 7s linear infinite}
+  .scan{animation:scanY 9s linear infinite}
+  .in{animation:fadeUp .9s ease-out both}
+</style>
+  <defs>
+  <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#020a06"/><stop offset=".48" stop-color="#071b10"/><stop offset="1" stop-color="#020d08"/></linearGradient>
+  <radialGradient id="topGlow" cx=".5" cy=".1" r=".6"><stop offset="0" stop-color="#3dff86" stop-opacity=".16"/><stop offset="1" stop-color="#3dff86" stop-opacity="0"/></radialGradient>
+  <radialGradient id="midGlow" cx=".5" cy=".5" r=".5"><stop offset="0" stop-color="#3dff86" stop-opacity=".12"/><stop offset="1" stop-color="#3dff86" stop-opacity="0"/></radialGradient>
+  <radialGradient id="vignette" cx=".5" cy=".5" r=".75"><stop offset=".6" stop-color="#000" stop-opacity="0"/><stop offset="1" stop-color="#000" stop-opacity=".55"/></radialGradient>
+  <linearGradient id="panel" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#0f2a1b" stop-opacity=".92"/><stop offset="1" stop-color="#06150d" stop-opacity=".92"/></linearGradient>
+  <linearGradient id="glass" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0c2418" stop-opacity=".9"/><stop offset="1" stop-color="#030d08" stop-opacity=".88"/></linearGradient>
+  <linearGradient id="title" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#3dff86"/><stop offset=".5" stop-color="#d5ffe2"/><stop offset="1" stop-color="#3dff86"/></linearGradient>
+  <linearGradient id="shine" gradientUnits="userSpaceOnUse" x1="-300" y1="0" x2="0" y2="0">
+    <stop offset="0" stop-color="#fff" stop-opacity="0"/><stop offset=".5" stop-color="#fff" stop-opacity=".85"/><stop offset="1" stop-color="#fff" stop-opacity="0"/>
+    <animateTransform attributeName="gradientTransform" type="translate" values="0 0;1964 0;1964 0" keyTimes="0;.5;1" dur="7s" repeatCount="indefinite"/>
+  </linearGradient>
+  <linearGradient id="bar" x1="0" x2="1"><stop offset="0" stop-color="#22c55e"/><stop offset="1" stop-color="#7dffae"/></linearGradient>
+  <linearGradient id="hline" x1="0" x2="1"><stop offset="0" stop-color="#3dff86" stop-opacity="0"/><stop offset=".5" stop-color="#3dff86" stop-opacity=".9"/><stop offset="1" stop-color="#3dff86" stop-opacity="0"/></linearGradient>
+  <linearGradient id="sweepG" x1="0" x2="1"><stop offset="0" stop-color="#3dff86" stop-opacity="0"/><stop offset=".5" stop-color="#3dff86" stop-opacity=".07"/><stop offset="1" stop-color="#3dff86" stop-opacity="0"/></linearGradient>
+  <linearGradient id="scanG" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#3dff86" stop-opacity="0"/><stop offset=".5" stop-color="#3dff86" stop-opacity=".06"/><stop offset="1" stop-color="#3dff86" stop-opacity="0"/></linearGradient>
+  <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse"><path d="M32 0H0V32" fill="none" stroke="#3dff86" stroke-opacity=".05"/></pattern>
+  <filter id="glow" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="4" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  <filter id="softGlow" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="10"/></filter>
+  <filter id="blur2"><feGaussianBlur stdDeviation="2"/></filter>
+<clipPath id="frameClip"><rect width="1664" height="936"/></clipPath></defs>
+  <g clip-path="url(#frameClip)">
+  <rect width="1664" height="936" fill="url(#bg)"/>
+  <rect width="1664" height="936" fill="url(#grid)"/>
+  <rect width="1664" height="936" fill="url(#topGlow)"/>
+  <g><circle cx="416.4" cy="589.0" r="1.61" fill="#d5ffe2" style="animation:tw 3s ease-in-out -2.45s infinite"/><circle cx="119.1" cy="564.4" r="0.72" fill="#3dff86" style="animation:tw 4s ease-in-out -1.22s infinite"/><circle cx="899.5" cy="734.7" r="1.70" fill="#3dff86" style="animation:tw 6s ease-in-out -2.86s infinite"/><circle cx="865.7" cy="632.7" r="2.26" fill="#3dff86" style="animation:tw 3s ease-in-out -1.14s infinite"/><circle cx="547.4" cy="358.8" r="1.64" fill="#d5ffe2" style="animation:tw 4s ease-in-out -0.77s infinite"/><circle cx="498.1" cy="718.8" r="0.75" fill="#3dff86" style="animation:tw 6s ease-in-out -3.20s infinite"/><circle cx="803.5" cy="68.0" r="1.29" fill="#3dff86" style="animation:tw 3s ease-in-out -2.04s infinite"/><circle cx="1136.9" cy="556.0" r="1.85" fill="#3dff86" style="animation:tw 4s ease-in-out -2.57s infinite"/><circle cx="395.0" cy="726.9" r="1.65" fill="#d5ffe2" style="animation:tw 6s ease-in-out -1.90s infinite"/><circle cx="96.8" cy="434.1" r="1.63" fill="#3dff86" style="animation:tw 3s ease-in-out -0.45s infinite"/><circle cx="285.9" cy="591.2" r="2.10" fill="#3dff86" style="animation:tw 4s ease-in-out -0.17s infinite"/><circle cx="828.8" cy="177.7" r="1.83" fill="#3dff86" style="animation:tw 6s ease-in-out -2.40s infinite"/><circle cx="809.4" cy="839.6" r="2.23" fill="#d5ffe2" style="animation:tw 3s ease-in-out -1.80s infinite"/><circle cx="202.2" cy="532.8" r="0.98" fill="#3dff86" style="animation:tw 4s ease-in-out -1.04s infinite"/><circle cx="482.5" cy="673.7" r="1.07" fill="#3dff86" style="animation:tw 6s ease-in-out -0.40s infinite"/><circle cx="1229.0" cy="111.9" r="0.86" fill="#3dff86" style="animation:tw 3s ease-in-out -0.23s infinite"/><circle cx="1256.6" cy="817.3" r="0.94" fill="#d5ffe2" style="animation:tw 4s ease-in-out -2.87s infinite"/><circle cx="543.6" cy="738.7" r="1.46" fill="#3dff86" style="animation:tw 6s ease-in-out -5.62s infinite"/><circle cx="1194.3" cy="862.8" r="1.55" fill="#3dff86" style="animation:tw 3s ease-in-out -0.56s infinite"/><circle cx="1325.2" cy="649.2" r="2.27" fill="#3dff86" style="animation:tw 4s ease-in-out -0.92s infinite"/><circle cx="1501.3" cy="737.8" r="2.25" fill="#d5ffe2" style="animation:tw 6s ease-in-out -5.63s infinite"/><circle cx="975.7" cy="371.3" r="1.01" fill="#3dff86" style="animation:tw 3s ease-in-out -1.64s infinite"/><circle cx="986.0" cy="298.5" r="1.74" fill="#3dff86" style="animation:tw 4s ease-in-out -0.29s infinite"/><circle cx="1071.9" cy="740.3" r="0.63" fill="#3dff86" style="animation:tw 6s ease-in-out -5.16s infinite"/><circle cx="121.4" cy="475.5" r="2.37" fill="#d5ffe2" style="animation:tw 3s ease-in-out -1.25s infinite"/><circle cx="1577.4" cy="754.1" r="1.02" fill="#3dff86" style="animation:tw 4s ease-in-out -0.20s infinite"/></g>
+  <rect x="22" y="22" width="1620" height="892" rx="26" fill="none" stroke="#3dff86" stroke-opacity=".16" stroke-width="1.5"/>
+  
+  <g fill="none" stroke="#3dff86" stroke-opacity=".55" stroke-width="2">
+    <path d="M36 76V36H76"/><path d="M1588 36H1628V76"/>
+    <path d="M36 860V900H76"/><path d="M1588 900H1628V860"/>
+  </g>
+  <g class="in">
+    <text x="832" y="92" text-anchor="middle" font-family="'Arial Black', 'Segoe UI Black', 'Segoe UI', Arial, sans-serif" font-size="64" font-weight="900" fill="#3dff86" opacity=".35" filter="url(#softGlow)">TECHNOLOGY UNIVERSE</text>
+    <text x="832" y="92" text-anchor="middle" font-family="'Arial Black', 'Segoe UI Black', 'Segoe UI', Arial, sans-serif" font-size="64" font-weight="900" fill="url(#title)">TECHNOLOGY UNIVERSE</text>
+    <text x="832" y="92" text-anchor="middle" font-family="'Arial Black', 'Segoe UI Black', 'Segoe UI', Arial, sans-serif" font-size="64" font-weight="900" fill="url(#shine)" opacity=".7">TECHNOLOGY UNIVERSE</text>
+    <text x="832" y="130" text-anchor="middle" font-family="'JetBrains Mono', 'Cascadia Code', 'SF Mono', Consolas, 'Liberation Mono', Menlo, monospace" font-size="15" letter-spacing="6" fill="#3dff86" opacity=".85">AI  /  WEB  /  MOBILE  /  GAME ENGINEERING</text>
+    <rect x="532" y="148" width="600" height="1.5" fill="url(#hline)"/>
+  </g>
+    <rect x="105" y="466" width="1454" height="1.5" fill="url(#hline)" opacity=".5"/>
+    <g class="in" style="animation-delay:0s">
+    <rect x="105" y="196" width="344" height="640" rx="18" fill="url(#panel)" stroke="#3dff86" stroke-opacity=".28" stroke-width="1.5"/>
+    <rect x="111" y="194" width="332" height="5" rx="2.5" fill="#3dff86" filter="url(#glow)" opacity=".9"/>
+  </g>
+      <g class="in" style="animation-delay:0.2s">
+        <text x="131" y="238" text-anchor="start" font-family="'JetBrains Mono', 'Cascadia Code', 'SF Mono', Consolas, 'Liberation Mono', Menlo, monospace" font-size="13" font-weight="700" letter-spacing="3" fill="#3dff86">01 / INTELLIGENCE</text>
+        <text x="131" y="280" text-anchor="start" font-family="'Segoe UI', Inter, Arial, Helvetica, sans-serif" font-size="32" font-weight="800" letter-spacing="0" fill="#eafff1" >AI / ML</text>
+        <text x="131" y="308" text-anchor="start" font-family="'Segoe UI', Inter, Arial, Helvetica, sans-serif" font-size="13.5" font-weight="400" letter-spacing="0" fill="#a7d9b9" >Models • Agents • Vision</text>
+        <circle cx="387" cy="270" r="40" fill="#04110a" stroke="#3dff86" stroke-opacity=".2" stroke-dasharray="3 5"/>
+        <g transform="translate(387 270) scale(0.62)" fill="none" stroke="#3dff86" stroke-width="3"><g stroke-width="2"><circle r="38" stroke-dasharray="4 6" class="spin"/>
+    <path d="M-22 -14L0 -26L22 -14M-22 -14L-26 10L0 24L26 10L22 -14M-22 -14L0 0L22 -14M-26 10L0 0L26 10M0 0L0 24M0 -26L0 0"/>
+    <circle cx="-22" cy="-14" r="4" fill="#3dff86" style="animation:pulse 1.8s ease-in-out 0s infinite"/><circle cx="0" cy="-26" r="4" fill="#3dff86" style="animation:pulse 1.8s ease-in-out -0.3s infinite"/><circle cx="22" cy="-14" r="4" fill="#3dff86" style="animation:pulse 1.8s ease-in-out -0.6s infinite"/><circle cx="-26" cy="10" r="4" fill="#3dff86" style="animation:pulse 1.8s ease-in-out -0.8999999999999999s infinite"/><circle cx="0" cy="24" r="4" fill="#3dff86" style="animation:pulse 1.8s ease-in-out -1.2s infinite"/><circle cx="26" cy="10" r="4" fill="#3dff86" style="animation:pulse 1.8s ease-in-out -1.5s infinite"/>
+    <circle r="9" fill="#04110a"/><text y="4" text-anchor="middle" font-family="'JetBrains Mono', 'Cascadia Code', 'SF Mono', Consolas, 'Liberation Mono', Menlo, monospace" font-size="10" font-weight="700" fill="#d5ffe2" stroke="none">AI</text></g></g>
+        <g>
+    <rect x="128" y="351" width="62" height="62" rx="16" fill="#071a10" stroke="#3dff86" stroke-opacity=".35" stroke-width="1.5"/>
+    <rect x="133" y="356" width="52" height="52" rx="12" fill="none" stroke="#3dff86" stroke-opacity=".15"/>
+    <text x="159" y="388.12" text-anchor="middle" font-family="'Segoe UI', Inter, Arial, Helvetica, sans-serif" font-size="17" font-weight="800" fill="#7dffae" style="animation:pulse 3s ease-in-out 0.0s infinite">PY</text>
+  </g><g>
+    <rect x="207" y="351" width="62" height="62" rx="16" fill="#071a10" stroke="#3dff86" stroke-opacity=".35" stroke-width="1.5"/>
+    <rect x="212" y="356" width="52" height="52" rx="12" fill="none" stroke="#3dff86" stroke-opacity=".15"/>
+    <text x="238" y="388.12" text-anchor="middle" font-family="'Segoe UI', Inter, Arial, Helvetica, sans-serif" font-size="17" font-weight="800" fill="#7dffae" style="animation:pulse 3s ease-in-out -0.4s infinite">PT</text>
+  </g><g>
+    <rect x="286" y="351" width="62" height="62" rx="16" fill="#071a10" stroke="#3dff86" stroke-opacity=".35" stroke-width="1.5"/>
+    <rect x="291" y="356" width="52" height="52" rx="12" fill="none" stroke="#3dff86" stroke-opacity=".15"/>
+    <text x="317" y="388.12" text-anchor="middle" font-family="'Segoe UI', Inter, Arial, Helvetica, sans-serif" font-size="17" font-weight="800" fill="#7dffae" style="animation:pulse 3s ease-in-out -0.8s infinite">TF</text>
+  </g><g>
+    <rect x="365" y="351" width="62" height="62" rx="16" fill="#071a10" stroke="#3dff86" stroke-opacity=".35" stroke-width="1.5"/>
+    <rect x="370" y="356" width="52" height="52" rx="12" fill="none" stroke="#3dff86" stroke-opacity=".15"/>
+    <text x="396" y="388.12" text-anchor="middle" font-family="'Segoe UI', Inter, Arial, Helvetica, sans-serif" font-size="17" font-weight="800" fill="#7dffae" style="animation:pulse 3s ease-in-out -1.2s infinite">HF</text>
+  </g><g>
+    <rect x="167.5" y="427" width="62" height="62" rx="16" fill="#071a10" stroke="#3dff86" stroke-opacity=".35" stroke-width="1.5"/>
+    <rect x="172.5" y="432" width="52" height="52" rx="12" fill="none" stroke="#3dff86" stroke-opacity=".15"/>
+    <text x="198.5" y="464.12" text-anchor="middle" font-family="'Segoe UI', Inter, Arial, Helvetica, sans-serif" font-size="17" font-weight="800" fill="#7dffae" style="animation:pulse 3s ease-in-out -1.6s infinite">LC</text>
+  </g><g>
+    <rect x="246.5" y="427" width="62" height="62" rx="16" fill="#071a10" stroke="#3dff86" stroke-opacity=".35" stroke-width="1.5"/>
+    <rect x="251.5" y="432" width="52" height="52" rx="12" fill="none" stroke="#3dff86" stroke-opacity=".15"/>
+    <text x="277.5" y="463.04" text-anchor="middle" font-family="'Segoe UI', Inter, Arial, Helvetica, sans-serif" font-size="14" font-weight="800" fill="#7dffae" style="animation:pulse 3s ease-in-out -2.0s infinite">OAI</text>
+  </g><g>
+    <rect x="325.5" y="427" width="62" height="62" rx="16" fill="#071a10" stroke="#3dff86" stroke-opacity=".35" stroke-width="1.5"/>
+    <rect x="330.5" y="432" width="52" height="52" rx="12" fill="none" stroke="#3dff86" stroke-opacity=".15"/>
+    <text x="356.5" y="464.12" text-anchor="middle" font-family="'Segoe UI', Inter, Arial, Helvetica, sans-serif" font-size="17" font-weight="800" fill="#7dffae" style="animation:pulse 3s ease-in-out -2.4s infinite">CV</text>
+  </g>
+        <text x="131" y="534" text-anchor="start" font-family="'Segoe UI', Inter, Arial, Helvetica, sans-serif" font-size="14.5" font-weight="600" letter-spacing="1.5" fill="#eafff1" >CORE TOOLCHAIN</text>
+        <text x="131" y="572" text-anchor="start" font-family="'Segoe UI', Inter, Arial, Helvetica, sans-serif" font-size="15.5" font-weight="400" letter-spacing="0" fill="#a7d9b9" >PyTorch</text><text x="291" y="572" text-anchor="start" font-family="'Segoe UI', Inter, Arial, Helvetica, sans-serif" font-size="15.5" font-weight="400" letter-spacing="0" fill="#a7d9b9" >TensorFlow</text><text x="131" y="606" text-anchor="start" font-family="'Segoe UI', Inter, Arial, Helvetica, sans-serif" font-size="15.5" font-weight="400" letter-spacing="0" fill="#a7d9b9" >LangChain</text><text x="291" y="606" text-anchor="start" font-family="'Segoe UI', Inter, Arial, Helvetica, sans-serif" font-size="15.5" font-weight="400" letter-spacing="0" fill="#a7d9b9" >LlamaIndex</text><text x="131" y="640" text-anchor="start" font-family="'Segoe UI', Inter, Arial, Helvetica, sans-serif" font-size="15.5" font-weight="400" letter-spacing="0" fill="#a7d9b9" >OpenAI / Claude</text><text x="291" y="640" text-anchor="start" font-family="'Segoe UI', Inter, Arial, Helvetica, sans-serif" font-size="15.5" font-weight="400" letter-spacing="0" fill="#a7d9b9" >Hugging Face</text><text x="131" y="674" text-anchor="start" font-family="'Segoe UI', Inter, Arial, Helvetica, sans-serif" font-size="15.5" font-weight="400" letter-spacing="0" fill="#a7d9b9" >Vector DBs</text><text x="291" y="674" text-anchor="start" font-family="'Segoe UI', Inter, Arial, Helvetica, sans-serif" font-size="15.5" font-weight="400" letter-spacing="0" fill="#a7d9b9" >Computer Vision</text>
+        <line x1="131" y1="716" x2="423" y2="716" stroke="#3dff86" stroke-opacity=".2"/>
+        <text x="131" y="748" text-anchor="start" font-family="'JetBrains Mono', 'Cascadia Code', 'SF Mono', Consolas, 'Liberation Mono', Menlo, monospace" font-size="11.5" font-weight="700" letter-spacing="3" fill="#3dff86">INFERENCE</text>
+        <text x="131" y="778" text-anchor="start" font-family="'Segoe UI', Inter, Arial, Helvetica, sans-serif" font-size="17" font-weight="600" letter-spacing="0" fill="#eafff1" >MODELS ONLINE</text>
+        <circle cx="405" cy="772" r="5" fill="#3dff86" filter="url(#glow)" class="pulse"/>
+        <rect x="131" y="796" width="292" height="6" rx="3" fill="#0b2216"/>
+    <rect x="131" y="796" width="239.4" height="6" rx="3" fill="url(#bar)" filter="url(#glow)" class="grow" style="animation-delay:0.5s"/>
+      </g><g class="in" style="animation-delay:0.12s">
+    <rect x="475" y="196" width="344" height="640" rx="18" fill="url(#panel)" stroke="#3dff86" stroke-opacity=".28" stroke-width="1.5"/>
+    <rect x="481" y="194" width="332" height="5" rx="2.5" fill="#3dff86" filter="url(#glow)" opacity=".9"/>
+  </g>
+      <g class="in" style="animation-delay:0.32s">
+        <text x="501" y="238" text-anchor="start" font-family="'JetBrains Mono', 'Cascadia Code', 'SF Mono', Consolas, 'Liberation Mono', Menlo, monospace" font-size="13" font-weight="700" letter-spacing="3" fill="#3dff86">02 / PLATFORM</text>
+        <text x="501" y="280" text-anchor="start" font-family="'Segoe UI', Inter, Arial, Helvetica, sans-serif" font-size="32" font-weight="800" letter-spacing="0" fill="#eafff1" >WEB</text>
+        <text x="501" y="308" text-anchor="start" font-family="'Segoe UI', Inter, Arial, Helvetica, sans-serif" font-size="13.5" font-weight="400" letter-spacing="0" fill="#a7d9b9" >Frontend • Backend • APIs</text>
+        <circle cx="757" cy="270" r="40" fill="#04110a" stroke="#3dff86" stroke-opacity=".2" stroke-dasharray="3 5"/>
+        <g transform="translate(757 270) scale(0.62)" fill="none" stroke="#3dff86" stroke-width="3"><g stroke-width="2.2"><rect x="-40" y="-30" width="80" height="60" rx="8"/><path d="M-40 -16H40"/>
+    <circle cx="-31" cy="-23" r="2.2" fill="#3dff86"/><circle cx="-24" cy="-23" r="2.2" fill="#3dff86"/>
+    <path d="M-26 -4H18M-26 6H8M-26 16H22" stroke-width="3.5" stroke-linecap="round" opacity=".8"/></g></g>
+        <g>
+    <rect x="498" y="351" width="62" height="62" rx="16" fill="#071a10" stroke="#3dff86" stroke-opacity=".35" stroke-width="1.5"/>
+    <rect x="503" y="356" width="52" height="52" rx="12" fill="none" stroke="#3dff86" stroke-opacity=".15"/>
+    <text x="529" y="388.12" text-anchor="middle" font-family="'Segoe UI', Inter, Arial, Helvetica, sans-serif" font-size="17" font-weight="800" fill="#7dffae" style="animation:pulse 3s ease-in-out -0.4s infinite">RE</text>
+  </g><g>
+    <rect x="577" y="351" width="62" height="62" rx="16" fill="#071a10" stroke="#3dff86" stroke-opacity=".35" stroke-width="1.5"/>
+    <rect x="582" y="356" width="52" height="52" rx="12" fill="none" stroke="#3dff86" stroke-opacity=".15"/>
+    <text x="608" y="388.12" text-anchor="middle" font-family="'Segoe UI', Inter, Arial, Helvetica, sans-serif" font-size="17" font-weight="800" fill="#7dffae" style="animation:pulse 3s ease-in-out -0.8s infinite">NX</text>
+  </g><g>
+    <rect x="656" y="351" width="62" height="62" rx="16" fill="#071a10" stroke="#3dff86" stroke-opacity=".35" stroke-width="1.5"/>
+    <rect x="661" y="356" width="52" height="52" rx="12" fill="none" stroke="#3dff86" stroke-opacity=".15"/>
+    <text x="687" y="388.12" text-anchor="middle" font-family="'Segoe UI', Inter, Arial, Helvetica, sans-serif" font-size="17" font-weight="800" fill="#7dffae" style="animation:pulse 3s ease-in-out -1.2s infinite">TS</text>
+  </g><g>
+    <rect x="735" y="351" width="62" height="62" rx="16" fill="#071a10" stroke="#3dff86" stroke-opacity=".35" stroke-width="1.5"/>
+    <rect x="740" y="356" width="52" height="52" rx="12" fill="none" stroke="#3dff86" stroke-opacity=".15"/>
+    <text x="766" y="388.12" text-anchor="middle" font-family="'Segoe UI', Inter, Arial, Helvetica, sans-serif" font-size="17" font-weight="800" fill="#7dffae" style="animation:pulse 3s ease-in-out -1.6s infinite">VU</text>
+  </g><g>
+    <rect x="537.5" y="427" width="62" height="62" rx="16" fill="#071a10" stroke="#3dff86" stroke-opacity=".35" stroke-width="1.5"/>
+    <rect x="542.5" y="432" width="52" height="52" rx="12" fill="none" stroke="#3dff86" stroke-opacity=".15"/>
+    <text x="568.5" y="464.12" text-anchor="middle" font-family="'Segoe UI', Inter, Arial, Helvetica, sans-serif" font-size="17" font-weight="800" fill="#7dffae" style="animation:pulse 3s ease-in-out -2.0s infinite">ND</text>
+  </g><g>
+    <rect x="616.5" y="427" width="62" height="62" rx="16" fill="#071a10" stroke="#3dff86" stroke-opacity=".35" stroke-width="1.5"/>
+    <rect x="621.5" y="432" width="52" height="52" rx="12" fill="none" stroke="#3dff86" stroke-opacity=".15"/>
+    <text x="647.5" y="464.12" text-anchor="middle" font-family="'Segoe UI', Inter, Arial, Helvetica, sans-serif" font-size="17" font-weight="800" fill="#7dffae" style="animation:pulse 3s ease-in-out -2.4s infinite">NS</text>
+  </g><g>
+    <rect x="695.5" y="427" width="62" height="62" rx="16" fill="#071a10" stroke="#3dff86" stroke-opacity=".35" stroke-width="1.5"/>
+    <rect x="700.5" y="432" width="52" height="52" rx="12" fill="none" stroke="#3dff86" stroke-opacity=".15"/>
+    <text x="726.5" y="463.04" text-anchor="middle" font-family="'Segoe UI', Inter, Arial, Helvetica, sans-serif" font-size="14" font-weight="800" fill="#7dffae" style="animation:pulse 3s ease-in-out -2.8s infinite">GQL</text>
+  </g>
+        <text x="501" y="534" text-anchor="start" font-family="'Segoe UI', Inter, Arial, Helvetica, sans-serif" font-size="14.5" font-weight="600" letter-spacing="1.5" fill="#eafff1" >CORE TOOLCHAIN</text>
+        <text x="501" y="572" text-anchor="start" font-family="'Segoe UI', Inter, Arial, Helvetica, sans-serif" font-size="15.5" font-weight="400" letter-spacing="0" fill="#a7d9b9" >React</text><text x="661" y="572" text-anchor="start" font-family="'Segoe UI', Inter, Arial, Helvetica, sans-serif" font-size="15.5" font-weight="400" letter-spacing="0" fill="#a7d9b9" >Next.js</text><text x="501" y="606" text-anchor="start" font-family="'Segoe UI', Inter, Arial, Helvetica, sans-serif" font-size="15.5" font-weight="400" letter-spacing="0" fill="#a7d9b9" >TypeScript</text><text x="661" y="606" text-anchor="start" font-family="'Segoe UI', Inter, Arial, Helvetica, sans-serif" font-size="15.5" font-weight="400" letter-spacing="0" fill="#a7d9b9" >Vue.js</text><text x="501" y="640" text-anchor="start" font-family="'Segoe UI', Inter, Arial, Helvetica, sans-serif" font-size="15.5" font-weight="400" letter-spacing="0" fill="#a7d9b9" >Node.js</text><text x="661" y="640" text-anchor="start" font-family="'Segoe UI', Inter, Arial, Helvetica, sans-serif" font-size="15.5" font-weight="400" letter-spacing="0" fill="#a7d9b9" >NestJS</text><text x="501" y="674" text-anchor="start" font-family="'Segoe UI', Inter, Arial, Helvetica, sans-serif" font-size="15.5" font-weight="400" letter-spacing="0" fill="#a7d9b9" >GraphQL</text><text x="661" y="674" text-anchor="start" font-family="'Segoe UI', Inter, Arial, Helvetica, sans-serif" font-size="15.5" font-weight="400" letter-spacing="0" fill="#a7d9b9" >Tailwind</text>
+        <line x1="501" y1="716" x2="793" y2="716" stroke="#3dff86" stroke-opacity=".2"/>
+        <text x="501" y="748" text-anchor="start" font-family="'JetBrains Mono', 'Cascadia Code', 'SF Mono', Consolas, 'Liberation Mono', Menlo, monospace" font-size="11.5" font-weight="700" letter-spacing="3" fill="#3dff86">REQUEST FLOW</text>
+        <text x="501" y="778" text-anchor="start" font-family="'Segoe UI', Inter, Arial, Helvetica, sans-serif" font-size="17" font-weight="600" letter-spacing="0" fill="#eafff1" >SERVICES SYNCED</text>
+        <circle cx="775" cy="772" r="5" fill="#3dff86" filter="url(#glow)" class="pulse"/>
+        <rect x="501" y="796" width="292" height="6" rx="3" fill="#0b2216"/>
+    <rect x="501" y="796" width="221.9" height="6" rx="3" fill="url(#bar)" filter="url(#glow)" class="grow" style="animation-delay:0.65s"/>
+      </g><g class="in" style="animation-delay:0.24s">
+    <rect x="845" y="196" width="344" height="640" rx="18" fill="url(#panel)" stroke="#3dff86" stroke-opacity=".28" stroke-width="1.5"/>
+    <rect x="851" y="194" width="332" height="5" rx="2.5" fill="#3dff86" filter="url(#glow)" opacity=".9"/>
+  </g>
+      <g class="in" style="animation-delay:0.44s">
+        <text x="871" y="238" text-anchor="start" font-family="'JetBrains Mono', 'Cascadia Code', 'SF Mono', Consolas, 'Liberation Mono', Menlo, monospace" font-size="13" font-weight="700" letter-spacing="3" fill="#3dff86">03 / DEVICES</text>
+        <text x="871" y="280" text-anchor="start" font-family="'Segoe UI', Inter, Arial, Helvetica, sans-serif" font-size="32" font-weight="800" letter-spacing="0" fill="#eafff1" >MOBILE</text>
+        <text x="871" y="308" text-anchor="start" font-family="'Segoe UI', Inter, Arial, Helvetica, sans-serif" font-size="13.5" font-weight="400" letter-spacing="0" fill="#a7d9b9" >iOS • Android • Cross-platform</text>
+        <circle cx="1127" cy="270" r="40" fill="#04110a" stroke="#3dff86" stroke-opacity=".2" stroke-dasharray="3 5"/>
+        <g transform="translate(1127 270) scale(0.62)" fill="none" stroke="#3dff86" stroke-width="3"><g stroke-width="2.2"><rect x="-22" y="-38" width="44" height="76" rx="9"/><path d="M-6 -31H6" stroke-linecap="round"/>
+    <circle cy="30" r="3"/><rect x="-14" y="-22" width="28" height="42" rx="3" opacity=".5"/>
+    <path d="M-8 -6L0 -14L8 -6M0 -14V10" stroke-linecap="round" stroke-linejoin="round"/></g></g>
+        <g>
+    <rect x="868" y="351" width="62" height="62" rx="16" fill="#071a10" stroke="#3dff86" stroke-opacity=".35" stroke-width="1.5"/>
+    <rect x="873" y="356" width="52" height="52" rx="12" fill="none" stroke="#3dff86" stroke-opacity=".15"/>
+    <text x="899" y="388.12" text-anchor="middle" font-family="'Segoe UI', Inter, Arial, Helvetica, sans-serif" font-size="17" font-weight="800" fill="#7dffae" style="animation:pulse 3s ease-in-out -0.8s infinite">RN</text>
+  </g><g>
+    <rect x="947" y="351" width="62" height="62" rx="16" fill="#071a10" stroke="#3dff86" stroke-opacity=".35" stroke-width="1.5"/>
+    <rect x="952" y="356" width="52" height="52" rx="12" fill="none" stroke="#3dff86" stroke-opacity=".15"/>
+    <text x="978" y="388.12" text-anchor="middle" font-family="'Segoe UI', Inter, Arial, Helvetica, sans-serif" font-size="17" font-weight="800" fill="#7dffae" style="animation:pulse 3s ease-in-out -1.2s infinite">FL</text>
+  </g><g>
+    <rect x="1026" y="351" width="62" height="62" rx="16" fill="#071a10" stroke="#3dff86" stroke-opacity=".35" stroke-width="1.5"/>
+    <rect x="1031" y="356" width="52" height="52" rx="12" fill="none" stroke="#3dff86" stroke-opacity=".15"/>
+    <text x="1057" y="388.12" text-anchor="middle" font-family="'Segoe UI', Inter, Arial, Helvetica, sans-serif" font-size="17" font-weight="800" fill="#7dffae" style="animation:pulse 3s ease-in-out -1.6s infinite">DT</text>
+  </g><g>
+    <rect x="1105" y="351" width="62" height="62" rx="16" fill="#071a10" stroke="#3dff86" stroke-opacity=".35" stroke-width="1.5"/>
+    <rect x="1110" y="356" width="52" height="52" rx="12" fill="none" stroke="#3dff86" stroke-opacity=".15"/>
+    <text x="1136" y="388.12" text-anchor="middle" font-family="'Segoe UI', Inter, Arial, Helvetica, sans-serif" font-size="17" font-weight="800" fill="#7dffae" style="animation:pulse 3s ease-in-out -2.0s infinite">SW</text>
+  </g><g>
+    <rect x="907.5" y="427" width="62" height="62" rx="16" fill="#071a10" stroke="#3dff86" stroke-opacity=".35" stroke-width="1.5"/>
+    <rect x="912.5" y="432" width="52" height="52" rx="12" fill="none" stroke="#3dff86" stroke-opacity=".15"/>
+    <text x="938.5" y="464.12" text-anchor="middle" font-family="'Segoe UI', Inter, Arial, Helvetica, sans-serif" font-size="17" font-weight="800" fill="#7dffae" style="animation:pulse 3s ease-in-out -2.4s infinite">KT</text>
+  </g><g>
+    <rect x="986.5" y="427" width="62" height="62" rx="16" fill="#071a10" stroke="#3dff86" stroke-opacity=".35" stroke-width="1.5"/>
+    <rect x="991.5" y="432" width="52" height="52" rx="12" fill="none" stroke="#3dff86" stroke-opacity=".15"/>
+    <text x="1017.5" y="464.12" text-anchor="middle" font-family="'Segoe UI', Inter, Arial, Helvetica, sans-serif" font-size="17" font-weight="800" fill="#7dffae" style="animation:pulse 3s ease-in-out -2.8s infinite">EX</text>
+  </g><g>
+    <rect x="1065.5" y="427" width="62" height="62" rx="16" fill="#071a10" stroke="#3dff86" stroke-opacity=".35" stroke-width="1.5"/>
+    <rect x="1070.5" y="432" width="52" height="52" rx="12" fill="none" stroke="#3dff86" stroke-opacity=".15"/>
+    <text x="1096.5" y="464.12" text-anchor="middle" font-family="'Segoe UI', Inter, Arial, Helvetica, sans-serif" font-size="17" font-weight="800" fill="#7dffae" style="animation:pulse 3s ease-in-out -3.2s infinite">FB</text>
+  </g>
+        <text x="871" y="534" text-anchor="start" font-family="'Segoe UI', Inter, Arial, Helvetica, sans-serif" font-size="14.5" font-weight="600" letter-spacing="1.5" fill="#eafff1" >CORE TOOLCHAIN</text>
+        <text x="871" y="572" text-anchor="start" font-family="'Segoe UI', Inter, Arial, Helvetica, sans-serif" font-size="15.5" font-weight="400" letter-spacing="0" fill="#a7d9b9" >React Native</text><text x="1031" y="572" text-anchor="start" font-family="'Segoe UI', Inter, Arial, Helvetica, sans-serif" font-size="15.5" font-weight="400" letter-spacing="0" fill="#a7d9b9" >Flutter</text><text x="871" y="606" text-anchor="start" font-family="'Segoe UI', Inter, Arial, Helvetica, sans-serif" font-size="15.5" font-weight="400" letter-spacing="0" fill="#a7d9b9" >Dart</text><text x="1031" y="606" text-anchor="start" font-family="'Segoe UI', Inter, Arial, Helvetica, sans-serif" font-size="15.5" font-weight="400" letter-spacing="0" fill="#a7d9b9" >Swift</text><text x="871" y="640" text-anchor="start" font-family="'Segoe UI', Inter, Arial, Helvetica, sans-serif" font-size="15.5" font-weight="400" letter-spacing="0" fill="#a7d9b9" >Kotlin</text><text x="1031" y="640" text-anchor="start" font-family="'Segoe UI', Inter, Arial, Helvetica, sans-serif" font-size="15.5" font-weight="400" letter-spacing="0" fill="#a7d9b9" >Expo</text><text x="871" y="674" text-anchor="start" font-family="'Segoe UI', Inter, Arial, Helvetica, sans-serif" font-size="15.5" font-weight="400" letter-spacing="0" fill="#a7d9b9" >Firebase</text><text x="1031" y="674" text-anchor="start" font-family="'Segoe UI', Inter, Arial, Helvetica, sans-serif" font-size="15.5" font-weight="400" letter-spacing="0" fill="#a7d9b9" >Store CI/CD</text>
+        <line x1="871" y1="716" x2="1163" y2="716" stroke="#3dff86" stroke-opacity=".2"/>
+        <text x="871" y="748" text-anchor="start" font-family="'JetBrains Mono', 'Cascadia Code', 'SF Mono', Consolas, 'Liberation Mono', Menlo, monospace" font-size="11.5" font-weight="700" letter-spacing="3" fill="#3dff86">RELEASE TRAIN</text>
+        <text x="871" y="778" text-anchor="start" font-family="'Segoe UI', Inter, Arial, Helvetica, sans-serif" font-size="17" font-weight="600" letter-spacing="0" fill="#eafff1" >BUILDS SHIPPING</text>
+        <circle cx="1145" cy="772" r="5" fill="#3dff86" filter="url(#glow)" class="pulse"/>
+        <rect x="871" y="796" width="292" height="6" rx="3" fill="#0b2216"/>
+    <rect x="871" y="796" width="204.4" height="6" rx="3" fill="url(#bar)" filter="url(#glow)" class="grow" style="animation-delay:0.8s"/>
+      </g><g class="in" style="animation-delay:0.36s">
+    <rect x="1215" y="196" width="344" height="640" rx="18" fill="url(#panel)" stroke="#3dff86" stroke-opacity=".28" stroke-width="1.5"/>
+    <rect x="1221" y="194" width="332" height="5" rx="2.5" fill="#3dff86" filter="url(#glow)" opacity=".9"/>
+  </g>
+      <g class="in" style="animation-delay:0.56s">
+        <text x="1241" y="238" text-anchor="start" font-family="'JetBrains Mono', 'Cascadia Code', 'SF Mono', Consolas, 'Liberation Mono', Menlo, monospace" font-size="13" font-weight="700" letter-spacing="3" fill="#3dff86">04 / WORLDS</text>
+        <text x="1241" y="280" text-anchor="start" font-family="'Segoe UI', Inter, Arial, Helvetica, sans-serif" font-size="32" font-weight="800" letter-spacing="0" fill="#eafff1" >GAME DEV</text>
+        <text x="1241" y="308" text-anchor="start" font-family="'Segoe UI', Inter, Arial, Helvetica, sans-serif" font-size="13.5" font-weight="400" letter-spacing="0" fill="#a7d9b9" >Gameplay • Graphics • Netcode</text>
+        <circle cx="1497" cy="270" r="40" fill="#04110a" stroke="#3dff86" stroke-opacity=".2" stroke-dasharray="3 5"/>
+        <g transform="translate(1497 270) scale(0.62)" fill="none" stroke="#3dff86" stroke-width="3"><g stroke-width="2.2"><path d="M-36 -8Q-36 -22 -22 -22H22Q36 -22 36 -8L42 14Q44 28 31 28Q23 28 18 16H-18Q-23 28 -31 28Q-44 28 -42 14Z" stroke-linejoin="round"/>
+    <path d="M-22 -6V10M-30 2H-14" stroke-width="3.5" stroke-linecap="round"/>
+    <circle cx="18" cy="-4" r="4" fill="#3dff86"/><circle cx="27" cy="5" r="4"/></g></g>
+        <g>
+    <rect x="1238" y="351" width="62" height="62" rx="16" fill="#071a10" stroke="#3dff86" stroke-opacity=".35" stroke-width="1.5"/>
+    <rect x="1243" y="356" width="52" height="52" rx="12" fill="none" stroke="#3dff86" stroke-opacity=".15"/>
+    <text x="1269" y="388.12" text-anchor="middle" font-family="'Segoe UI', Inter, Arial, Helvetica, sans-serif" font-size="17" font-weight="800" fill="#7dffae" style="animation:pulse 3s ease-in-out -1.2s infinite">UN</text>
+  </g><g>
+    <rect x="1317" y="351" width="62" height="62" rx="16" fill="#071a10" stroke="#3dff86" stroke-opacity=".35" stroke-width="1.5"/>
+    <rect x="1322" y="356" width="52" height="52" rx="12" fill="none" stroke="#3dff86" stroke-opacity=".15"/>
+    <text x="1348" y="388.12" text-anchor="middle" font-family="'Segoe UI', Inter, Arial, Helvetica, sans-serif" font-size="17" font-weight="800" fill="#7dffae" style="animation:pulse 3s ease-in-out -1.6s infinite">UE</text>
+  </g><g>
+    <rect x="1396" y="351" width="62" height="62" rx="16" fill="#071a10" stroke="#3dff86" stroke-opacity=".35" stroke-width="1.5"/>
+    <rect x="1401" y="356" width="52" height="52" rx="12" fill="none" stroke="#3dff86" stroke-opacity=".15"/>
+    <text x="1427" y="388.12" text-anchor="middle" font-family="'Segoe UI', Inter, Arial, Helvetica, sans-serif" font-size="17" font-weight="800" fill="#7dffae" style="animation:pulse 3s ease-in-out -2.0s infinite">GD</text>
+  </g><g>
+    <rect x="1475" y="351" width="62" height="62" rx="16" fill="#071a10" stroke="#3dff86" stroke-opacity=".35" stroke-width="1.5"/>
+    <rect x="1480" y="356" width="52" height="52" rx="12" fill="none" stroke="#3dff86" stroke-opacity=".15"/>
+    <text x="1506" y="388.12" text-anchor="middle" font-family="'Segoe UI', Inter, Arial, Helvetica, sans-serif" font-size="17" font-weight="800" fill="#7dffae" style="animation:pulse 3s ease-in-out -2.4s infinite">C#</text>
+  </g><g>
+    <rect x="1277.5" y="427" width="62" height="62" rx="16" fill="#071a10" stroke="#3dff86" stroke-opacity=".35" stroke-width="1.5"/>
+    <rect x="1282.5" y="432" width="52" height="52" rx="12" fill="none" stroke="#3dff86" stroke-opacity=".15"/>
+    <text x="1308.5" y="463.04" text-anchor="middle" font-family="'Segoe UI', Inter, Arial, Helvetica, sans-serif" font-size="14" font-weight="800" fill="#7dffae" style="animation:pulse 3s ease-in-out -2.8s infinite">C++</text>
+  </g><g>
+    <rect x="1356.5" y="427" width="62" height="62" rx="16" fill="#071a10" stroke="#3dff86" stroke-opacity=".35" stroke-width="1.5"/>
+    <rect x="1361.5" y="432" width="52" height="52" rx="12" fill="none" stroke="#3dff86" stroke-opacity=".15"/>
+    <text x="1387.5" y="464.12" text-anchor="middle" font-family="'Segoe UI', Inter, Arial, Helvetica, sans-serif" font-size="17" font-weight="800" fill="#7dffae" style="animation:pulse 3s ease-in-out -3.2s infinite">GL</text>
+  </g><g>
+    <rect x="1435.5" y="427" width="62" height="62" rx="16" fill="#071a10" stroke="#3dff86" stroke-opacity=".35" stroke-width="1.5"/>
+    <rect x="1440.5" y="432" width="52" height="52" rx="12" fill="none" stroke="#3dff86" stroke-opacity=".15"/>
+    <text x="1466.5" y="464.12" text-anchor="middle" font-family="'Segoe UI', Inter, Arial, Helvetica, sans-serif" font-size="17" font-weight="800" fill="#7dffae" style="animation:pulse 3s ease-in-out -3.6s infinite">BL</text>
+  </g>
+        <text x="1241" y="534" text-anchor="start" font-family="'Segoe UI', Inter, Arial, Helvetica, sans-serif" font-size="14.5" font-weight="600" letter-spacing="1.5" fill="#eafff1" >CORE TOOLCHAIN</text>
+        <text x="1241" y="572" text-anchor="start" font-family="'Segoe UI', Inter, Arial, Helvetica, sans-serif" font-size="15.5" font-weight="400" letter-spacing="0" fill="#a7d9b9" >Unity</text><text x="1401" y="572" text-anchor="start" font-family="'Segoe UI', Inter, Arial, Helvetica, sans-serif" font-size="15.5" font-weight="400" letter-spacing="0" fill="#a7d9b9" >Unreal Engine</text><text x="1241" y="606" text-anchor="start" font-family="'Segoe UI', Inter, Arial, Helvetica, sans-serif" font-size="15.5" font-weight="400" letter-spacing="0" fill="#a7d9b9" >Godot</text><text x="1401" y="606" text-anchor="start" font-family="'Segoe UI', Inter, Arial, Helvetica, sans-serif" font-size="15.5" font-weight="400" letter-spacing="0" fill="#a7d9b9" >C# / C++</text><text x="1241" y="640" text-anchor="start" font-family="'Segoe UI', Inter, Arial, Helvetica, sans-serif" font-size="15.5" font-weight="400" letter-spacing="0" fill="#a7d9b9" >Three.js</text><text x="1401" y="640" text-anchor="start" font-family="'Segoe UI', Inter, Arial, Helvetica, sans-serif" font-size="15.5" font-weight="400" letter-spacing="0" fill="#a7d9b9" >Shaders / VFX</text><text x="1241" y="674" text-anchor="start" font-family="'Segoe UI', Inter, Arial, Helvetica, sans-serif" font-size="15.5" font-weight="400" letter-spacing="0" fill="#a7d9b9" >Multiplayer</text><text x="1401" y="674" text-anchor="start" font-family="'Segoe UI', Inter, Arial, Helvetica, sans-serif" font-size="15.5" font-weight="400" letter-spacing="0" fill="#a7d9b9" >Blender</text>
+        <line x1="1241" y1="716" x2="1533" y2="716" stroke="#3dff86" stroke-opacity=".2"/>
+        <text x="1241" y="748" text-anchor="start" font-family="'JetBrains Mono', 'Cascadia Code', 'SF Mono', Consolas, 'Liberation Mono', Menlo, monospace" font-size="11.5" font-weight="700" letter-spacing="3" fill="#3dff86">FRAME RATE</text>
+        <text x="1241" y="778" text-anchor="start" font-family="'Segoe UI', Inter, Arial, Helvetica, sans-serif" font-size="17" font-weight="600" letter-spacing="0" fill="#eafff1" >60 FPS STABLE</text>
+        <circle cx="1515" cy="772" r="5" fill="#3dff86" filter="url(#glow)" class="pulse"/>
+        <rect x="1241" y="796" width="292" height="6" rx="3" fill="#0b2216"/>
+    <rect x="1241" y="796" width="262.8" height="6" rx="3" fill="url(#bar)" filter="url(#glow)" class="grow" style="animation-delay:0.95s"/>
+      </g>
+  <text x="832" y="892" text-anchor="middle" font-family="'JetBrains Mono', 'Cascadia Code', 'SF Mono', Consolas, 'Liberation Mono', Menlo, monospace" font-size="12" letter-spacing="4" fill="#3dff86" opacity=".6">● SYSTEMS CONNECTED // 4 DOMAINS // BUILD • SHIP • PLAY</text>
+  
+  
+  <rect class="scan" y="0" width="1664" height="60" fill="url(#scanG)"/>
+  <rect width="1664" height="936" fill="url(#vignette)"/>
+  </g>
+</svg>

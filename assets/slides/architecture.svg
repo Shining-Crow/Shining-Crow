@@ -1,0 +1,269 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1664" height="936" viewBox="0 0 1664 936">
+  <style>
+  @keyframes tw{0%,100%{opacity:.15}50%{opacity:1}}
+  @keyframes rise{0%{transform:translateY(0);opacity:0}20%{opacity:.9}100%{transform:translateY(-160px);opacity:0}}
+  @keyframes pulse{0%,100%{opacity:.45}50%{opacity:1}}
+  @keyframes beat{0%,100%{transform:scale(1)}50%{transform:scale(1.35)}}
+  @keyframes blink{0%,49%{opacity:1}50%,100%{opacity:0}}
+  @keyframes spin{to{transform:rotate(360deg)}}
+  @keyframes spinr{to{transform:rotate(-360deg)}}
+  @keyframes float{0%,100%{transform:translateY(-5px)}50%{transform:translateY(5px)}}
+  @keyframes grow{from{transform:scaleX(0)}to{transform:scaleX(1)}}
+  @keyframes dash{to{stroke-dashoffset:-1000}}
+  @keyframes sweepX{0%{transform:translateX(-400px)}100%{transform:translateX(2064px)}}
+  @keyframes scanY{0%{transform:translateY(-60px)}100%{transform:translateY(996px)}}
+  @keyframes fadeUp{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+  @keyframes wave{0%{transform:scale(.3);opacity:.8}100%{transform:scale(1);opacity:0}}
+  .tw{animation:tw 3s ease-in-out infinite}
+  .pulse{animation:pulse 2.4s ease-in-out infinite}
+  .beat{animation:beat 2s ease-in-out infinite;transform-box:fill-box;transform-origin:center}
+  .blink{animation:blink 1.1s steps(1) infinite}
+  .spin{animation:spin 30s linear infinite}
+  .spinr{animation:spinr 20s linear infinite}
+  .float{animation:float 6s ease-in-out infinite}
+  .grow{animation:grow 1.6s cubic-bezier(.2,.8,.2,1) both;transform-box:fill-box;transform-origin:left center}
+  .dash{animation:dash 14s linear infinite}
+  .sweep{animation:sweepX 7s linear infinite}
+  .scan{animation:scanY 9s linear infinite}
+  .in{animation:fadeUp .9s ease-out both}
+</style>
+  <defs>
+  <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#020a06"/><stop offset=".48" stop-color="#071b10"/><stop offset="1" stop-color="#020d08"/></linearGradient>
+  <radialGradient id="topGlow" cx=".5" cy=".1" r=".6"><stop offset="0" stop-color="#3dff86" stop-opacity=".16"/><stop offset="1" stop-color="#3dff86" stop-opacity="0"/></radialGradient>
+  <radialGradient id="midGlow" cx=".5" cy=".5" r=".5"><stop offset="0" stop-color="#3dff86" stop-opacity=".12"/><stop offset="1" stop-color="#3dff86" stop-opacity="0"/></radialGradient>
+  <radialGradient id="vignette" cx=".5" cy=".5" r=".75"><stop offset=".6" stop-color="#000" stop-opacity="0"/><stop offset="1" stop-color="#000" stop-opacity=".55"/></radialGradient>
+  <linearGradient id="panel" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#0f2a1b" stop-opacity=".92"/><stop offset="1" stop-color="#06150d" stop-opacity=".92"/></linearGradient>
+  <linearGradient id="glass" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0c2418" stop-opacity=".9"/><stop offset="1" stop-color="#030d08" stop-opacity=".88"/></linearGradient>
+  <linearGradient id="title" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#3dff86"/><stop offset=".5" stop-color="#d5ffe2"/><stop offset="1" stop-color="#3dff86"/></linearGradient>
+  <linearGradient id="shine" gradientUnits="userSpaceOnUse" x1="-300" y1="0" x2="0" y2="0">
+    <stop offset="0" stop-color="#fff" stop-opacity="0"/><stop offset=".5" stop-color="#fff" stop-opacity=".85"/><stop offset="1" stop-color="#fff" stop-opacity="0"/>
+    <animateTransform attributeName="gradientTransform" type="translate" values="0 0;1964 0;1964 0" keyTimes="0;.5;1" dur="7s" repeatCount="indefinite"/>
+  </linearGradient>
+  <linearGradient id="bar" x1="0" x2="1"><stop offset="0" stop-color="#22c55e"/><stop offset="1" stop-color="#7dffae"/></linearGradient>
+  <linearGradient id="hline" x1="0" x2="1"><stop offset="0" stop-color="#3dff86" stop-opacity="0"/><stop offset=".5" stop-color="#3dff86" stop-opacity=".9"/><stop offset="1" stop-color="#3dff86" stop-opacity="0"/></linearGradient>
+  <linearGradient id="sweepG" x1="0" x2="1"><stop offset="0" stop-color="#3dff86" stop-opacity="0"/><stop offset=".5" stop-color="#3dff86" stop-opacity=".07"/><stop offset="1" stop-color="#3dff86" stop-opacity="0"/></linearGradient>
+  <linearGradient id="scanG" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#3dff86" stop-opacity="0"/><stop offset=".5" stop-color="#3dff86" stop-opacity=".06"/><stop offset="1" stop-color="#3dff86" stop-opacity="0"/></linearGradient>
+  <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse"><path d="M32 0H0V32" fill="none" stroke="#3dff86" stroke-opacity=".05"/></pattern>
+  <filter id="glow" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="4" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  <filter id="softGlow" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="10"/></filter>
+  <filter id="blur2"><feGaussianBlur stdDeviation="2"/></filter>
+<clipPath id="frameClip"><rect width="1664" height="936"/></clipPath></defs>
+  <g clip-path="url(#frameClip)">
+  <rect width="1664" height="936" fill="url(#bg)"/>
+  <rect width="1664" height="936" fill="url(#grid)"/>
+  <rect width="1664" height="936" fill="url(#topGlow)"/>
+  <g><circle cx="420.1" cy="198.9" r="1.80" fill="#d5ffe2" style="animation:tw 3s ease-in-out -0.11s infinite"/><circle cx="117.2" cy="124.7" r="1.78" fill="#3dff86" style="animation:tw 4s ease-in-out -3.21s infinite"/><circle cx="982.4" cy="173.8" r="1.20" fill="#3dff86" style="animation:tw 6s ease-in-out -3.51s infinite"/><circle cx="645.8" cy="385.2" r="1.12" fill="#3dff86" style="animation:tw 3s ease-in-out -0.53s infinite"/><circle cx="419.0" cy="436.9" r="1.27" fill="#d5ffe2" style="animation:tw 4s ease-in-out -2.05s infinite"/><circle cx="730.2" cy="185.5" r="0.78" fill="#3dff86" style="animation:tw 6s ease-in-out -5.79s infinite"/><circle cx="335.2" cy="625.1" r="2.36" fill="#3dff86" style="animation:tw 3s ease-in-out -0.85s infinite"/><circle cx="913.8" cy="302.5" r="0.99" fill="#3dff86" style="animation:tw 4s ease-in-out -2.29s infinite"/><circle cx="46.3" cy="417.3" r="2.34" fill="#d5ffe2" style="animation:tw 6s ease-in-out -5.12s infinite"/><circle cx="317.7" cy="375.9" r="2.33" fill="#3dff86" style="animation:tw 3s ease-in-out -0.09s infinite"/><circle cx="911.6" cy="880.3" r="0.94" fill="#3dff86" style="animation:tw 4s ease-in-out -1.53s infinite"/><circle cx="232.5" cy="173.1" r="0.72" fill="#3dff86" style="animation:tw 6s ease-in-out -5.11s infinite"/><circle cx="472.3" cy="90.2" r="0.71" fill="#d5ffe2" style="animation:tw 3s ease-in-out -2.27s infinite"/><circle cx="681.6" cy="267.3" r="2.34" fill="#3dff86" style="animation:tw 4s ease-in-out -2.90s infinite"/><circle cx="151.5" cy="149.2" r="0.77" fill="#3dff86" style="animation:tw 6s ease-in-out -5.62s infinite"/><circle cx="1042.1" cy="413.3" r="0.86" fill="#3dff86" style="animation:tw 3s ease-in-out -0.03s infinite"/><circle cx="1173.7" cy="774.1" r="1.59" fill="#d5ffe2" style="animation:tw 4s ease-in-out -0.38s infinite"/><circle cx="1558.7" cy="759.9" r="1.55" fill="#3dff86" style="animation:tw 6s ease-in-out -0.16s infinite"/><circle cx="1374.8" cy="855.9" r="0.82" fill="#3dff86" style="animation:tw 3s ease-in-out -1.75s infinite"/><circle cx="994.9" cy="761.5" r="2.35" fill="#3dff86" style="animation:tw 4s ease-in-out -0.80s infinite"/><circle cx="824.2" cy="287.5" r="1.81" fill="#d5ffe2" style="animation:tw 6s ease-in-out -4.28s infinite"/><circle cx="1512.0" cy="69.3" r="2.02" fill="#3dff86" style="animation:tw 3s ease-in-out -2.90s infinite"/><circle cx="416.1" cy="346.2" r="0.73" fill="#3dff86" style="animation:tw 4s ease-in-out -1.35s infinite"/><circle cx="182.9" cy="545.8" r="1.21" fill="#3dff86" style="animation:tw 6s ease-in-out -3.23s infinite"/><circle cx="1353.7" cy="64.3" r="0.72" fill="#d5ffe2" style="animation:tw 3s ease-in-out -0.77s infinite"/><circle cx="405.0" cy="842.7" r="1.86" fill="#3dff86" style="animation:tw 4s ease-in-out -1.80s infinite"/></g>
+  <rect x="22" y="22" width="1620" height="892" rx="26" fill="none" stroke="#3dff86" stroke-opacity=".16" stroke-width="1.5"/>
+  
+  <g fill="none" stroke="#3dff86" stroke-opacity=".55" stroke-width="2">
+    <path d="M36 76V36H76"/><path d="M1588 36H1628V76"/>
+    <path d="M36 860V900H76"/><path d="M1588 900H1628V860"/>
+  </g>
+  <g class="in">
+    <text x="832" y="84" text-anchor="middle" font-family="'Arial Black', 'Segoe UI Black', 'Segoe UI', Arial, sans-serif" font-size="60" font-weight="900" fill="#3dff86" opacity=".35" filter="url(#softGlow)">SYSTEM ARCHITECTURE</text>
+    <text x="832" y="84" text-anchor="middle" font-family="'Arial Black', 'Segoe UI Black', 'Segoe UI', Arial, sans-serif" font-size="60" font-weight="900" fill="url(#title)">SYSTEM ARCHITECTURE</text>
+    <text x="832" y="84" text-anchor="middle" font-family="'Arial Black', 'Segoe UI Black', 'Segoe UI', Arial, sans-serif" font-size="60" font-weight="900" fill="url(#shine)" opacity=".7">SYSTEM ARCHITECTURE</text>
+    <text x="832" y="122" text-anchor="middle" font-family="'JetBrains Mono', 'Cascadia Code', 'SF Mono', Consolas, 'Liberation Mono', Menlo, monospace" font-size="15" letter-spacing="6" fill="#3dff86" opacity=".85">CLIENTS / GATEWAY / SERVICES / AI / DATA</text>
+    <rect x="532" y="140" width="600" height="1.5" fill="url(#hline)"/>
+  </g>
+    <circle cx="832" cy="300" r="260" fill="url(#midGlow)"/>
+    <g class="in" style="animation-delay:0.1s">
+      <rect x="677" y="176" width="310" height="50" rx="12" fill="#04110a" stroke="#3dff86" stroke-opacity=".45" stroke-width="1.5"/>
+      <rect x="677" y="176" width="5" height="50" rx="2" fill="#3dff86" filter="url(#glow)"/>
+      <circle cx="711" cy="201" r="15" fill="none" stroke="#3dff86" stroke-opacity=".6" stroke-width="1.5"/>
+      <g transform="translate(711 201) scale(0.2)" fill="none" stroke="#3dff86" stroke-width="7"><g stroke-width="2.2"><rect x="-22" y="-38" width="44" height="76" rx="9"/><path d="M-6 -31H6" stroke-linecap="round"/>
+    <circle cy="30" r="3"/><rect x="-14" y="-22" width="28" height="42" rx="3" opacity=".5"/>
+    <path d="M-8 -6L0 -14L8 -6M0 -14V10" stroke-linecap="round" stroke-linejoin="round"/></g></g>
+      <text x="846" y="207" text-anchor="middle" font-family="'Segoe UI', Inter, Arial, Helvetica, sans-serif" font-size="16" font-weight="800" letter-spacing="2.5" fill="#eafff1">CLIENT APPS</text>
+      <line x1="832" y1="226" x2="832" y2="242" stroke="#3dff86" stroke-opacity=".5"/><circle cx="832" cy="234" r="4" fill="#3dff86" filter="url(#glow)" class="pulse"/>
+    </g><g class="in" style="animation-delay:0.2s">
+      <rect x="689" y="242" width="286" height="50" rx="12" fill="#04110a" stroke="#3dff86" stroke-opacity=".45" stroke-width="1.5"/>
+      
+      <circle cx="723" cy="267" r="15" fill="none" stroke="#3dff86" stroke-opacity=".6" stroke-width="1.5"/>
+      <g transform="translate(723 267) scale(0.2)" fill="none" stroke="#3dff86" stroke-width="7"><g stroke-width="2.2"><circle r="38" stroke-dasharray="3 6" class="spinr"/><polygon points="0,-26 23,-13 23,13 0,26 -23,13 -23,-13"/>
+    <text y="5" text-anchor="middle" font-family="'JetBrains Mono', 'Cascadia Code', 'SF Mono', Consolas, 'Liberation Mono', Menlo, monospace" font-size="13" font-weight="700" fill="#d5ffe2" stroke="none">API</text></g></g>
+      <text x="846" y="273" text-anchor="middle" font-family="'Segoe UI', Inter, Arial, Helvetica, sans-serif" font-size="16" font-weight="800" letter-spacing="2.5" fill="#eafff1">API GATEWAY</text>
+      <line x1="832" y1="292" x2="832" y2="308" stroke="#3dff86" stroke-opacity=".5"/><circle cx="832" cy="300" r="4" fill="#3dff86" filter="url(#glow)" class="pulse"/>
+    </g><g class="in" style="animation-delay:0.30000000000000004s">
+      <rect x="677" y="308" width="310" height="50" rx="12" fill="#04110a" stroke="#3dff86" stroke-opacity=".45" stroke-width="1.5"/>
+      
+      <circle cx="711" cy="333" r="15" fill="none" stroke="#3dff86" stroke-opacity=".6" stroke-width="1.5"/>
+      <g transform="translate(711 333) scale(0.2)" fill="none" stroke="#3dff86" stroke-width="7"><g stroke-width="2.2"><rect x="-24" y="-24" width="48" height="48" rx="6"/><rect x="-12" y="-12" width="24" height="24" rx="3" fill="#3dff86" fill-opacity=".25"/>
+    <path d="M-12 -24V-34M0 -24V-34M12 -24V-34M-12 24V34M0 24V34M12 24V34M-24 -12H-34M-24 0H-34M-24 12H-34M24 -12H34M24 0H34M24 12H34"/></g></g>
+      <text x="846" y="339" text-anchor="middle" font-family="'Segoe UI', Inter, Arial, Helvetica, sans-serif" font-size="16" font-weight="800" letter-spacing="2.5" fill="#eafff1">AI + SERVICES</text>
+      <line x1="832" y1="358" x2="832" y2="374" stroke="#3dff86" stroke-opacity=".5"/><circle cx="832" cy="366" r="4" fill="#3dff86" filter="url(#glow)" class="pulse"/>
+    </g><g class="in" style="animation-delay:0.4s">
+      <rect x="689" y="374" width="286" height="50" rx="12" fill="#04110a" stroke="#3dff86" stroke-opacity=".45" stroke-width="1.5"/>
+      
+      <circle cx="723" cy="399" r="15" fill="none" stroke="#3dff86" stroke-opacity=".6" stroke-width="1.5"/>
+      <g transform="translate(723 399) scale(0.2)" fill="none" stroke="#3dff86" stroke-width="7"><g stroke-width="2.2"><ellipse cy="-24" rx="34" ry="10"/><path d="M-34 -24V24Q0 40 34 24V-24"/><path d="M-34 -8Q0 8 34 -8M-34 8Q0 24 34 8"/></g></g>
+      <text x="846" y="405" text-anchor="middle" font-family="'Segoe UI', Inter, Arial, Helvetica, sans-serif" font-size="16" font-weight="800" letter-spacing="2.5" fill="#eafff1">DATA LAYER</text>
+      
+    </g>
+    <text x="42" y="462" text-anchor="start" font-family="'JetBrains Mono', 'Cascadia Code', 'SF Mono', Consolas, 'Liberation Mono', Menlo, monospace" font-size="10.5" font-weight="400" letter-spacing="1" fill="#3dff86">SVC_BUS</text><text x="42" y="478" text-anchor="start" font-family="'JetBrains Mono', 'Cascadia Code', 'SF Mono', Consolas, 'Liberation Mono', Menlo, monospace" font-size="10" font-weight="400" letter-spacing="1" fill="#5f9c78">ONLINE</text>
+    <text x="1622" y="462" text-anchor="end" font-family="'JetBrains Mono', 'Cascadia Code', 'SF Mono', Consolas, 'Liberation Mono', Menlo, monospace" font-size="10.5" font-weight="400" letter-spacing="1" fill="#3dff86">FLOW_05</text><text x="1622" y="478" text-anchor="end" font-family="'JetBrains Mono', 'Cascadia Code', 'SF Mono', Consolas, 'Liberation Mono', Menlo, monospace" font-size="10" font-weight="400" letter-spacing="1" fill="#5f9c78">SYNCED</text>
+    <line x1="832" y1="424" x2="832" y2="458" stroke="#3dff86" stroke-opacity=".5" stroke-dasharray="3 4"/>
+    <path d="M236 458H1428" stroke="#3dff86" stroke-opacity=".45" stroke-width="1.5" stroke-dasharray="4 6"/>
+    <circle cx="832" cy="458" r="8" fill="#d5ffe2" filter="url(#glow)" class="beat"/>
+    <line x1="236" y1="458" x2="236" y2="504" stroke="#3dff86" stroke-opacity=".4" stroke-dasharray="3 4"/>
+        <circle r="4.5" fill="#fff" filter="url(#glow)"><animateMotion dur="2.4s" begin="0.70s" repeatCount="indefinite" path="M832,458 H236 V504"/></circle><line x1="534" y1="458" x2="534" y2="504" stroke="#3dff86" stroke-opacity=".4" stroke-dasharray="3 4"/>
+        <circle r="4.5" fill="#fff" filter="url(#glow)"><animateMotion dur="2.4s" begin="0.35s" repeatCount="indefinite" path="M832,458 H534 V504"/></circle><line x1="832" y1="458" x2="832" y2="504" stroke="#3dff86" stroke-opacity=".4" stroke-dasharray="3 4"/>
+        <circle r="4.5" fill="#fff" filter="url(#glow)"><animateMotion dur="2.4s" begin="0.00s" repeatCount="indefinite" path="M832,458 H832 V504"/></circle><line x1="1130" y1="458" x2="1130" y2="504" stroke="#3dff86" stroke-opacity=".4" stroke-dasharray="3 4"/>
+        <circle r="4.5" fill="#fff" filter="url(#glow)"><animateMotion dur="2.4s" begin="0.35s" repeatCount="indefinite" path="M832,458 H1130 V504"/></circle><line x1="1428" y1="458" x2="1428" y2="504" stroke="#3dff86" stroke-opacity=".4" stroke-dasharray="3 4"/>
+        <circle r="4.5" fill="#fff" filter="url(#glow)"><animateMotion dur="2.4s" begin="0.70s" repeatCount="indefinite" path="M832,458 H1428 V504"/></circle>
+    <circle r="4" fill="#fff" filter="url(#glow)"><animateMotion dur="1.6s" repeatCount="indefinite" path="M832,176 V458"/></circle><g class="in" style="animation-delay:0.2s">
+    <rect x="94" y="504" width="284" height="338" rx="18" fill="url(#panel)" stroke="#3dff86" stroke-opacity=".28" stroke-width="1.5"/>
+    <rect x="100" y="502" width="272" height="5" rx="2.5" fill="#3dff86" filter="url(#glow)" opacity=".9"/>
+  </g>
+      <g class="in" style="animation-delay:0.3s">
+        <text x="116" y="536" text-anchor="start" font-family="'JetBrains Mono', 'Cascadia Code', 'SF Mono', Consolas, 'Liberation Mono', Menlo, monospace" font-size="11" font-weight="700" letter-spacing="3" fill="#3dff86">01 / EXPERIENCE</text>
+        <circle cx="236" cy="592" r="40" fill="none" stroke="#3dff86" stroke-opacity=".18" stroke-dasharray="3 5"/>
+        <g transform="translate(236 592) scale(0.72)" fill="none" stroke="#3dff86" stroke-width="2.8"><g stroke-width="2.2"><rect x="-40" y="-30" width="80" height="60" rx="8"/><path d="M-40 -16H40"/>
+    <circle cx="-31" cy="-23" r="2.2" fill="#3dff86"/><circle cx="-24" cy="-23" r="2.2" fill="#3dff86"/>
+    <path d="M-26 -4H18M-26 6H8M-26 16H22" stroke-width="3.5" stroke-linecap="round" opacity=".8"/></g></g>
+        <text x="116" y="668" text-anchor="start" font-family="'Segoe UI', Inter, Arial, Helvetica, sans-serif" font-size="27" font-weight="800" letter-spacing="0" fill="#eafff1" >WEB APPS</text>
+        <text x="116" y="692" text-anchor="start" font-family="'JetBrains Mono', 'Cascadia Code', 'SF Mono', Consolas, 'Liberation Mono', Menlo, monospace" font-size="11" font-weight="400" letter-spacing="0.5" fill="#a7d9b9" >SSR / SPA / PWA</text>
+        <g>
+    <rect x="114" y="708" width="74.66666666666667" height="40" rx="12" fill="#04110a" stroke="#3dff86" stroke-opacity=".4" stroke-width="1.5"/>
+    <rect x="118" y="712" width="66.66666666666667" height="32" rx="9" fill="none" stroke="#3dff86" stroke-opacity=".12"/>
+    <text x="151.33333333333334" y="732.32" text-anchor="middle" font-family="'Segoe UI', Inter, Arial, Helvetica, sans-serif" font-size="12" font-weight="800" letter-spacing="1.5" fill="#eafff1">REACT</text>
+    
+  </g><g>
+    <rect x="198.66666666666669" y="708" width="74.66666666666667" height="40" rx="12" fill="#04110a" stroke="#3dff86" stroke-opacity=".4" stroke-width="1.5"/>
+    <rect x="202.66666666666669" y="712" width="66.66666666666667" height="32" rx="9" fill="none" stroke="#3dff86" stroke-opacity=".12"/>
+    <text x="236.00000000000003" y="732.32" text-anchor="middle" font-family="'Segoe UI', Inter, Arial, Helvetica, sans-serif" font-size="12" font-weight="800" letter-spacing="1.5" fill="#eafff1">NEXT</text>
+    
+  </g><g>
+    <rect x="283.33333333333337" y="708" width="74.66666666666667" height="40" rx="12" fill="#04110a" stroke="#3dff86" stroke-opacity=".4" stroke-width="1.5"/>
+    <rect x="287.33333333333337" y="712" width="66.66666666666667" height="32" rx="9" fill="none" stroke="#3dff86" stroke-opacity=".12"/>
+    <text x="320.6666666666667" y="732.32" text-anchor="middle" font-family="'Segoe UI', Inter, Arial, Helvetica, sans-serif" font-size="12" font-weight="800" letter-spacing="1.5" fill="#eafff1">VUE</text>
+    
+  </g>
+        <text x="116" y="780" text-anchor="start" font-family="'Segoe UI', Inter, Arial, Helvetica, sans-serif" font-size="15" font-weight="400" letter-spacing="0" fill="#a7d9b9" >React / Next.js</text><text x="116" y="804" text-anchor="start" font-family="'Segoe UI', Inter, Arial, Helvetica, sans-serif" font-size="15" font-weight="400" letter-spacing="0" fill="#a7d9b9" >Design systems</text><text x="116" y="828" text-anchor="start" font-family="'Segoe UI', Inter, Arial, Helvetica, sans-serif" font-size="15" font-weight="400" letter-spacing="0" fill="#a7d9b9" >Real-time UI</text>
+        <circle cx="348" cy="808" r="5" fill="#3dff86" filter="url(#glow)" class="pulse"/>
+      </g><g class="in" style="animation-delay:0.30000000000000004s">
+    <rect x="392" y="504" width="284" height="338" rx="18" fill="url(#panel)" stroke="#3dff86" stroke-opacity=".28" stroke-width="1.5"/>
+    <rect x="398" y="502" width="272" height="5" rx="2.5" fill="#3dff86" filter="url(#glow)" opacity=".9"/>
+  </g>
+      <g class="in" style="animation-delay:0.4s">
+        <text x="414" y="536" text-anchor="start" font-family="'JetBrains Mono', 'Cascadia Code', 'SF Mono', Consolas, 'Liberation Mono', Menlo, monospace" font-size="11" font-weight="700" letter-spacing="3" fill="#3dff86">02 / DEVICES</text>
+        <circle cx="534" cy="592" r="40" fill="none" stroke="#3dff86" stroke-opacity=".18" stroke-dasharray="3 5"/>
+        <g transform="translate(534 592) scale(0.72)" fill="none" stroke="#3dff86" stroke-width="2.8"><g stroke-width="2.2"><rect x="-22" y="-38" width="44" height="76" rx="9"/><path d="M-6 -31H6" stroke-linecap="round"/>
+    <circle cy="30" r="3"/><rect x="-14" y="-22" width="28" height="42" rx="3" opacity=".5"/>
+    <path d="M-8 -6L0 -14L8 -6M0 -14V10" stroke-linecap="round" stroke-linejoin="round"/></g></g>
+        <text x="414" y="668" text-anchor="start" font-family="'Segoe UI', Inter, Arial, Helvetica, sans-serif" font-size="27" font-weight="800" letter-spacing="0" fill="#eafff1" >MOBILE</text>
+        <text x="414" y="692" text-anchor="start" font-family="'JetBrains Mono', 'Cascadia Code', 'SF Mono', Consolas, 'Liberation Mono', Menlo, monospace" font-size="11" font-weight="400" letter-spacing="0.5" fill="#a7d9b9" >IOS / ANDROID / CROSS</text>
+        <g>
+    <rect x="412" y="708" width="74.66666666666667" height="40" rx="12" fill="#04110a" stroke="#3dff86" stroke-opacity=".4" stroke-width="1.5"/>
+    <rect x="416" y="712" width="66.66666666666667" height="32" rx="9" fill="none" stroke="#3dff86" stroke-opacity=".12"/>
+    <text x="449.3333333333333" y="732.32" text-anchor="middle" font-family="'Segoe UI', Inter, Arial, Helvetica, sans-serif" font-size="12" font-weight="800" letter-spacing="1.5" fill="#eafff1">RN</text>
+    
+  </g><g>
+    <rect x="496.6666666666667" y="708" width="74.66666666666667" height="40" rx="12" fill="#04110a" stroke="#3dff86" stroke-opacity=".4" stroke-width="1.5"/>
+    <rect x="500.6666666666667" y="712" width="66.66666666666667" height="32" rx="9" fill="none" stroke="#3dff86" stroke-opacity=".12"/>
+    <text x="534" y="731.78" text-anchor="middle" font-family="'Segoe UI', Inter, Arial, Helvetica, sans-serif" font-size="10.5" font-weight="800" letter-spacing="1.5" fill="#eafff1">FLUTTER</text>
+    
+  </g><g>
+    <rect x="581.3333333333334" y="708" width="74.66666666666667" height="40" rx="12" fill="#04110a" stroke="#3dff86" stroke-opacity=".4" stroke-width="1.5"/>
+    <rect x="585.3333333333334" y="712" width="66.66666666666667" height="32" rx="9" fill="none" stroke="#3dff86" stroke-opacity=".12"/>
+    <text x="618.6666666666667" y="732.32" text-anchor="middle" font-family="'Segoe UI', Inter, Arial, Helvetica, sans-serif" font-size="12" font-weight="800" letter-spacing="1.5" fill="#eafff1">NATIVE</text>
+    
+  </g>
+        <text x="414" y="780" text-anchor="start" font-family="'Segoe UI', Inter, Arial, Helvetica, sans-serif" font-size="15" font-weight="400" letter-spacing="0" fill="#a7d9b9" >Offline-first sync</text><text x="414" y="804" text-anchor="start" font-family="'Segoe UI', Inter, Arial, Helvetica, sans-serif" font-size="15" font-weight="400" letter-spacing="0" fill="#a7d9b9" >Push &amp; deep links</text><text x="414" y="828" text-anchor="start" font-family="'Segoe UI', Inter, Arial, Helvetica, sans-serif" font-size="15" font-weight="400" letter-spacing="0" fill="#a7d9b9" >Store CI/CD</text>
+        <circle cx="646" cy="808" r="5" fill="#3dff86" filter="url(#glow)" class="pulse"/>
+      </g><g class="in" style="animation-delay:0.4s">
+    <rect x="690" y="504" width="284" height="338" rx="18" fill="url(#panel)" stroke="#3dff86" stroke-opacity=".28" stroke-width="1.5"/>
+    <rect x="696" y="502" width="272" height="5" rx="2.5" fill="#3dff86" filter="url(#glow)" opacity=".9"/>
+  </g>
+      <g class="in" style="animation-delay:0.5s">
+        <text x="712" y="536" text-anchor="start" font-family="'JetBrains Mono', 'Cascadia Code', 'SF Mono', Consolas, 'Liberation Mono', Menlo, monospace" font-size="11" font-weight="700" letter-spacing="3" fill="#3dff86">03 / GATEWAY</text>
+        <circle cx="832" cy="592" r="40" fill="none" stroke="#3dff86" stroke-opacity=".18" stroke-dasharray="3 5"/>
+        <g transform="translate(832 592) scale(0.72)" fill="none" stroke="#3dff86" stroke-width="2.8"><g stroke-width="2.2"><circle r="38" stroke-dasharray="3 6" class="spinr"/><polygon points="0,-26 23,-13 23,13 0,26 -23,13 -23,-13"/>
+    <text y="5" text-anchor="middle" font-family="'JetBrains Mono', 'Cascadia Code', 'SF Mono', Consolas, 'Liberation Mono', Menlo, monospace" font-size="13" font-weight="700" fill="#d5ffe2" stroke="none">API</text></g></g>
+        <text x="712" y="668" text-anchor="start" font-family="'Segoe UI', Inter, Arial, Helvetica, sans-serif" font-size="27" font-weight="800" letter-spacing="0" fill="#eafff1" >API LAYER</text>
+        <text x="712" y="692" text-anchor="start" font-family="'JetBrains Mono', 'Cascadia Code', 'SF Mono', Consolas, 'Liberation Mono', Menlo, monospace" font-size="11" font-weight="400" letter-spacing="0.5" fill="#a7d9b9" >REST / GRAPHQL / WS</text>
+        <g>
+    <rect x="710" y="708" width="74.66666666666667" height="40" rx="12" fill="#04110a" stroke="#3dff86" stroke-opacity=".4" stroke-width="1.5"/>
+    <rect x="714" y="712" width="66.66666666666667" height="32" rx="9" fill="none" stroke="#3dff86" stroke-opacity=".12"/>
+    <text x="747.3333333333334" y="732.32" text-anchor="middle" font-family="'Segoe UI', Inter, Arial, Helvetica, sans-serif" font-size="12" font-weight="800" letter-spacing="1.5" fill="#eafff1">REST</text>
+    
+  </g><g>
+    <rect x="794.6666666666666" y="708" width="74.66666666666667" height="40" rx="12" fill="#04110a" stroke="#3dff86" stroke-opacity=".4" stroke-width="1.5"/>
+    <rect x="798.6666666666666" y="712" width="66.66666666666667" height="32" rx="9" fill="none" stroke="#3dff86" stroke-opacity=".12"/>
+    <text x="832" y="732.32" text-anchor="middle" font-family="'Segoe UI', Inter, Arial, Helvetica, sans-serif" font-size="12" font-weight="800" letter-spacing="1.5" fill="#eafff1">GRAPH</text>
+    
+  </g><g>
+    <rect x="879.3333333333334" y="708" width="74.66666666666667" height="40" rx="12" fill="#04110a" stroke="#3dff86" stroke-opacity=".4" stroke-width="1.5"/>
+    <rect x="883.3333333333334" y="712" width="66.66666666666667" height="32" rx="9" fill="none" stroke="#3dff86" stroke-opacity=".12"/>
+    <text x="916.6666666666667" y="732.32" text-anchor="middle" font-family="'Segoe UI', Inter, Arial, Helvetica, sans-serif" font-size="12" font-weight="800" letter-spacing="1.5" fill="#eafff1">WS</text>
+    
+  </g>
+        <text x="712" y="780" text-anchor="start" font-family="'Segoe UI', Inter, Arial, Helvetica, sans-serif" font-size="15" font-weight="400" letter-spacing="0" fill="#a7d9b9" >Auth / RBAC</text><text x="712" y="804" text-anchor="start" font-family="'Segoe UI', Inter, Arial, Helvetica, sans-serif" font-size="15" font-weight="400" letter-spacing="0" fill="#a7d9b9" >Rate limiting</text><text x="712" y="828" text-anchor="start" font-family="'Segoe UI', Inter, Arial, Helvetica, sans-serif" font-size="15" font-weight="400" letter-spacing="0" fill="#a7d9b9" >Realtime events</text>
+        <circle cx="944" cy="808" r="5" fill="#3dff86" filter="url(#glow)" class="pulse"/>
+      </g><g class="in" style="animation-delay:0.5s">
+    <rect x="988" y="504" width="284" height="338" rx="18" fill="url(#panel)" stroke="#3dff86" stroke-opacity=".28" stroke-width="1.5"/>
+    <rect x="994" y="502" width="272" height="5" rx="2.5" fill="#3dff86" filter="url(#glow)" opacity=".9"/>
+  </g>
+      <g class="in" style="animation-delay:0.6000000000000001s">
+        <text x="1010" y="536" text-anchor="start" font-family="'JetBrains Mono', 'Cascadia Code', 'SF Mono', Consolas, 'Liberation Mono', Menlo, monospace" font-size="11" font-weight="700" letter-spacing="3" fill="#3dff86">04 / INTELLIGENCE</text>
+        <circle cx="1130" cy="592" r="40" fill="none" stroke="#3dff86" stroke-opacity=".18" stroke-dasharray="3 5"/>
+        <g transform="translate(1130 592) scale(0.72)" fill="none" stroke="#3dff86" stroke-width="2.8"><g stroke-width="2"><circle r="38" stroke-dasharray="4 6" class="spin"/>
+    <path d="M-22 -14L0 -26L22 -14M-22 -14L-26 10L0 24L26 10L22 -14M-22 -14L0 0L22 -14M-26 10L0 0L26 10M0 0L0 24M0 -26L0 0"/>
+    <circle cx="-22" cy="-14" r="4" fill="#3dff86" style="animation:pulse 1.8s ease-in-out 0s infinite"/><circle cx="0" cy="-26" r="4" fill="#3dff86" style="animation:pulse 1.8s ease-in-out -0.3s infinite"/><circle cx="22" cy="-14" r="4" fill="#3dff86" style="animation:pulse 1.8s ease-in-out -0.6s infinite"/><circle cx="-26" cy="10" r="4" fill="#3dff86" style="animation:pulse 1.8s ease-in-out -0.8999999999999999s infinite"/><circle cx="0" cy="24" r="4" fill="#3dff86" style="animation:pulse 1.8s ease-in-out -1.2s infinite"/><circle cx="26" cy="10" r="4" fill="#3dff86" style="animation:pulse 1.8s ease-in-out -1.5s infinite"/>
+    <circle r="9" fill="#04110a"/><text y="4" text-anchor="middle" font-family="'JetBrains Mono', 'Cascadia Code', 'SF Mono', Consolas, 'Liberation Mono', Menlo, monospace" font-size="10" font-weight="700" fill="#d5ffe2" stroke="none">AI</text></g></g>
+        <text x="1010" y="668" text-anchor="start" font-family="'Segoe UI', Inter, Arial, Helvetica, sans-serif" font-size="27" font-weight="800" letter-spacing="0" fill="#eafff1" >AI SERVICES</text>
+        <text x="1010" y="692" text-anchor="start" font-family="'JetBrains Mono', 'Cascadia Code', 'SF Mono', Consolas, 'Liberation Mono', Menlo, monospace" font-size="11" font-weight="400" letter-spacing="0.5" fill="#a7d9b9" >LLM / RAG / AGENTS</text>
+        <g>
+    <rect x="1008" y="708" width="74.66666666666667" height="40" rx="12" fill="#04110a" stroke="#3dff86" stroke-opacity=".4" stroke-width="1.5"/>
+    <rect x="1012" y="712" width="66.66666666666667" height="32" rx="9" fill="none" stroke="#3dff86" stroke-opacity=".12"/>
+    <text x="1045.3333333333333" y="732.32" text-anchor="middle" font-family="'Segoe UI', Inter, Arial, Helvetica, sans-serif" font-size="12" font-weight="800" letter-spacing="1.5" fill="#eafff1">LLM</text>
+    
+  </g><g>
+    <rect x="1092.6666666666667" y="708" width="74.66666666666667" height="40" rx="12" fill="#04110a" stroke="#3dff86" stroke-opacity=".4" stroke-width="1.5"/>
+    <rect x="1096.6666666666667" y="712" width="66.66666666666667" height="32" rx="9" fill="none" stroke="#3dff86" stroke-opacity=".12"/>
+    <text x="1130" y="732.32" text-anchor="middle" font-family="'Segoe UI', Inter, Arial, Helvetica, sans-serif" font-size="12" font-weight="800" letter-spacing="1.5" fill="#eafff1">RAG</text>
+    
+  </g><g>
+    <rect x="1177.3333333333333" y="708" width="74.66666666666667" height="40" rx="12" fill="#04110a" stroke="#3dff86" stroke-opacity=".4" stroke-width="1.5"/>
+    <rect x="1181.3333333333333" y="712" width="66.66666666666667" height="32" rx="9" fill="none" stroke="#3dff86" stroke-opacity=".12"/>
+    <text x="1214.6666666666665" y="732.32" text-anchor="middle" font-family="'Segoe UI', Inter, Arial, Helvetica, sans-serif" font-size="12" font-weight="800" letter-spacing="1.5" fill="#eafff1">AGENT</text>
+    
+  </g>
+        <text x="1010" y="780" text-anchor="start" font-family="'Segoe UI', Inter, Arial, Helvetica, sans-serif" font-size="15" font-weight="400" letter-spacing="0" fill="#a7d9b9" >Model orchestration</text><text x="1010" y="804" text-anchor="start" font-family="'Segoe UI', Inter, Arial, Helvetica, sans-serif" font-size="15" font-weight="400" letter-spacing="0" fill="#a7d9b9" >Vector retrieval</text><text x="1010" y="828" text-anchor="start" font-family="'Segoe UI', Inter, Arial, Helvetica, sans-serif" font-size="15" font-weight="400" letter-spacing="0" fill="#a7d9b9" >Evals &amp; guardrails</text>
+        <circle cx="1242" cy="808" r="5" fill="#3dff86" filter="url(#glow)" class="pulse"/>
+      </g><g class="in" style="animation-delay:0.6000000000000001s">
+    <rect x="1286" y="504" width="284" height="338" rx="18" fill="url(#panel)" stroke="#3dff86" stroke-opacity=".28" stroke-width="1.5"/>
+    <rect x="1292" y="502" width="272" height="5" rx="2.5" fill="#3dff86" filter="url(#glow)" opacity=".9"/>
+  </g>
+      <g class="in" style="animation-delay:0.7s">
+        <text x="1308" y="536" text-anchor="start" font-family="'JetBrains Mono', 'Cascadia Code', 'SF Mono', Consolas, 'Liberation Mono', Menlo, monospace" font-size="11" font-weight="700" letter-spacing="3" fill="#3dff86">05 / PERSISTENCE</text>
+        <circle cx="1428" cy="592" r="40" fill="none" stroke="#3dff86" stroke-opacity=".18" stroke-dasharray="3 5"/>
+        <g transform="translate(1428 592) scale(0.72)" fill="none" stroke="#3dff86" stroke-width="2.8"><g stroke-width="2.2"><path d="M-30 20Q-46 20 -46 6Q-46 -8 -32 -10Q-30 -30 -8 -30Q8 -30 14 -16Q20 -22 30 -18Q42 -12 38 2Q48 6 46 14Q44 20 36 20Z" stroke-linejoin="round"/><circle cy="0" r="4" fill="#3dff86" class="pulse"/></g></g>
+        <text x="1308" y="668" text-anchor="start" font-family="'Segoe UI', Inter, Arial, Helvetica, sans-serif" font-size="27" font-weight="800" letter-spacing="0" fill="#eafff1" >DATA &amp; CLOUD</text>
+        <text x="1308" y="692" text-anchor="start" font-family="'JetBrains Mono', 'Cascadia Code', 'SF Mono', Consolas, 'Liberation Mono', Menlo, monospace" font-size="11" font-weight="400" letter-spacing="0.5" fill="#a7d9b9" >STORAGE / CACHE / INFRA</text>
+        <g>
+    <rect x="1306" y="708" width="74.66666666666667" height="40" rx="12" fill="#04110a" stroke="#3dff86" stroke-opacity=".4" stroke-width="1.5"/>
+    <rect x="1310" y="712" width="66.66666666666667" height="32" rx="9" fill="none" stroke="#3dff86" stroke-opacity=".12"/>
+    <text x="1343.3333333333333" y="732.32" text-anchor="middle" font-family="'Segoe UI', Inter, Arial, Helvetica, sans-serif" font-size="12" font-weight="800" letter-spacing="1.5" fill="#eafff1">PG</text>
+    
+  </g><g>
+    <rect x="1390.6666666666667" y="708" width="74.66666666666667" height="40" rx="12" fill="#04110a" stroke="#3dff86" stroke-opacity=".4" stroke-width="1.5"/>
+    <rect x="1394.6666666666667" y="712" width="66.66666666666667" height="32" rx="9" fill="none" stroke="#3dff86" stroke-opacity=".12"/>
+    <text x="1428" y="732.32" text-anchor="middle" font-family="'Segoe UI', Inter, Arial, Helvetica, sans-serif" font-size="12" font-weight="800" letter-spacing="1.5" fill="#eafff1">MONGO</text>
+    
+  </g><g>
+    <rect x="1475.3333333333333" y="708" width="74.66666666666667" height="40" rx="12" fill="#04110a" stroke="#3dff86" stroke-opacity=".4" stroke-width="1.5"/>
+    <rect x="1479.3333333333333" y="712" width="66.66666666666667" height="32" rx="9" fill="none" stroke="#3dff86" stroke-opacity=".12"/>
+    <text x="1512.6666666666665" y="732.32" text-anchor="middle" font-family="'Segoe UI', Inter, Arial, Helvetica, sans-serif" font-size="12" font-weight="800" letter-spacing="1.5" fill="#eafff1">REDIS</text>
+    
+  </g>
+        <text x="1308" y="780" text-anchor="start" font-family="'Segoe UI', Inter, Arial, Helvetica, sans-serif" font-size="15" font-weight="400" letter-spacing="0" fill="#a7d9b9" >Docker / Kubernetes</text><text x="1308" y="804" text-anchor="start" font-family="'Segoe UI', Inter, Arial, Helvetica, sans-serif" font-size="15" font-weight="400" letter-spacing="0" fill="#a7d9b9" >AWS / GCP</text><text x="1308" y="828" text-anchor="start" font-family="'Segoe UI', Inter, Arial, Helvetica, sans-serif" font-size="15" font-weight="400" letter-spacing="0" fill="#a7d9b9" >CI/CD pipelines</text>
+        <circle cx="1540" cy="808" r="5" fill="#3dff86" filter="url(#glow)" class="pulse"/>
+      </g>
+  <text x="832" y="892" text-anchor="middle" font-family="'JetBrains Mono', 'Cascadia Code', 'SF Mono', Consolas, 'Liberation Mono', Menlo, monospace" font-size="12" letter-spacing="4" fill="#3dff86" opacity=".6">CLIENT  →  GATEWAY  →  SERVICES  →  AI  →  DATA</text>
+  
+  
+  <rect class="scan" y="0" width="1664" height="60" fill="url(#scanG)"/>
+  <rect width="1664" height="936" fill="url(#vignette)"/>
+  </g>
+</svg>

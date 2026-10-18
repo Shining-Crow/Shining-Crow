@@ -1,0 +1,155 @@
+{
+  "username": "Shining-Crow",
+  "name": "Shining Crow",
+  "roles": ["Senior AI Full Stack Engineer", "Web + Mobile", "Game Developer"],
+
+  "hero": {
+    "kicker": "AI · FULL STACK · GAME DEV",
+    "nav": ["HOME", "AI", "WEB", "MOBILE", "GAMES", "CONTACT"],
+    "motto": "BUILDING INTELLIGENT WORLDS",
+    "tagline": ["INTELLIGENT PRODUCTS", "FOR WEB · MOBILE · GAMES"],
+    "quote": ["Turning ideas into", "intelligent, playable", "experiences.\""],
+    "code": [
+      "const crow = new Engineer({",
+      "  ai: ['LLM', 'RAG', 'Agents'],",
+      "  web: ['React', 'Next.js'],",
+      "  mobile: ['RN', 'Flutter'],",
+      "  games: ['Unity', 'Unreal'],",
+      "});",
+      "crow.ship('the future'); // ⚡"
+    ]
+  },
+
+  "intro": {
+    "heading": "Intelligence, Engineered to Play",
+    "paragraphs": [
+      "I'm <strong>Shining Crow</strong>, a Senior AI Full Stack Engineer building across the <strong>AI, web, mobile, and game</strong> layers.",
+      "I turn ambitious product ideas into fast, scalable, production-ready systems — and I bring a game developer's obsession with feel, performance, and play to everything I ship."
+    ],
+    "grid": [
+      { "title": "AI / ML", "items": "LLM · RAG · Agents · Vision" },
+      { "title": "Web", "items": "React · Next.js · Node.js · TypeScript" },
+      { "title": "Mobile", "items": "React Native · Flutter · Swift · Kotlin" },
+      { "title": "Games", "items": "Unity · Unreal · Godot · WebGL" }
+    ]
+  },
+
+  "core": {
+    "domains": [
+      { "label": "AI", "icon": "brain" },
+      { "label": "WEB", "icon": "web" },
+      { "label": "MOBILE", "icon": "mobile" },
+      { "label": "GAMES", "icon": "game" }
+    ],
+    "satellites": ["PY", "TS", "RN", "C#", "C++", "GO", "SQL", "GL", "LLM", "K8S"],
+    "caption": "SHINING CROW // AI · WEB · MOBILE · GAMES"
+  },
+
+  "universeSubtitle": "AI  /  WEB  /  MOBILE  /  GAME ENGINEERING",
+  "universeFooter": "● SYSTEMS CONNECTED // 4 DOMAINS // BUILD • SHIP • PLAY",
+  "universe": [
+    {
+      "index": "01 / INTELLIGENCE", "title": "AI / ML", "subtitle": "Models • Agents • Vision", "icon": "brain",
+      "badges": ["PY", "PT", "TF", "HF", "LC", "OAI", "CV"],
+      "list": ["PyTorch", "TensorFlow", "LangChain", "LlamaIndex", "OpenAI / Claude", "Hugging Face", "Vector DBs", "Computer Vision"],
+      "statusLabel": "INFERENCE", "status": "MODELS ONLINE", "pct": 0.82
+    },
+    {
+      "index": "02 / PLATFORM", "title": "WEB", "subtitle": "Frontend • Backend • APIs", "icon": "web",
+      "badges": ["RE", "NX", "TS", "VU", "ND", "NS", "GQL"],
+      "list": ["React", "Next.js", "TypeScript", "Vue.js", "Node.js", "NestJS", "GraphQL", "Tailwind"],
+      "statusLabel": "REQUEST FLOW", "status": "SERVICES SYNCED", "pct": 0.76
+    },
+    {
+      "index": "03 / DEVICES", "title": "MOBILE", "subtitle": "iOS • Android • Cross-platform", "icon": "mobile",
+      "badges": ["RN", "FL", "DT", "SW", "KT", "EX", "FB"],
+      "list": ["React Native", "Flutter", "Dart", "Swift", "Kotlin", "Expo", "Firebase", "Store CI/CD"],
+      "statusLabel": "RELEASE TRAIN", "status": "BUILDS SHIPPING", "pct": 0.7
+    },
+    {
+      "index": "04 / WORLDS", "title": "GAME DEV", "subtitle": "Gameplay • Graphics • Netcode", "icon": "game",
+      "badges": ["UN", "UE", "GD", "C#", "C++", "GL", "BL"],
+      "list": ["Unity", "Unreal Engine", "Godot", "C# / C++", "Three.js", "Shaders / VFX", "Multiplayer", "Blender"],
+      "statusLabel": "FRAME RATE", "status": "60 FPS STABLE", "pct": 0.9
+    }
+  ],
+
+  "ai": {
+    "title": "AI ENGINEERING",
+    "subtitle": "INTELLIGENCE / RETRIEVAL / AGENTS / AUTOMATION",
+    "panels": [
+      {
+        "index": "01 / GENERATIVE INTELLIGENCE", "title": "LLM APPLICATIONS", "tags": "MODELS / PROMPTS / AGENTS / TOOLS",
+        "bullets": ["AI-powered products", "LLM APIs & tool use", "Prompt engineering", "Autonomous agents", "AI-assisted workflows"],
+        "meter": "INFERENCE ACTIVITY", "pct": 0.55
+      },
+      {
+        "index": "02 / KNOWLEDGE RETRIEVAL", "title": "RAG SYSTEMS", "tags": "RETRIEVAL / VECTORS / KNOWLEDGE / CONTEXT",
+        "bullets": ["Retrieval-augmented gen", "Embeddings & vector search", "Knowledge systems", "Document intelligence", "Context-aware apps"],
+        "meter": "RETRIEVAL PIPELINE", "pct": 0.52
+      }
+    ],
+    "tools": ["OPENAI", "CLAUDE", "LANGCHAIN", "PYTORCH", "HUGGING FACE"],
+    "statusL": "LLM // RAG // AGENTS // VISION",
+    "statusR": "AI_CORE: ACTIVE"
+  },
+
+  "game": {
+    "title": "GAME DEVELOPMENT",
+    "subtitle": "GAMEPLAY / GRAPHICS / PHYSICS / MULTIPLAYER",
+    "engines": ["UNITY", "UNREAL", "GODOT", "THREE.JS"],
+    "cards": [
+      { "index": "02 / MECHANICS", "title": "GAMEPLAY SYSTEMS", "subtitle": "Mechanics · AI NPCs · Physics", "stat": "60 FPS", "icon": "game" },
+      { "index": "03 / RENDERING", "title": "GRAPHICS & VFX", "subtitle": "Shaders · Lighting · Particles", "stat": "PBR", "icon": "sparkle" },
+      { "index": "04 / NETCODE", "title": "MULTIPLAYER", "subtitle": "Realtime sync · Matchmaking", "stat": "<50MS", "icon": "net" }
+    ],
+    "pipeline": ["CONCEPT", "PROTOTYPE", "GAMEPLAY", "POLISH", "LAUNCH"],
+    "statusL": "PLAY // BUILD // ITERATE // SHIP",
+    "statusR": "ENGINE: RUNNING"
+  },
+
+  "architecture": {
+    "title": "SYSTEM ARCHITECTURE",
+    "subtitle": "CLIENTS / GATEWAY / SERVICES / AI / DATA",
+    "footer": "CLIENT  →  GATEWAY  →  SERVICES  →  AI  →  DATA",
+    "flow": [
+      { "label": "CLIENT APPS", "icon": "mobile" },
+      { "label": "API GATEWAY", "icon": "api" },
+      { "label": "AI + SERVICES", "icon": "cpu" },
+      { "label": "DATA LAYER", "icon": "db" }
+    ],
+    "cards": [
+      { "index": "01 / EXPERIENCE", "title": "WEB APPS", "tags": "SSR / SPA / PWA", "icon": "web", "chips": ["REACT", "NEXT", "VUE"], "list": ["React / Next.js", "Design systems", "Real-time UI"] },
+      { "index": "02 / DEVICES", "title": "MOBILE", "tags": "IOS / ANDROID / CROSS", "icon": "mobile", "chips": ["RN", "FLUTTER", "NATIVE"], "list": ["Offline-first sync", "Push & deep links", "Store CI/CD"] },
+      { "index": "03 / GATEWAY", "title": "API LAYER", "tags": "REST / GRAPHQL / WS", "icon": "api", "chips": ["REST", "GRAPH", "WS"], "list": ["Auth / RBAC", "Rate limiting", "Realtime events"] },
+      { "index": "04 / INTELLIGENCE", "title": "AI SERVICES", "tags": "LLM / RAG / AGENTS", "icon": "brain", "chips": ["LLM", "RAG", "AGENT"], "list": ["Model orchestration", "Vector retrieval", "Evals & guardrails"] },
+      { "index": "05 / PERSISTENCE", "title": "DATA & CLOUD", "tags": "STORAGE / CACHE / INFRA", "icon": "cloud", "chips": ["PG", "MONGO", "REDIS"], "list": ["Docker / Kubernetes", "AWS / GCP", "CI/CD pipelines"] }
+    ]
+  },
+
+  "focus": [
+    { "title": "AI SYSTEMS", "icon": "brain", "items": ["LLM applications", "RAG pipelines", "AI agents"] },
+    { "title": "WEB PLATFORMS", "icon": "web", "items": ["React · Next.js", "Node.js APIs", "Realtime apps"] },
+    { "title": "MOBILE APPS", "icon": "mobile", "items": ["React Native", "Flutter", "Offline-first"] },
+    { "title": "GAME WORLDS", "icon": "game", "items": ["Unity · Unreal", "Gameplay systems", "WebGL / Three.js"] }
+  ],
+
+  "projects": [
+    { "repo": "PocketCare", "kind": "AI Health", "icon": "brain", "description": "AI-assisted healthcare platform with symptom analysis, doctor booking, and emergency features." },
+    { "repo": "Restaurant", "kind": "Web App", "icon": "web", "description": "Italia Restaurant — a modern, responsive restaurant web experience built with TypeScript." },
+    { "repo": "MxaTech", "kind": "Company Site", "icon": "cloud", "description": "MxaTech — company website and product showcase." },
+    { "repo": "remote-cooperation", "kind": "Collaboration", "icon": "net", "description": "Remote cooperation platform for distributed teams." }
+  ],
+
+  "socials": [
+    { "label": "GitHub", "url": "https://github.com/Shining-Crow", "logo": "github" },
+    { "label": "LinkedIn", "url": "", "logo": "linkedin" },
+    { "label": "Portfolio", "url": "", "logo": "googlechrome" },
+    { "label": "Email", "url": "", "logo": "gmail" },
+    { "label": "Discord", "url": "", "logo": "discord" }
+  ],
+
+  "video": {
+    "attachmentUrl": ""
+  }
+}
