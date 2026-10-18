@@ -34,7 +34,8 @@ function art(x, y, w, h, seed, ic) {
 
 export function projectsSlide(cfg, data) {
   const items = cfg.projects.slice(0, 4).map((p) => ({ p, r: data.repos.find((r) => r.name.toLowerCase() === p.repo.toLowerCase()) }));
-  const cw = 716, ch = 252, xs = [100, 848], ys = [174, 448];
+  // Two or fewer projects sit in one vertically-centred row; more fill a 2×2 grid.
+  const cw = 716, ch = 252, xs = [100, 848], ys = items.length <= 2 ? [314] : [174, 448];
 
   const cards = items.map(({ p, r }, i) => {
     const x = xs[i % 2], y = ys[Math.floor(i / 2)];

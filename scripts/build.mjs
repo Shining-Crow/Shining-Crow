@@ -6,7 +6,6 @@ import { fileURLToPath } from 'node:url';
 import { join, dirname } from 'node:path';
 import { collect } from './lib/github.mjs';
 import { heroSlide } from './slides/hero.mjs';
-import { coreSlide } from './slides/core.mjs';
 import { universeSlide } from './slides/universe.mjs';
 import { aiSlide } from './slides/ai.mjs';
 import { gameSlide } from './slides/game.mjs';
@@ -38,7 +37,6 @@ try {
 
 console.log('» generating slides');
 await write('assets/slides/hero.svg', heroSlide(cfg, data));
-await write('assets/slides/core.svg', coreSlide(cfg));
 await write('assets/slides/universe.svg', universeSlide(cfg));
 await write('assets/slides/ai.svg', aiSlide(cfg));
 await write('assets/slides/game.svg', gameSlide(cfg));

@@ -20,8 +20,8 @@ export function readme(cfg, data) {
 
   const video = cfg.video?.attachmentUrl
     ? `\n\n${cfg.video.attachmentUrl}\n\n`
-    : `<a href="assets/video/showreel.mp4"><img src="assets/video/showreel.jpg" width="100%" alt="Watch the Shining Crow showreel"/></a>
-  <br/><sub>▶ Click to watch the 1080p showreel</sub>`;
+    : `<a href="assets/video/showreel.mp4"><img src="assets/video/crow-realm-wide.webp" width="100%" alt="Shining Crow — real-time 3D showreel"/></a>
+  <br/><sub>▶ Real-time 3D (Three.js) · click to watch the full 1080p cinematic</sub>`;
 
   const socials = cfg.socials
     .filter((s) => s.url)
@@ -52,7 +52,7 @@ ${gridRows}
 </table>
 
 <p>
-  <img src="https://komarev.com/ghpvc/?username=${u}&style=flat-square&color=22c55e&label=PROFILE+VIEWS" alt="profile views"/>
+  <img src="https://hits.sh/github.com/${u}.svg?style=flat-square&label=PROFILE%20VIEWS&color=22c55e&labelColor=071b10" alt="profile views"/>
   <a href="https://github.com/${u}?tab=followers"><img src="https://img.shields.io/github/followers/${u}?style=flat-square&logo=github&color=22c55e&labelColor=071b10" alt="followers"/></a>
 </p>
 
@@ -60,7 +60,7 @@ ${gridRows}
 
 <td width="42%" align="center">
 
-<img src="assets/slides/core.svg" width="100%" alt="System core — AI · Web · Mobile · Games"/>
+<img src="assets/video/crow-realm.webp" width="100%" alt="3D render — the Shining Crow flying through a neon canyon"/>
 
 </td>
 

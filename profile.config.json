@@ -136,9 +136,7 @@
 
   "projects": [
     { "repo": "PocketCare", "kind": "AI Health", "icon": "brain", "description": "AI-assisted healthcare platform with symptom analysis, doctor booking, and emergency features." },
-    { "repo": "Restaurant", "kind": "Web App", "icon": "web", "description": "Italia Restaurant — a modern, responsive restaurant web experience built with TypeScript." },
-    { "repo": "MxaTech", "kind": "Company Site", "icon": "cloud", "description": "MxaTech — company website and product showcase." },
-    { "repo": "remote-cooperation", "kind": "Collaboration", "icon": "net", "description": "Remote cooperation platform for distributed teams." }
+    { "repo": "Restaurant", "kind": "Web App", "icon": "web", "description": "Italia Restaurant — a modern, responsive restaurant web experience built with TypeScript." }
   ],
 
   "socials": [

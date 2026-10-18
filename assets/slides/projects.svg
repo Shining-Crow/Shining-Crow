@@ -67,114 +67,62 @@
     <rect x="532" y="140" width="600" height="1.5" fill="url(#hline)"/>
   </g>
     <g class="in" style="animation-delay:0.1s">
-    <rect x="100" y="174" width="716" height="252" rx="18" fill="url(#panel)" stroke="#3dff86" stroke-opacity=".28" stroke-width="1.5"/>
-    <rect x="106" y="172" width="704" height="5" rx="2.5" fill="#3dff86" filter="url(#glow)" opacity=".9"/>
+    <rect x="100" y="314" width="716" height="252" rx="18" fill="url(#panel)" stroke="#3dff86" stroke-opacity=".28" stroke-width="1.5"/>
+    <rect x="106" y="312" width="704" height="5" rx="2.5" fill="#3dff86" filter="url(#glow)" opacity=".9"/>
   </g>
       <g class="in" style="animation-delay:0.2s">
-        <clipPath id="pa1"><rect x="118" y="194" width="236" height="212" rx="12"/></clipPath>
+        <clipPath id="pa1"><rect x="118" y="334" width="236" height="212" rx="12"/></clipPath>
     <g clip-path="url(#pa1)">
-      <rect x="118" y="194" width="236" height="212" fill="#04140b"/>
-      <rect x="118" y="194" width="236" height="212" fill="url(#grid)"/>
-      <circle cx="264.32" cy="283.03999999999996" r="30" fill="none" stroke="#3dff86" stroke-opacity="0.40" stroke-dasharray="2 4" style="animation:spin 18s linear infinite ;transform-box:fill-box;transform-origin:center"/><circle cx="264.32" cy="283.03999999999996" r="56" fill="none" stroke="#3dff86" stroke-opacity="0.32" stroke-dasharray="5 8" style="animation:spin 26s linear infinite reverse;transform-box:fill-box;transform-origin:center"/><circle cx="264.32" cy="283.03999999999996" r="82" fill="none" stroke="#3dff86" stroke-opacity="0.24" stroke-dasharray="8 12" style="animation:spin 34s linear infinite ;transform-box:fill-box;transform-origin:center"/><circle cx="264.32" cy="283.03999999999996" r="108" fill="none" stroke="#3dff86" stroke-opacity="0.16" stroke-dasharray="11 16" style="animation:spin 42s linear infinite reverse;transform-box:fill-box;transform-origin:center"/><rect x="134" y="367.52248961059377" width="8" height="24" rx="2" fill="#3dff86" opacity="0.60"/><rect x="148" y="366.5362328574993" width="8" height="25" rx="2" fill="#3dff86" opacity="0.59"/><rect x="162" y="364.17895285924897" width="8" height="28" rx="2" fill="#3dff86" opacity="0.60"/><rect x="176" y="340.6581807699986" width="8" height="51" rx="2" fill="#3dff86" opacity="0.23"/><rect x="190" y="346.47667431784794" width="8" height="46" rx="2" fill="#3dff86" opacity="0.45"/><rect x="204" y="361.4567517586984" width="8" height="31" rx="2" fill="#3dff86" opacity="0.32"/><rect x="218" y="360.96601132815704" width="8" height="31" rx="2" fill="#3dff86" opacity="0.32"/><rect x="232" y="356.20844986336306" width="8" height="36" rx="2" fill="#3dff86" opacity="0.62"/><rect x="246" y="339.8492911416106" width="8" height="52" rx="2" fill="#3dff86" opacity="0.40"/>
-      <circle cx="264.32" cy="283.03999999999996" r="30" fill="#04110a" stroke="#3dff86" stroke-width="1.5"/>
-      <g transform="translate(264.32 283.03999999999996) scale(0.42)" fill="none" stroke="#3dff86" stroke-width="4.5"><g stroke-width="2"><circle r="38" stroke-dasharray="4 6" class="spin"/>
+      <rect x="118" y="334" width="236" height="212" fill="#04140b"/>
+      <rect x="118" y="334" width="236" height="212" fill="url(#grid)"/>
+      <circle cx="264.32" cy="423.03999999999996" r="30" fill="none" stroke="#3dff86" stroke-opacity="0.40" stroke-dasharray="2 4" style="animation:spin 18s linear infinite ;transform-box:fill-box;transform-origin:center"/><circle cx="264.32" cy="423.03999999999996" r="56" fill="none" stroke="#3dff86" stroke-opacity="0.32" stroke-dasharray="5 8" style="animation:spin 26s linear infinite reverse;transform-box:fill-box;transform-origin:center"/><circle cx="264.32" cy="423.03999999999996" r="82" fill="none" stroke="#3dff86" stroke-opacity="0.24" stroke-dasharray="8 12" style="animation:spin 34s linear infinite ;transform-box:fill-box;transform-origin:center"/><circle cx="264.32" cy="423.03999999999996" r="108" fill="none" stroke="#3dff86" stroke-opacity="0.16" stroke-dasharray="11 16" style="animation:spin 42s linear infinite reverse;transform-box:fill-box;transform-origin:center"/><rect x="134" y="507.52248961059377" width="8" height="24" rx="2" fill="#3dff86" opacity="0.60"/><rect x="148" y="506.5362328574993" width="8" height="25" rx="2" fill="#3dff86" opacity="0.59"/><rect x="162" y="504.17895285924897" width="8" height="28" rx="2" fill="#3dff86" opacity="0.60"/><rect x="176" y="480.6581807699986" width="8" height="51" rx="2" fill="#3dff86" opacity="0.23"/><rect x="190" y="486.47667431784794" width="8" height="46" rx="2" fill="#3dff86" opacity="0.45"/><rect x="204" y="501.4567517586984" width="8" height="31" rx="2" fill="#3dff86" opacity="0.32"/><rect x="218" y="500.96601132815704" width="8" height="31" rx="2" fill="#3dff86" opacity="0.32"/><rect x="232" y="496.20844986336306" width="8" height="36" rx="2" fill="#3dff86" opacity="0.62"/><rect x="246" y="479.8492911416106" width="8" height="52" rx="2" fill="#3dff86" opacity="0.40"/>
+      <circle cx="264.32" cy="423.03999999999996" r="30" fill="#04110a" stroke="#3dff86" stroke-width="1.5"/>
+      <g transform="translate(264.32 423.03999999999996) scale(0.42)" fill="none" stroke="#3dff86" stroke-width="4.5"><g stroke-width="2"><circle r="38" stroke-dasharray="4 6" class="spin"/>
     <path d="M-22 -14L0 -26L22 -14M-22 -14L-26 10L0 24L26 10L22 -14M-22 -14L0 0L22 -14M-26 10L0 0L26 10M0 0L0 24M0 -26L0 0"/>
     <circle cx="-22" cy="-14" r="4" fill="#3dff86" style="animation:pulse 1.8s ease-in-out 0s infinite"/><circle cx="0" cy="-26" r="4" fill="#3dff86" style="animation:pulse 1.8s ease-in-out -0.3s infinite"/><circle cx="22" cy="-14" r="4" fill="#3dff86" style="animation:pulse 1.8s ease-in-out -0.6s infinite"/><circle cx="-26" cy="10" r="4" fill="#3dff86" style="animation:pulse 1.8s ease-in-out -0.8999999999999999s infinite"/><circle cx="0" cy="24" r="4" fill="#3dff86" style="animation:pulse 1.8s ease-in-out -1.2s infinite"/><circle cx="26" cy="10" r="4" fill="#3dff86" style="animation:pulse 1.8s ease-in-out -1.5s infinite"/>
     <circle r="9" fill="#04110a"/><text y="4" text-anchor="middle" font-family="'JetBrains Mono', 'Cascadia Code', 'SF Mono', Consolas, 'Liberation Mono', Menlo, monospace" font-size="10" font-weight="700" fill="#d5ffe2" stroke="none">AI</text></g></g>
-      <rect x="118" y="194" width="50" height="212" fill="url(#sweepG)" style="animation:sweepX 6s linear -1.3s infinite"/>
+      <rect x="118" y="334" width="50" height="212" fill="url(#sweepG)" style="animation:sweepX 6s linear -1.3s infinite"/>
     </g>
-    <rect x="118" y="194" width="236" height="212" rx="12" fill="none" stroke="#3dff86" stroke-opacity=".3"/>
-        <text x="380" y="218" text-anchor="start" font-family="'JetBrains Mono', 'Cascadia Code', 'SF Mono', Consolas, 'Liberation Mono', Menlo, monospace" font-size="11.5" font-weight="700" letter-spacing="3" fill="#3dff86">QUEST 01 · AI HEALTH</text>
-        <text x="380" y="258" text-anchor="start" font-family="'Segoe UI', Inter, Arial, Helvetica, sans-serif" font-size="30" font-weight="800" letter-spacing="0" fill="#eafff1" >PocketCare</text>
-        <text x="380" y="290" text-anchor="start" font-family="'Segoe UI', Inter, Arial, Helvetica, sans-serif" font-size="16" font-weight="400" letter-spacing="0" fill="#a7d9b9" >AI-assisted healthcare platform with symptom</text><text x="380" y="314" text-anchor="start" font-family="'Segoe UI', Inter, Arial, Helvetica, sans-serif" font-size="16" font-weight="400" letter-spacing="0" fill="#a7d9b9" >analysis, doctor booking, and emergency</text><text x="380" y="338" text-anchor="start" font-family="'Segoe UI', Inter, Arial, Helvetica, sans-serif" font-size="16" font-weight="400" letter-spacing="0" fill="#a7d9b9" >features.</text>
+    <rect x="118" y="334" width="236" height="212" rx="12" fill="none" stroke="#3dff86" stroke-opacity=".3"/>
+        <text x="380" y="358" text-anchor="start" font-family="'JetBrains Mono', 'Cascadia Code', 'SF Mono', Consolas, 'Liberation Mono', Menlo, monospace" font-size="11.5" font-weight="700" letter-spacing="3" fill="#3dff86">QUEST 01 · AI HEALTH</text>
+        <text x="380" y="398" text-anchor="start" font-family="'Segoe UI', Inter, Arial, Helvetica, sans-serif" font-size="30" font-weight="800" letter-spacing="0" fill="#eafff1" >PocketCare</text>
+        <text x="380" y="430" text-anchor="start" font-family="'Segoe UI', Inter, Arial, Helvetica, sans-serif" font-size="16" font-weight="400" letter-spacing="0" fill="#a7d9b9" >AI-assisted healthcare platform with symptom</text><text x="380" y="454" text-anchor="start" font-family="'Segoe UI', Inter, Arial, Helvetica, sans-serif" font-size="16" font-weight="400" letter-spacing="0" fill="#a7d9b9" >analysis, doctor booking, and emergency</text><text x="380" y="478" text-anchor="start" font-family="'Segoe UI', Inter, Arial, Helvetica, sans-serif" font-size="16" font-weight="400" letter-spacing="0" fill="#a7d9b9" >features.</text>
         <g font-family="'JetBrains Mono', 'Cascadia Code', 'SF Mono', Consolas, 'Liberation Mono', Menlo, monospace" font-size="13" fill="#a7d9b9">
-          <rect x="380" y="370" width="118" height="28" rx="14" fill="#04110a" stroke="#3dff86" stroke-opacity=".4"/>
-          <circle cx="396" cy="384" r="4.5" fill="#3dff86"/>
-          <text x="408" y="389" fill="#eafff1">JavaScript</text>
-          <text x="516" y="389">★ 0   ⑂ 0</text>
-          <text x="790" y="389" text-anchor="end" fill="#5f9c78">updated 20d ago</text>
+          <rect x="380" y="510" width="118" height="28" rx="14" fill="#04110a" stroke="#3dff86" stroke-opacity=".4"/>
+          <circle cx="396" cy="524" r="4.5" fill="#3dff86"/>
+          <text x="408" y="529" fill="#eafff1">JavaScript</text>
+          <text x="516" y="529">★ 0   ⑂ 0</text>
+          <text x="790" y="529" text-anchor="end" fill="#5f9c78">updated 20d ago</text>
         </g>
-        <g transform="translate(776 216)"><circle r="15" fill="none" stroke="#3dff86" stroke-opacity=".5"/><path d="M-5 5L5 -5M-3 -5H5V3" stroke="#3dff86" stroke-width="2" fill="none"/></g>
+        <g transform="translate(776 356)"><circle r="15" fill="none" stroke="#3dff86" stroke-opacity=".5"/><path d="M-5 5L5 -5M-3 -5H5V3" stroke="#3dff86" stroke-width="2" fill="none"/></g>
       </g><g class="in" style="animation-delay:0.2s">
-    <rect x="848" y="174" width="716" height="252" rx="18" fill="url(#panel)" stroke="#3dff86" stroke-opacity=".28" stroke-width="1.5"/>
-    <rect x="854" y="172" width="704" height="5" rx="2.5" fill="#3dff86" filter="url(#glow)" opacity=".9"/>
+    <rect x="848" y="314" width="716" height="252" rx="18" fill="url(#panel)" stroke="#3dff86" stroke-opacity=".28" stroke-width="1.5"/>
+    <rect x="854" y="312" width="704" height="5" rx="2.5" fill="#3dff86" filter="url(#glow)" opacity=".9"/>
   </g>
       <g class="in" style="animation-delay:0.30000000000000004s">
-        <clipPath id="pa2"><rect x="866" y="194" width="236" height="212" rx="12"/></clipPath>
+        <clipPath id="pa2"><rect x="866" y="334" width="236" height="212" rx="12"/></clipPath>
     <g clip-path="url(#pa2)">
-      <rect x="866" y="194" width="236" height="212" fill="#04140b"/>
-      <rect x="866" y="194" width="236" height="212" fill="url(#grid)"/>
-      <circle cx="1012.3199999999999" cy="283.03999999999996" r="30" fill="none" stroke="#3dff86" stroke-opacity="0.40" stroke-dasharray="2 4" style="animation:spin 18s linear infinite ;transform-box:fill-box;transform-origin:center"/><circle cx="1012.3199999999999" cy="283.03999999999996" r="56" fill="none" stroke="#3dff86" stroke-opacity="0.32" stroke-dasharray="5 8" style="animation:spin 26s linear infinite reverse;transform-box:fill-box;transform-origin:center"/><circle cx="1012.3199999999999" cy="283.03999999999996" r="82" fill="none" stroke="#3dff86" stroke-opacity="0.24" stroke-dasharray="8 12" style="animation:spin 34s linear infinite ;transform-box:fill-box;transform-origin:center"/><circle cx="1012.3199999999999" cy="283.03999999999996" r="108" fill="none" stroke="#3dff86" stroke-opacity="0.16" stroke-dasharray="11 16" style="animation:spin 42s linear infinite reverse;transform-box:fill-box;transform-origin:center"/><rect x="882" y="364.98402121290565" width="8" height="27" rx="2" fill="#3dff86" opacity="0.54"/><rect x="896" y="381.69704903196543" width="8" height="10" rx="2" fill="#3dff86" opacity="0.51"/><rect x="910" y="348.8249644804746" width="8" height="43" rx="2" fill="#3dff86" opacity="0.58"/><rect x="924" y="367.36561934743077" width="8" height="25" rx="2" fill="#3dff86" opacity="0.24"/><rect x="938" y="364.3925504460931" width="8" height="28" rx="2" fill="#3dff86" opacity="0.22"/><rect x="952" y="339.5537550961599" width="8" height="52" rx="2" fill="#3dff86" opacity="0.68"/><rect x="966" y="362.5249038618058" width="8" height="29" rx="2" fill="#3dff86" opacity="0.66"/><rect x="980" y="360.6686995299533" width="8" height="31" rx="2" fill="#3dff86" opacity="0.65"/><rect x="994" y="336.6892006881535" width="8" height="55" rx="2" fill="#3dff86" opacity="0.40"/>
-      <circle cx="1012.3199999999999" cy="283.03999999999996" r="30" fill="#04110a" stroke="#3dff86" stroke-width="1.5"/>
-      <g transform="translate(1012.3199999999999 283.03999999999996) scale(0.42)" fill="none" stroke="#3dff86" stroke-width="4.5"><g stroke-width="2.2"><rect x="-40" y="-30" width="80" height="60" rx="8"/><path d="M-40 -16H40"/>
+      <rect x="866" y="334" width="236" height="212" fill="#04140b"/>
+      <rect x="866" y="334" width="236" height="212" fill="url(#grid)"/>
+      <circle cx="1012.3199999999999" cy="423.03999999999996" r="30" fill="none" stroke="#3dff86" stroke-opacity="0.40" stroke-dasharray="2 4" style="animation:spin 18s linear infinite ;transform-box:fill-box;transform-origin:center"/><circle cx="1012.3199999999999" cy="423.03999999999996" r="56" fill="none" stroke="#3dff86" stroke-opacity="0.32" stroke-dasharray="5 8" style="animation:spin 26s linear infinite reverse;transform-box:fill-box;transform-origin:center"/><circle cx="1012.3199999999999" cy="423.03999999999996" r="82" fill="none" stroke="#3dff86" stroke-opacity="0.24" stroke-dasharray="8 12" style="animation:spin 34s linear infinite ;transform-box:fill-box;transform-origin:center"/><circle cx="1012.3199999999999" cy="423.03999999999996" r="108" fill="none" stroke="#3dff86" stroke-opacity="0.16" stroke-dasharray="11 16" style="animation:spin 42s linear infinite reverse;transform-box:fill-box;transform-origin:center"/><rect x="882" y="504.98402121290565" width="8" height="27" rx="2" fill="#3dff86" opacity="0.54"/><rect x="896" y="521.6970490319654" width="8" height="10" rx="2" fill="#3dff86" opacity="0.51"/><rect x="910" y="488.8249644804746" width="8" height="43" rx="2" fill="#3dff86" opacity="0.58"/><rect x="924" y="507.36561934743077" width="8" height="25" rx="2" fill="#3dff86" opacity="0.24"/><rect x="938" y="504.3925504460931" width="8" height="28" rx="2" fill="#3dff86" opacity="0.22"/><rect x="952" y="479.5537550961599" width="8" height="52" rx="2" fill="#3dff86" opacity="0.68"/><rect x="966" y="502.5249038618058" width="8" height="29" rx="2" fill="#3dff86" opacity="0.66"/><rect x="980" y="500.6686995299533" width="8" height="31" rx="2" fill="#3dff86" opacity="0.65"/><rect x="994" y="476.6892006881535" width="8" height="55" rx="2" fill="#3dff86" opacity="0.40"/>
+      <circle cx="1012.3199999999999" cy="423.03999999999996" r="30" fill="#04110a" stroke="#3dff86" stroke-width="1.5"/>
+      <g transform="translate(1012.3199999999999 423.03999999999996) scale(0.42)" fill="none" stroke="#3dff86" stroke-width="4.5"><g stroke-width="2.2"><rect x="-40" y="-30" width="80" height="60" rx="8"/><path d="M-40 -16H40"/>
     <circle cx="-31" cy="-23" r="2.2" fill="#3dff86"/><circle cx="-24" cy="-23" r="2.2" fill="#3dff86"/>
     <path d="M-26 -4H18M-26 6H8M-26 16H22" stroke-width="3.5" stroke-linecap="round" opacity=".8"/></g></g>
-      <rect x="866" y="194" width="50" height="212" fill="url(#sweepG)" style="animation:sweepX 6s linear -2.6s infinite"/>
+      <rect x="866" y="334" width="50" height="212" fill="url(#sweepG)" style="animation:sweepX 6s linear -2.6s infinite"/>
     </g>
-    <rect x="866" y="194" width="236" height="212" rx="12" fill="none" stroke="#3dff86" stroke-opacity=".3"/>
-        <text x="1128" y="218" text-anchor="start" font-family="'JetBrains Mono', 'Cascadia Code', 'SF Mono', Consolas, 'Liberation Mono', Menlo, monospace" font-size="11.5" font-weight="700" letter-spacing="3" fill="#3dff86">QUEST 02 · WEB APP</text>
-        <text x="1128" y="258" text-anchor="start" font-family="'Segoe UI', Inter, Arial, Helvetica, sans-serif" font-size="30" font-weight="800" letter-spacing="0" fill="#eafff1" >Restaurant</text>
-        <text x="1128" y="290" text-anchor="start" font-family="'Segoe UI', Inter, Arial, Helvetica, sans-serif" font-size="16" font-weight="400" letter-spacing="0" fill="#a7d9b9" >Italia Restaurant — a modern, responsive</text><text x="1128" y="314" text-anchor="start" font-family="'Segoe UI', Inter, Arial, Helvetica, sans-serif" font-size="16" font-weight="400" letter-spacing="0" fill="#a7d9b9" >restaurant web experience built with</text><text x="1128" y="338" text-anchor="start" font-family="'Segoe UI', Inter, Arial, Helvetica, sans-serif" font-size="16" font-weight="400" letter-spacing="0" fill="#a7d9b9" >TypeScript.</text>
+    <rect x="866" y="334" width="236" height="212" rx="12" fill="none" stroke="#3dff86" stroke-opacity=".3"/>
+        <text x="1128" y="358" text-anchor="start" font-family="'JetBrains Mono', 'Cascadia Code', 'SF Mono', Consolas, 'Liberation Mono', Menlo, monospace" font-size="11.5" font-weight="700" letter-spacing="3" fill="#3dff86">QUEST 02 · WEB APP</text>
+        <text x="1128" y="398" text-anchor="start" font-family="'Segoe UI', Inter, Arial, Helvetica, sans-serif" font-size="30" font-weight="800" letter-spacing="0" fill="#eafff1" >Restaurant</text>
+        <text x="1128" y="430" text-anchor="start" font-family="'Segoe UI', Inter, Arial, Helvetica, sans-serif" font-size="16" font-weight="400" letter-spacing="0" fill="#a7d9b9" >Italia Restaurant — a modern, responsive</text><text x="1128" y="454" text-anchor="start" font-family="'Segoe UI', Inter, Arial, Helvetica, sans-serif" font-size="16" font-weight="400" letter-spacing="0" fill="#a7d9b9" >restaurant web experience built with</text><text x="1128" y="478" text-anchor="start" font-family="'Segoe UI', Inter, Arial, Helvetica, sans-serif" font-size="16" font-weight="400" letter-spacing="0" fill="#a7d9b9" >TypeScript.</text>
         <g font-family="'JetBrains Mono', 'Cascadia Code', 'SF Mono', Consolas, 'Liberation Mono', Menlo, monospace" font-size="13" fill="#a7d9b9">
-          <rect x="1128" y="370" width="118" height="28" rx="14" fill="#04110a" stroke="#3dff86" stroke-opacity=".4"/>
-          <circle cx="1144" cy="384" r="4.5" fill="#3dff86"/>
-          <text x="1156" y="389" fill="#eafff1">TypeScript</text>
-          <text x="1264" y="389">★ 0   ⑂ 0</text>
-          <text x="1538" y="389" text-anchor="end" fill="#5f9c78">updated 1mo ago</text>
+          <rect x="1128" y="510" width="118" height="28" rx="14" fill="#04110a" stroke="#3dff86" stroke-opacity=".4"/>
+          <circle cx="1144" cy="524" r="4.5" fill="#3dff86"/>
+          <text x="1156" y="529" fill="#eafff1">TypeScript</text>
+          <text x="1264" y="529">★ 0   ⑂ 0</text>
+          <text x="1538" y="529" text-anchor="end" fill="#5f9c78">updated 1mo ago</text>
         </g>
-        <g transform="translate(1524 216)"><circle r="15" fill="none" stroke="#3dff86" stroke-opacity=".5"/><path d="M-5 5L5 -5M-3 -5H5V3" stroke="#3dff86" stroke-width="2" fill="none"/></g>
-      </g><g class="in" style="animation-delay:0.30000000000000004s">
-    <rect x="100" y="448" width="716" height="252" rx="18" fill="url(#panel)" stroke="#3dff86" stroke-opacity=".28" stroke-width="1.5"/>
-    <rect x="106" y="446" width="704" height="5" rx="2.5" fill="#3dff86" filter="url(#glow)" opacity=".9"/>
-  </g>
-      <g class="in" style="animation-delay:0.4s">
-        <clipPath id="pa3"><rect x="118" y="468" width="236" height="212" rx="12"/></clipPath>
-    <g clip-path="url(#pa3)">
-      <rect x="118" y="468" width="236" height="212" fill="#04140b"/>
-      <rect x="118" y="468" width="236" height="212" fill="url(#grid)"/>
-      <circle cx="264.32" cy="557.04" r="30" fill="none" stroke="#3dff86" stroke-opacity="0.40" stroke-dasharray="2 4" style="animation:spin 18s linear infinite ;transform-box:fill-box;transform-origin:center"/><circle cx="264.32" cy="557.04" r="56" fill="none" stroke="#3dff86" stroke-opacity="0.32" stroke-dasharray="5 8" style="animation:spin 26s linear infinite reverse;transform-box:fill-box;transform-origin:center"/><circle cx="264.32" cy="557.04" r="82" fill="none" stroke="#3dff86" stroke-opacity="0.24" stroke-dasharray="8 12" style="animation:spin 34s linear infinite ;transform-box:fill-box;transform-origin:center"/><circle cx="264.32" cy="557.04" r="108" fill="none" stroke="#3dff86" stroke-opacity="0.16" stroke-dasharray="11 16" style="animation:spin 42s linear infinite reverse;transform-box:fill-box;transform-origin:center"/><rect x="134" y="636.4455528152175" width="8" height="30" rx="2" fill="#3dff86" opacity="0.48"/><rect x="148" y="620.8578652064316" width="8" height="45" rx="2" fill="#3dff86" opacity="0.44"/><rect x="162" y="607.4709761017002" width="8" height="59" rx="2" fill="#3dff86" opacity="0.55"/><rect x="176" y="618.073057924863" width="8" height="48" rx="2" fill="#3dff86" opacity="0.25"/><rect x="190" y="606.3084265743382" width="8" height="60" rx="2" fill="#3dff86" opacity="0.48"/><rect x="204" y="641.6507584336214" width="8" height="24" rx="2" fill="#3dff86" opacity="0.53"/><rect x="218" y="638.0837963954546" width="8" height="28" rx="2" fill="#3dff86" opacity="0.51"/><rect x="232" y="639.1289491965435" width="8" height="27" rx="2" fill="#3dff86" opacity="0.68"/><rect x="246" y="607.5291102346964" width="8" height="58" rx="2" fill="#3dff86" opacity="0.40"/>
-      <circle cx="264.32" cy="557.04" r="30" fill="#04110a" stroke="#3dff86" stroke-width="1.5"/>
-      <g transform="translate(264.32 557.04) scale(0.42)" fill="none" stroke="#3dff86" stroke-width="4.5"><g stroke-width="2.2"><path d="M-30 20Q-46 20 -46 6Q-46 -8 -32 -10Q-30 -30 -8 -30Q8 -30 14 -16Q20 -22 30 -18Q42 -12 38 2Q48 6 46 14Q44 20 36 20Z" stroke-linejoin="round"/><circle cy="0" r="4" fill="#3dff86" class="pulse"/></g></g>
-      <rect x="118" y="468" width="50" height="212" fill="url(#sweepG)" style="animation:sweepX 6s linear -3.9000000000000004s infinite"/>
-    </g>
-    <rect x="118" y="468" width="236" height="212" rx="12" fill="none" stroke="#3dff86" stroke-opacity=".3"/>
-        <text x="380" y="492" text-anchor="start" font-family="'JetBrains Mono', 'Cascadia Code', 'SF Mono', Consolas, 'Liberation Mono', Menlo, monospace" font-size="11.5" font-weight="700" letter-spacing="3" fill="#3dff86">QUEST 03 · COMPANY SITE</text>
-        <text x="380" y="532" text-anchor="start" font-family="'Segoe UI', Inter, Arial, Helvetica, sans-serif" font-size="30" font-weight="800" letter-spacing="0" fill="#eafff1" >MxaTech</text>
-        <text x="380" y="564" text-anchor="start" font-family="'Segoe UI', Inter, Arial, Helvetica, sans-serif" font-size="16" font-weight="400" letter-spacing="0" fill="#a7d9b9" >MxaTech — company website and product</text><text x="380" y="588" text-anchor="start" font-family="'Segoe UI', Inter, Arial, Helvetica, sans-serif" font-size="16" font-weight="400" letter-spacing="0" fill="#a7d9b9" >showcase.</text>
-        <g font-family="'JetBrains Mono', 'Cascadia Code', 'SF Mono', Consolas, 'Liberation Mono', Menlo, monospace" font-size="13" fill="#a7d9b9">
-          <rect x="380" y="644" width="67.6" height="28" rx="14" fill="#04110a" stroke="#3dff86" stroke-opacity=".4"/>
-          <circle cx="396" cy="658" r="4.5" fill="#3dff86"/>
-          <text x="408" y="663" fill="#eafff1">Code</text>
-          <text x="465.6" y="663">★ 0   ⑂ 0</text>
-          
-        </g>
-        <g transform="translate(776 490)"><circle r="15" fill="none" stroke="#3dff86" stroke-opacity=".5"/><path d="M-5 5L5 -5M-3 -5H5V3" stroke="#3dff86" stroke-width="2" fill="none"/></g>
-      </g><g class="in" style="animation-delay:0.4s">
-    <rect x="848" y="448" width="716" height="252" rx="18" fill="url(#panel)" stroke="#3dff86" stroke-opacity=".28" stroke-width="1.5"/>
-    <rect x="854" y="446" width="704" height="5" rx="2.5" fill="#3dff86" filter="url(#glow)" opacity=".9"/>
-  </g>
-      <g class="in" style="animation-delay:0.5s">
-        <clipPath id="pa4"><rect x="866" y="468" width="236" height="212" rx="12"/></clipPath>
-    <g clip-path="url(#pa4)">
-      <rect x="866" y="468" width="236" height="212" fill="#04140b"/>
-      <rect x="866" y="468" width="236" height="212" fill="url(#grid)"/>
-      <circle cx="1012.3199999999999" cy="557.04" r="30" fill="none" stroke="#3dff86" stroke-opacity="0.40" stroke-dasharray="2 4" style="animation:spin 18s linear infinite ;transform-box:fill-box;transform-origin:center"/><circle cx="1012.3199999999999" cy="557.04" r="56" fill="none" stroke="#3dff86" stroke-opacity="0.32" stroke-dasharray="5 8" style="animation:spin 26s linear infinite reverse;transform-box:fill-box;transform-origin:center"/><circle cx="1012.3199999999999" cy="557.04" r="82" fill="none" stroke="#3dff86" stroke-opacity="0.24" stroke-dasharray="8 12" style="animation:spin 34s linear infinite ;transform-box:fill-box;transform-origin:center"/><circle cx="1012.3199999999999" cy="557.04" r="108" fill="none" stroke="#3dff86" stroke-opacity="0.16" stroke-dasharray="11 16" style="animation:spin 42s linear infinite reverse;transform-box:fill-box;transform-origin:center"/><rect x="882" y="633.9070844175294" width="8" height="32" rx="2" fill="#3dff86" opacity="0.42"/><rect x="896" y="636.0186813808978" width="8" height="30" rx="2" fill="#3dff86" opacity="0.36"/><rect x="910" y="642.1169877229258" width="8" height="24" rx="2" fill="#3dff86" opacity="0.53"/><rect x="924" y="644.7804965022951" width="8" height="21" rx="2" fill="#3dff86" opacity="0.26"/><rect x="938" y="624.2243027025834" width="8" height="42" rx="2" fill="#3dff86" opacity="0.24"/><rect x="952" y="619.7477617710829" width="8" height="46" rx="2" fill="#3dff86" opacity="0.39"/><rect x="966" y="639.6426889291033" width="8" height="26" rx="2" fill="#3dff86" opacity="0.35"/><rect x="980" y="643.5891988631338" width="8" height="22" rx="2" fill="#3dff86" opacity="0.21"/><rect x="994" y="654.3690197812393" width="8" height="12" rx="2" fill="#3dff86" opacity="0.39"/>
-      <circle cx="1012.3199999999999" cy="557.04" r="30" fill="#04110a" stroke="#3dff86" stroke-width="1.5"/>
-      <g transform="translate(1012.3199999999999 557.04) scale(0.42)" fill="none" stroke="#3dff86" stroke-width="4.5"><g stroke-width="2.2"><circle r="30"/><ellipse rx="13" ry="30"/><path d="M-30 0H30M-26 -14H26M-26 14H26"/></g></g>
-      <rect x="866" y="468" width="50" height="212" fill="url(#sweepG)" style="animation:sweepX 6s linear -5.2s infinite"/>
-    </g>
-    <rect x="866" y="468" width="236" height="212" rx="12" fill="none" stroke="#3dff86" stroke-opacity=".3"/>
-        <text x="1128" y="492" text-anchor="start" font-family="'JetBrains Mono', 'Cascadia Code', 'SF Mono', Consolas, 'Liberation Mono', Menlo, monospace" font-size="11.5" font-weight="700" letter-spacing="3" fill="#3dff86">QUEST 04 · COLLABORATION</text>
-        <text x="1128" y="532" text-anchor="start" font-family="'Segoe UI', Inter, Arial, Helvetica, sans-serif" font-size="30" font-weight="800" letter-spacing="0" fill="#eafff1" >remote-cooperation</text>
-        <text x="1128" y="564" text-anchor="start" font-family="'Segoe UI', Inter, Arial, Helvetica, sans-serif" font-size="16" font-weight="400" letter-spacing="0" fill="#a7d9b9" >Remote cooperation platform for distributed</text><text x="1128" y="588" text-anchor="start" font-family="'Segoe UI', Inter, Arial, Helvetica, sans-serif" font-size="16" font-weight="400" letter-spacing="0" fill="#a7d9b9" >teams.</text>
-        <g font-family="'JetBrains Mono', 'Cascadia Code', 'SF Mono', Consolas, 'Liberation Mono', Menlo, monospace" font-size="13" fill="#a7d9b9">
-          <rect x="1128" y="644" width="67.6" height="28" rx="14" fill="#04110a" stroke="#3dff86" stroke-opacity=".4"/>
-          <circle cx="1144" cy="658" r="4.5" fill="#3dff86"/>
-          <text x="1156" y="663" fill="#eafff1">Code</text>
-          <text x="1213.6" y="663">★ 0   ⑂ 0</text>
-          
-        </g>
-        <g transform="translate(1524 490)"><circle r="15" fill="none" stroke="#3dff86" stroke-opacity=".5"/><path d="M-5 5L5 -5M-3 -5H5V3" stroke="#3dff86" stroke-width="2" fill="none"/></g>
+        <g transform="translate(1524 356)"><circle r="15" fill="none" stroke="#3dff86" stroke-opacity=".5"/><path d="M-5 5L5 -5M-3 -5H5V3" stroke="#3dff86" stroke-width="2" fill="none"/></g>
       </g>
     <g class="in" style="animation-delay:0.5s">
     <rect x="100" y="726" width="1464" height="128" rx="18" fill="url(#panel)" stroke="#3dff86" stroke-opacity=".28" stroke-width="1.5"/>

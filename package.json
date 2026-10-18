@@ -6,14 +6,15 @@
   "scripts": {
     "build": "node scripts/build.mjs",
     "build:offline": "node scripts/build.mjs --offline",
-    "video": "node scripts/render-video.mjs",
-    "preview": "node scripts/render-video.mjs --preview"
+    "video": "node scripts/render-3d.mjs",
+    "preview": "node scripts/render-3d.mjs --preview"
   },
   "engines": {
     "node": ">=20"
   },
   "devDependencies": {
     "ffmpeg-static": "^5.2.0",
-    "puppeteer-core": "^23.11.1"
+    "puppeteer-core": "^23.11.1",
+    "three": "^0.170.0"
   }
 }

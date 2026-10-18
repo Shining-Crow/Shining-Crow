@@ -234,17 +234,6 @@
       <circle cx="962" cy="813" r="9" fill="none" stroke="#3dff86" stroke-opacity=".5"/><path d="M960 809l4 4l-4 4" stroke="#3dff86" fill="none"/>
       <rect x="834" y="838" width="86" height="20" rx="10" fill="none" stroke="#3dff86" stroke-opacity=".35"/>
       <text x="842" y="852" text-anchor="start" font-family="'JetBrains Mono', 'Cascadia Code', 'SF Mono', Consolas, 'Liberation Mono', Menlo, monospace" font-size="11" font-weight="400" letter-spacing="0" fill="#a7d9b9" >TypeScript</text>
-    </g><g>
-      <rect x="996" y="708" width="160" height="160" rx="12" fill="#04110a" stroke="#3dff86" stroke-opacity=".25"/>
-      <clipPath id="th3"><rect x="1004" y="716" width="144" height="70" rx="8"/></clipPath>
-    <g clip-path="url(#th3)"><rect x="1004" y="716" width="144" height="70" fill="#071a10"/><circle cx="1054.4" cy="782.2" r="11.2" fill="#3dff86" opacity="0.29"/><circle cx="1050.8" cy="747.4" r="9.8" fill="#d5ffe2" opacity="0.42"/><circle cx="1014.1" cy="749.0" r="13.0" fill="#22c55e" opacity="0.14"/><circle cx="1120.8" cy="766.4" r="11.5" fill="#3dff86" opacity="0.28"/><circle cx="1109.9" cy="770.6" r="12.4" fill="#d5ffe2" opacity="0.23"/><circle cx="1105.4" cy="716.9" r="19.7" fill="#22c55e" opacity="0.22"/><circle cx="1079.9" cy="727.1" r="12.8" fill="#3dff86" opacity="0.16"/><path d="M1004 776Q1076 735.0022752759978 1148 768" stroke="#3dff86" stroke-opacity=".5" fill="none"/><path d="M1004 766Q1076 719.532420810312 1148 760" stroke="#3dff86" stroke-opacity=".5" fill="none"/><path d="M1004 756Q1076 716.02792517934 1148 752" stroke="#3dff86" stroke-opacity=".5" fill="none"/><path d="M1004 746Q1076 691.4377813655883 1148 744" stroke="#3dff86" stroke-opacity=".5" fill="none"/>
-    <rect x="1004" y="716" width="40" height="70" fill="url(#sweepG)" style="animation:sweepX 5s linear -3s infinite"/></g>
-    <rect x="1004" y="716" width="144" height="70" rx="8" fill="none" stroke="#3dff86" stroke-opacity=".25"/>
-      <text x="1008" y="808" text-anchor="start" font-family="'Segoe UI', Inter, Arial, Helvetica, sans-serif" font-size="14.5" font-weight="700" letter-spacing="0" fill="#eafff1" >MxaTech</text>
-      <text x="1008" y="826" text-anchor="start" font-family="'Segoe UI', Inter, Arial, Helvetica, sans-serif" font-size="11.5" font-weight="400" letter-spacing="0" fill="#5f9c78" >Company Site</text>
-      <circle cx="1136" cy="813" r="9" fill="none" stroke="#3dff86" stroke-opacity=".5"/><path d="M1134 809l4 4l-4 4" stroke="#3dff86" fill="none"/>
-      <rect x="1008" y="838" width="44" height="20" rx="10" fill="none" stroke="#3dff86" stroke-opacity=".35"/>
-      <text x="1016" y="852" text-anchor="start" font-family="'JetBrains Mono', 'Cascadia Code', 'SF Mono', Consolas, 'Liberation Mono', Menlo, monospace" font-size="11" font-weight="400" letter-spacing="0" fill="#a7d9b9" >Code</text>
     </g>
   </g>
 
