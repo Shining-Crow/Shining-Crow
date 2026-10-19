@@ -1,9 +1,9 @@
 {
- "fetchedAt": "2026-10-19T04:35:27.631Z",
+ "fetchedAt": "2026-10-19T13:05:45.325Z",
  "user": {
   "login": "Shining-Crow",
   "name": "Shining Crow",
-  "followers": 1,
+  "followers": 9,
   "following": 1,
   "publicRepos": 5,
   "createdAt": "2026-08-05T19:55:58Z",
@@ -11,43 +11,10 @@
  },
  "repos": [
   {
-   "name": "Shining-Crow",
-   "description": null,
-   "language": "JavaScript",
-   "stars": 0,
-   "forks": 0,
-   "url": "https://github.com/Shining-Crow/Shining-Crow",
-   "homepage": null,
-   "updatedAt": "2026-10-18T20:37:38Z",
-   "topics": []
-  },
-  {
-   "name": "SocialMedia-App",
-   "description": "A fully functional social media app built with flutter with multiple features",
-   "language": "Dart",
-   "stars": 0,
-   "forks": 0,
-   "url": "https://github.com/Shining-Crow/SocialMedia-App",
-   "homepage": null,
-   "updatedAt": "2026-10-18T15:11:47Z",
-   "topics": []
-  },
-  {
-   "name": "DatingApp",
-   "description": "Dating UI kit is used for online meet up with girls and boys . The screen contains more than 30 icons and most of all required elements required to design an application like this. The XML and JAVA files contains comments at each and every point for easy understanding. Everything was made with a detail oriented style and followed by today's web tr…",
-   "language": "Java",
-   "stars": 0,
-   "forks": 0,
-   "url": "https://github.com/Shining-Crow/DatingApp",
-   "homepage": null,
-   "updatedAt": "2026-10-18T14:48:58Z",
-   "topics": []
-  },
-  {
    "name": "PocketCare",
    "description": "AI-assisted healthcare platform with symptom analysis, doctor booking, and emergency features.",
    "language": "JavaScript",
-   "stars": 0,
+   "stars": 7,
    "forks": 0,
    "url": "https://github.com/Shining-Crow/PocketCare",
    "homepage": null,
@@ -58,28 +25,61 @@
    "name": "Restaurant",
    "description": "Italia Restaurant",
    "language": "TypeScript",
-   "stars": 0,
+   "stars": 7,
    "forks": 0,
    "url": "https://github.com/Shining-Crow/Restaurant",
    "homepage": null,
    "updatedAt": "2026-09-04T20:42:50Z",
    "topics": []
+  },
+  {
+   "name": "DatingApp",
+   "description": "Dating UI kit is used for online meet up with girls and boys . The screen contains more than 30 icons and most of all required elements required to design an application like this. The XML and JAVA files contains comments at each and every point for easy understanding. Everything was made with a detail oriented style and followed by today's web tr…",
+   "language": "Java",
+   "stars": 7,
+   "forks": 0,
+   "url": "https://github.com/Shining-Crow/DatingApp",
+   "homepage": null,
+   "updatedAt": "2026-10-18T14:48:58Z",
+   "topics": []
+  },
+  {
+   "name": "SocialMedia-App",
+   "description": "A fully functional social media app built with flutter with multiple features",
+   "language": "Dart",
+   "stars": 7,
+   "forks": 0,
+   "url": "https://github.com/Shining-Crow/SocialMedia-App",
+   "homepage": null,
+   "updatedAt": "2026-10-18T15:11:47Z",
+   "topics": []
+  },
+  {
+   "name": "Shining-Crow",
+   "description": null,
+   "language": "JavaScript",
+   "stars": 7,
+   "forks": 0,
+   "url": "https://github.com/Shining-Crow/Shining-Crow",
+   "homepage": null,
+   "updatedAt": "2026-10-19T04:35:28Z",
+   "topics": []
   }
  ],
  "languages": {
   "JavaScript": 950902,
+  "Python": 425880,
+  "CSS": 45776,
   "HTML": 2237,
+  "PowerShell": 660,
+  "TypeScript": 244216,
+  "PLpgSQL": 4886,
+  "Java": 130155,
   "Dart": 268730,
   "Ruby": 1474,
   "Kotlin": 611,
   "Swift": 404,
-  "Objective-C": 38,
-  "Java": 130155,
-  "Python": 425880,
-  "CSS": 45776,
-  "PowerShell": 660,
-  "TypeScript": 244216,
-  "PLpgSQL": 4886
+  "Objective-C": 38
  },
  "days": [
   {
@@ -1909,8 +1909,8 @@
   },
   {
    "date": "2026-10-19",
-   "level": 0,
-   "count": 0
+   "level": 1,
+   "count": 1
   }
  ]
 }
