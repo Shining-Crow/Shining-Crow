@@ -85,7 +85,7 @@
           <rect x="380" y="510" width="118" height="28" rx="14" fill="#a78bfa" fill-opacity=".12" stroke="#a78bfa" stroke-opacity=".5"/>
           <circle cx="396" cy="524" r="4.5" fill="#a78bfa"/>
           <text x="408" y="529" fill="#f5f3ff">JavaScript</text>
-          <text x="516" y="529">★ 7   ⑂ 0</text>
+          <text x="516" y="529">★ 8   ⑂ 0</text>
           <text x="790" y="529" text-anchor="end" fill="#6f6a93">updated 21d ago</text>
         </g>
         <g transform="translate(776 356)"><circle r="16" fill="#a78bfa" fill-opacity=".12" stroke="#a78bfa" stroke-opacity=".6"/><path d="M-5 5L5 -5M-3 -5H5V3" stroke="#a78bfa" stroke-width="2" fill="none"/></g>
@@ -115,7 +115,7 @@
           <rect x="1128" y="510" width="118" height="28" rx="14" fill="#22d3ee" fill-opacity=".12" stroke="#22d3ee" stroke-opacity=".5"/>
           <circle cx="1144" cy="524" r="4.5" fill="#22d3ee"/>
           <text x="1156" y="529" fill="#f5f3ff">TypeScript</text>
-          <text x="1264" y="529">★ 7   ⑂ 0</text>
+          <text x="1264" y="529">★ 8   ⑂ 0</text>
           <text x="1538" y="529" text-anchor="end" fill="#6f6a93">updated 1mo ago</text>
         </g>
         <g transform="translate(1524 356)"><circle r="16" fill="#22d3ee" fill-opacity=".12" stroke="#22d3ee" stroke-opacity=".6"/><path d="M-5 5L5 -5M-3 -5H5V3" stroke="#22d3ee" stroke-width="2" fill="none"/></g>

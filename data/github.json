@@ -1,5 +1,5 @@
 {
- "fetchedAt": "2026-10-19T13:05:45.325Z",
+ "fetchedAt": "2026-10-19T22:19:17.494Z",
  "user": {
   "login": "Shining-Crow",
   "name": "Shining Crow",
@@ -11,21 +11,10 @@
  },
  "repos": [
   {
-   "name": "PocketCare",
-   "description": "AI-assisted healthcare platform with symptom analysis, doctor booking, and emergency features.",
-   "language": "JavaScript",
-   "stars": 7,
-   "forks": 0,
-   "url": "https://github.com/Shining-Crow/PocketCare",
-   "homepage": null,
-   "updatedAt": "2026-09-28T07:04:32Z",
-   "topics": []
-  },
-  {
    "name": "Restaurant",
    "description": "Italia Restaurant",
    "language": "TypeScript",
-   "stars": 7,
+   "stars": 8,
    "forks": 0,
    "url": "https://github.com/Shining-Crow/Restaurant",
    "homepage": null,
@@ -33,10 +22,21 @@
    "topics": []
   },
   {
+   "name": "PocketCare",
+   "description": "AI-assisted healthcare platform with symptom analysis, doctor booking, and emergency features.",
+   "language": "JavaScript",
+   "stars": 8,
+   "forks": 0,
+   "url": "https://github.com/Shining-Crow/PocketCare",
+   "homepage": null,
+   "updatedAt": "2026-09-28T07:04:32Z",
+   "topics": []
+  },
+  {
    "name": "DatingApp",
    "description": "Dating UI kit is used for online meet up with girls and boys . The screen contains more than 30 icons and most of all required elements required to design an application like this. The XML and JAVA files contains comments at each and every point for easy understanding. Everything was made with a detail oriented style and followed by today's web tr…",
    "language": "Java",
-   "stars": 7,
+   "stars": 8,
    "forks": 0,
    "url": "https://github.com/Shining-Crow/DatingApp",
    "homepage": null,
@@ -47,7 +47,7 @@
    "name": "SocialMedia-App",
    "description": "A fully functional social media app built with flutter with multiple features",
    "language": "Dart",
-   "stars": 7,
+   "stars": 8,
    "forks": 0,
    "url": "https://github.com/Shining-Crow/SocialMedia-App",
    "homepage": null,
@@ -58,22 +58,22 @@
    "name": "Shining-Crow",
    "description": null,
    "language": "JavaScript",
-   "stars": 7,
+   "stars": 8,
    "forks": 0,
    "url": "https://github.com/Shining-Crow/Shining-Crow",
    "homepage": null,
-   "updatedAt": "2026-10-19T04:35:28Z",
+   "updatedAt": "2026-10-19T13:05:46Z",
    "topics": []
   }
  ],
  "languages": {
+  "TypeScript": 244216,
+  "CSS": 45776,
+  "PLpgSQL": 4886,
   "JavaScript": 950902,
   "Python": 425880,
-  "CSS": 45776,
   "HTML": 2237,
   "PowerShell": 660,
-  "TypeScript": 244216,
-  "PLpgSQL": 4886,
   "Java": 130155,
   "Dart": 268730,
   "Ruby": 1474,
