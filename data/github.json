@@ -1,5 +1,5 @@
 {
- "fetchedAt": "2026-10-25T20:47:24.919Z",
+ "fetchedAt": "2026-10-26T04:41:11.696Z",
  "user": {
   "login": "Shining-Crow",
   "name": "Shining Crow",
@@ -11,6 +11,17 @@
  },
  "repos": [
   {
+   "name": "Shining-Crow",
+   "description": null,
+   "language": "JavaScript",
+   "stars": 8,
+   "forks": 0,
+   "url": "https://github.com/Shining-Crow/Shining-Crow",
+   "homepage": null,
+   "updatedAt": "2026-10-25T20:47:26Z",
+   "topics": []
+  },
+  {
    "name": "PocketCare",
    "description": "AI-assisted healthcare platform with symptom analysis, doctor booking, and emergency features.",
    "language": "JavaScript",
@@ -19,17 +30,6 @@
    "url": "https://github.com/Shining-Crow/PocketCare",
    "homepage": null,
    "updatedAt": "2026-09-28T07:04:32Z",
-   "topics": []
-  },
-  {
-   "name": "Shining-Crow",
-   "description": null,
-   "language": "JavaScript",
-   "stars": 8,
-   "forks": 0,
-   "url": "https://github.com/Shining-Crow/Shining-Crow",
-   "homepage": null,
-   "updatedAt": "2026-10-25T16:11:25Z",
    "topics": []
   },
   {
@@ -68,9 +68,9 @@
  ],
  "languages": {
   "JavaScript": 950902,
+  "HTML": 2237,
   "Python": 425880,
   "CSS": 45776,
-  "HTML": 2237,
   "PowerShell": 660,
   "TypeScript": 244216,
   "PLpgSQL": 4886,
@@ -1904,6 +1904,11 @@
   },
   {
    "date": "2026-10-25",
+   "level": 0,
+   "count": 0
+  },
+  {
+   "date": "2026-10-26",
    "level": 0,
    "count": 0
   }
