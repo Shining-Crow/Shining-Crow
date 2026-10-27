@@ -86,7 +86,7 @@
           <circle cx="396" cy="524" r="4.5" fill="#a78bfa"/>
           <text x="408" y="529" fill="#f5f3ff">JavaScript</text>
           <text x="516" y="529">★ 9   ⑂ 0</text>
-          <text x="790" y="529" text-anchor="end" fill="#6f6a93">updated 28d ago</text>
+          <text x="790" y="529" text-anchor="end" fill="#6f6a93">updated 29d ago</text>
         </g>
         <g transform="translate(776 356)"><circle r="16" fill="#a78bfa" fill-opacity=".12" stroke="#a78bfa" stroke-opacity=".6"/><path d="M-5 5L5 -5M-3 -5H5V3" stroke="#a78bfa" stroke-width="2" fill="none"/></g>
       </g><g class="in" style="animation-delay:0.2s">
@@ -128,31 +128,31 @@
   </g>
     <g class="in" style="animation-delay:.6s">
       <text x="128" y="760" text-anchor="start" font-family="'JetBrains Mono', 'Cascadia Code', 'SF Mono', Consolas, 'Liberation Mono', Menlo, monospace" font-size="12" font-weight="700" letter-spacing="4" fill="#a78bfa">LANGUAGE WALL</text>
-      <text x="1536" y="760" text-anchor="end" font-family="'JetBrains Mono', 'Cascadia Code', 'SF Mono', Consolas, 'Liberation Mono', Menlo, monospace" font-size="11" font-weight="400" letter-spacing="2" fill="#b8b3d9">7 LANGUAGES / 5 REPOS</text>
+      <text x="1536" y="760" text-anchor="end" font-family="'JetBrains Mono', 'Cascadia Code', 'SF Mono', Consolas, 'Liberation Mono', Menlo, monospace" font-size="11" font-weight="400" letter-spacing="2" fill="#b8b3d9">7 LANGUAGES / 7 REPOS</text>
       <rect x="128" y="776" width="1408" height="16" rx="5" fill="#fff" fill-opacity=".05"/>
-      <rect x="128.0" y="776" width="641.9" height="16" rx="5" fill="#22d3ee" class="grow" style="animation-delay:0.40s"/><rect x="772.9" y="776" width="285.8" height="16" rx="5" fill="#a78bfa" class="grow" style="animation-delay:0.52s"/><rect x="1061.8" y="776" width="179.3" height="16" rx="5" fill="#f472b6" class="grow" style="animation-delay:0.64s"/><rect x="1244.0" y="776" width="162.6" height="16" rx="5" fill="#fbbf24" class="grow" style="animation-delay:0.76s"/><rect x="1409.7" y="776" width="85.3" height="16" rx="5" fill="#a3e635" class="grow" style="animation-delay:0.88s"/><rect x="1498.0" y="776" width="28.0" height="16" rx="5" fill="#818cf8" class="grow" style="animation-delay:1.00s"/><rect x="1529.0" y="776" width="2.0" height="16" rx="5" fill="#c084fc" class="grow" style="animation-delay:1.12s"/>
+      <rect x="128.0" y="776" width="761.7" height="16" rx="5" fill="#22d3ee" class="grow" style="animation-delay:0.40s"/><rect x="892.7" y="776" width="254.9" height="16" rx="5" fill="#a78bfa" class="grow" style="animation-delay:0.52s"/><rect x="1150.6" y="776" width="137.2" height="16" rx="5" fill="#f472b6" class="grow" style="animation-delay:0.64s"/><rect x="1290.8" y="776" width="131.6" height="16" rx="5" fill="#fbbf24" class="grow" style="animation-delay:0.76s"/><rect x="1425.4" y="776" width="64.9" height="16" rx="5" fill="#a3e635" class="grow" style="animation-delay:0.88s"/><rect x="1493.3" y="776" width="20.9" height="16" rx="5" fill="#818cf8" class="grow" style="animation-delay:1.00s"/><rect x="1517.2" y="776" width="10.9" height="16" rx="5" fill="#c084fc" class="grow" style="animation-delay:1.12s"/>
       <g transform="translate(128 826)">
       <rect y="-11" width="12" height="12" rx="3" fill="#22d3ee"/>
       <text x="20" y="0" font-family="'Segoe UI', Inter, 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="600" fill="#f5f3ff">JavaScript</text>
-      <text x="177.14285714285714" y="0" text-anchor="end" font-family="'JetBrains Mono', 'Cascadia Code', 'SF Mono', Consolas, 'Liberation Mono', Menlo, monospace" font-size="13" fill="#6f6a93">45.8%</text></g><g transform="translate(329.1428571428571 826)">
+      <text x="177.14285714285714" y="0" text-anchor="end" font-family="'JetBrains Mono', 'Cascadia Code', 'SF Mono', Consolas, 'Liberation Mono', Menlo, monospace" font-size="13" fill="#6f6a93">54.3%</text></g><g transform="translate(329.1428571428571 826)">
       <rect y="-11" width="12" height="12" rx="3" fill="#a78bfa"/>
       <text x="20" y="0" font-family="'Segoe UI', Inter, 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="600" fill="#f5f3ff">Python</text>
-      <text x="177.14285714285714" y="0" text-anchor="end" font-family="'JetBrains Mono', 'Cascadia Code', 'SF Mono', Consolas, 'Liberation Mono', Menlo, monospace" font-size="13" fill="#6f6a93">20.5%</text></g><g transform="translate(530.2857142857142 826)">
+      <text x="177.14285714285714" y="0" text-anchor="end" font-family="'JetBrains Mono', 'Cascadia Code', 'SF Mono', Consolas, 'Liberation Mono', Menlo, monospace" font-size="13" fill="#6f6a93">18.3%</text></g><g transform="translate(530.2857142857142 826)">
       <rect y="-11" width="12" height="12" rx="3" fill="#f472b6"/>
       <text x="20" y="0" font-family="'Segoe UI', Inter, 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="600" fill="#f5f3ff">Dart</text>
-      <text x="177.14285714285714" y="0" text-anchor="end" font-family="'JetBrains Mono', 'Cascadia Code', 'SF Mono', Consolas, 'Liberation Mono', Menlo, monospace" font-size="13" fill="#6f6a93">12.9%</text></g><g transform="translate(731.4285714285714 826)">
+      <text x="177.14285714285714" y="0" text-anchor="end" font-family="'JetBrains Mono', 'Cascadia Code', 'SF Mono', Consolas, 'Liberation Mono', Menlo, monospace" font-size="13" fill="#6f6a93">10.0%</text></g><g transform="translate(731.4285714285714 826)">
       <rect y="-11" width="12" height="12" rx="3" fill="#fbbf24"/>
       <text x="20" y="0" font-family="'Segoe UI', Inter, 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="600" fill="#f5f3ff">TypeScript</text>
-      <text x="177.14285714285714" y="0" text-anchor="end" font-family="'JetBrains Mono', 'Cascadia Code', 'SF Mono', Consolas, 'Liberation Mono', Menlo, monospace" font-size="13" fill="#6f6a93">11.8%</text></g><g transform="translate(932.5714285714286 826)">
+      <text x="177.14285714285714" y="0" text-anchor="end" font-family="'JetBrains Mono', 'Cascadia Code', 'SF Mono', Consolas, 'Liberation Mono', Menlo, monospace" font-size="13" fill="#6f6a93">9.6%</text></g><g transform="translate(932.5714285714286 826)">
       <rect y="-11" width="12" height="12" rx="3" fill="#a3e635"/>
       <text x="20" y="0" font-family="'Segoe UI', Inter, 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="600" fill="#f5f3ff">Java</text>
-      <text x="177.14285714285714" y="0" text-anchor="end" font-family="'JetBrains Mono', 'Cascadia Code', 'SF Mono', Consolas, 'Liberation Mono', Menlo, monospace" font-size="13" fill="#6f6a93">6.3%</text></g><g transform="translate(1133.7142857142858 826)">
+      <text x="177.14285714285714" y="0" text-anchor="end" font-family="'JetBrains Mono', 'Cascadia Code', 'SF Mono', Consolas, 'Liberation Mono', Menlo, monospace" font-size="13" fill="#6f6a93">4.8%</text></g><g transform="translate(1133.7142857142858 826)">
       <rect y="-11" width="12" height="12" rx="3" fill="#818cf8"/>
       <text x="20" y="0" font-family="'Segoe UI', Inter, 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="600" fill="#f5f3ff">CSS</text>
-      <text x="177.14285714285714" y="0" text-anchor="end" font-family="'JetBrains Mono', 'Cascadia Code', 'SF Mono', Consolas, 'Liberation Mono', Menlo, monospace" font-size="13" fill="#6f6a93">2.2%</text></g><g transform="translate(1334.857142857143 826)">
+      <text x="177.14285714285714" y="0" text-anchor="end" font-family="'JetBrains Mono', 'Cascadia Code', 'SF Mono', Consolas, 'Liberation Mono', Menlo, monospace" font-size="13" fill="#6f6a93">1.7%</text></g><g transform="translate(1334.857142857143 826)">
       <rect y="-11" width="12" height="12" rx="3" fill="#c084fc"/>
-      <text x="20" y="0" font-family="'Segoe UI', Inter, 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="600" fill="#f5f3ff">PLpgSQL</text>
-      <text x="177.14285714285714" y="0" text-anchor="end" font-family="'JetBrains Mono', 'Cascadia Code', 'SF Mono', Consolas, 'Liberation Mono', Menlo, monospace" font-size="13" fill="#6f6a93">0.2%</text></g>
+      <text x="20" y="0" font-family="'Segoe UI', Inter, 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="600" fill="#f5f3ff">HTML</text>
+      <text x="177.14285714285714" y="0" text-anchor="end" font-family="'JetBrains Mono', 'Cascadia Code', 'SF Mono', Consolas, 'Liberation Mono', Menlo, monospace" font-size="13" fill="#6f6a93">1.0%</text></g>
     </g>
   
   <text x="56" y="896" font-family="'JetBrains Mono', 'Cascadia Code', 'SF Mono', Consolas, 'Liberation Mono', Menlo, monospace" font-size="11" letter-spacing="1.5" fill="#6f6a93">SHIP // ITERATE // SCALE</text>
