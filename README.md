@@ -156,4 +156,4 @@ I bring a game developer's obsession with <em>feel and performance</em> to every
   <a href="https://github.com/Shining-Crow"><img src="https://img.shields.io/badge/GITHUB-7c3aed?style=for-the-badge&logo=github&logoColor=white" alt="GITHUB"/></a>
 </p>
 
-<p align="center"><sub>⚡ Live sections refresh every 6 hours via GitHub Actions · last sync 2026-10-27</sub></p>
+<p align="center"><sub>⚡ Live sections refresh every 6 hours via GitHub Actions · last sync 2026-10-28</sub></p>
