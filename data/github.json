@@ -1,5 +1,5 @@
 {
- "fetchedAt": "2026-10-29T12:54:53.336Z",
+ "fetchedAt": "2026-10-29T22:42:19.500Z",
  "user": {
   "login": "Shining-Crow",
   "name": "Shining Crow",
@@ -11,6 +11,17 @@
  },
  "repos": [
   {
+   "name": "Shining-Crow",
+   "description": null,
+   "language": "JavaScript",
+   "stars": 8,
+   "forks": 0,
+   "url": "https://github.com/Shining-Crow/Shining-Crow",
+   "homepage": null,
+   "updatedAt": "2026-10-29T12:54:54Z",
+   "topics": []
+  },
+  {
    "name": "VirtualGamePad-Mobile",
    "description": "Android App for Virtual Gamepad.",
    "language": "Kotlin",
@@ -19,17 +30,6 @@
    "url": "https://github.com/Shining-Crow/VirtualGamePad-Mobile",
    "homepage": null,
    "updatedAt": "2026-10-29T07:42:44Z",
-   "topics": []
-  },
-  {
-   "name": "Shining-Crow",
-   "description": null,
-   "language": "JavaScript",
-   "stars": 8,
-   "forks": 0,
-   "url": "https://github.com/Shining-Crow/Shining-Crow",
-   "homepage": null,
-   "updatedAt": "2026-10-29T05:42:08Z",
    "topics": []
   },
   {
@@ -100,10 +100,10 @@
   }
  ],
  "languages": {
-  "Kotlin": 235897,
-  "Shell": 2101,
   "JavaScript": 1465370,
   "HTML": 26672,
+  "Kotlin": 235897,
+  "Shell": 2101,
   "Python": 494250,
   "TypeScript": 257909,
   "Dockerfile": 1288,
