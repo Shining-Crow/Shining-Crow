@@ -1,5 +1,5 @@
 {
- "fetchedAt": "2026-10-31T21:29:43.420Z",
+ "fetchedAt": "2026-11-01T05:57:00.792Z",
  "user": {
   "login": "Shining-Crow",
   "name": "Shining Crow",
@@ -11,6 +11,17 @@
  },
  "repos": [
   {
+   "name": "Shining-Crow",
+   "description": null,
+   "language": "JavaScript",
+   "stars": 8,
+   "forks": 0,
+   "url": "https://github.com/Shining-Crow/Shining-Crow",
+   "homepage": null,
+   "updatedAt": "2026-10-31T21:29:44Z",
+   "topics": []
+  },
+  {
    "name": "Soveni",
    "description": null,
    "language": "TypeScript",
@@ -19,17 +30,6 @@
    "url": "https://github.com/Shining-Crow/Soveni",
    "homepage": null,
    "updatedAt": "2026-10-31T20:56:11Z",
-   "topics": []
-  },
-  {
-   "name": "Shining-Crow",
-   "description": null,
-   "language": "JavaScript",
-   "stars": 8,
-   "forks": 0,
-   "url": "https://github.com/Shining-Crow/Shining-Crow",
-   "homepage": null,
-   "updatedAt": "2026-10-31T12:19:54Z",
    "topics": []
   },
   {
@@ -111,10 +111,10 @@
   }
  ],
  "languages": {
-  "TypeScript": 341913,
-  "CSS": 48133,
   "JavaScript": 1465433,
   "HTML": 26672,
+  "TypeScript": 341913,
+  "CSS": 48133,
   "Kotlin": 235897,
   "Shell": 2101,
   "Python": 494250,
@@ -128,41 +128,6 @@
   "Objective-C": 38
  },
  "days": [
-  {
-   "date": "2025-10-26",
-   "level": 0,
-   "count": 0
-  },
-  {
-   "date": "2025-10-27",
-   "level": 0,
-   "count": 0
-  },
-  {
-   "date": "2025-10-28",
-   "level": 0,
-   "count": 0
-  },
-  {
-   "date": "2025-10-29",
-   "level": 1,
-   "count": 1
-  },
-  {
-   "date": "2025-10-30",
-   "level": 0,
-   "count": 0
-  },
-  {
-   "date": "2025-10-31",
-   "level": 0,
-   "count": 0
-  },
-  {
-   "date": "2025-11-01",
-   "level": 0,
-   "count": 0
-  },
   {
    "date": "2025-11-02",
    "level": 0,
@@ -1982,6 +1947,11 @@
    "date": "2026-10-31",
    "level": 1,
    "count": 2
+  },
+  {
+   "date": "2026-11-01",
+   "level": 0,
+   "count": 0
   }
  ]
 }
