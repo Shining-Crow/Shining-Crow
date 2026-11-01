@@ -1,5 +1,5 @@
 {
- "fetchedAt": "2026-11-01T13:15:24.788Z",
+ "fetchedAt": "2026-11-01T21:58:39.511Z",
  "user": {
   "login": "Shining-Crow",
   "name": "Shining Crow",
@@ -11,6 +11,17 @@
  },
  "repos": [
   {
+   "name": "Shining-Crow",
+   "description": null,
+   "language": "JavaScript",
+   "stars": 8,
+   "forks": 0,
+   "url": "https://github.com/Shining-Crow/Shining-Crow",
+   "homepage": null,
+   "updatedAt": "2026-11-01T13:15:25Z",
+   "topics": []
+  },
+  {
    "name": "Soveni",
    "description": null,
    "language": "TypeScript",
@@ -19,17 +30,6 @@
    "url": "https://github.com/Shining-Crow/Soveni",
    "homepage": "https://soveni-five.vercel.app",
    "updatedAt": "2026-11-01T09:05:46Z",
-   "topics": []
-  },
-  {
-   "name": "Shining-Crow",
-   "description": null,
-   "language": "JavaScript",
-   "stars": 8,
-   "forks": 0,
-   "url": "https://github.com/Shining-Crow/Shining-Crow",
-   "homepage": null,
-   "updatedAt": "2026-11-01T05:57:01Z",
    "topics": []
   },
   {
@@ -111,10 +111,10 @@
   }
  ],
  "languages": {
-  "TypeScript": 342115,
-  "CSS": 48719,
   "JavaScript": 1465433,
   "HTML": 26672,
+  "TypeScript": 342115,
+  "CSS": 48719,
   "Kotlin": 235897,
   "Shell": 2101,
   "Python": 494250,
