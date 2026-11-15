@@ -1,5 +1,5 @@
 {
- "fetchedAt": "2026-11-14T22:19:21.520Z",
+ "fetchedAt": "2026-11-15T06:21:51.949Z",
  "user": {
   "login": "Shining-Crow",
   "name": "Shining Crow",
@@ -18,7 +18,7 @@
    "forks": 0,
    "url": "https://github.com/Shining-Crow/Shining-Crow",
    "homepage": null,
-   "updatedAt": "2026-11-14T13:29:29Z",
+   "updatedAt": "2026-11-14T22:19:22Z",
    "topics": []
   },
   {
@@ -128,41 +128,6 @@
   "Objective-C": 38
  },
  "days": [
-  {
-   "date": "2025-11-09",
-   "level": 0,
-   "count": 0
-  },
-  {
-   "date": "2025-11-10",
-   "level": 0,
-   "count": 0
-  },
-  {
-   "date": "2025-11-11",
-   "level": 0,
-   "count": 0
-  },
-  {
-   "date": "2025-11-12",
-   "level": 0,
-   "count": 0
-  },
-  {
-   "date": "2025-11-13",
-   "level": 1,
-   "count": 2
-  },
-  {
-   "date": "2025-11-14",
-   "level": 0,
-   "count": 0
-  },
-  {
-   "date": "2025-11-15",
-   "level": 0,
-   "count": 0
-  },
   {
    "date": "2025-11-16",
    "level": 1,
@@ -1980,6 +1945,11 @@
   },
   {
    "date": "2026-11-14",
+   "level": 0,
+   "count": 0
+  },
+  {
+   "date": "2026-11-15",
    "level": 0,
    "count": 0
   }
