@@ -1,5 +1,5 @@
 {
- "fetchedAt": "2026-11-17T07:50:05.427Z",
+ "fetchedAt": "2026-11-17T20:51:07.251Z",
  "user": {
   "login": "Shining-Crow",
   "name": "Shining Crow",
@@ -11,6 +11,17 @@
  },
  "repos": [
   {
+   "name": "Restaurant",
+   "description": "Italia Restaurant",
+   "language": "TypeScript",
+   "stars": 8,
+   "forks": 0,
+   "url": "https://github.com/Shining-Crow/Restaurant",
+   "homepage": "https://amore-mio-alpha.vercel.app",
+   "updatedAt": "2026-11-17T20:22:35Z",
+   "topics": []
+  },
+  {
    "name": "Shining-Crow",
    "description": null,
    "language": "JavaScript",
@@ -18,7 +29,7 @@
    "forks": 0,
    "url": "https://github.com/Shining-Crow/Shining-Crow",
    "homepage": null,
-   "updatedAt": "2026-11-16T21:57:43Z",
+   "updatedAt": "2026-11-17T07:50:06Z",
    "topics": []
   },
   {
@@ -77,17 +88,6 @@
    "topics": []
   },
   {
-   "name": "Restaurant",
-   "description": "Italia Restaurant",
-   "language": "TypeScript",
-   "stars": 8,
-   "forks": 0,
-   "url": "https://github.com/Shining-Crow/Restaurant",
-   "homepage": null,
-   "updatedAt": "2026-09-04T20:42:50Z",
-   "topics": []
-  },
-  {
    "name": "DatingApp",
    "description": "Dating UI kit is used for online meet up with girls and boys . The screen contains more than 30 icons and most of all required elements required to design an application like this. The XML and JAVA files contains comments at each and every point for easy understanding. Everything was made with a detail oriented style and followed by today's web tr…",
    "language": "Java",
@@ -111,16 +111,16 @@
   }
  ],
  "languages": {
-  "JavaScript": 1465433,
-  "HTML": 26672,
   "TypeScript": 384488,
   "CSS": 52165,
+  "PLpgSQL": 4886,
+  "JavaScript": 1465433,
+  "HTML": 26672,
   "Kotlin": 235897,
   "Shell": 2101,
   "Python": 494250,
   "Dockerfile": 1288,
   "PowerShell": 660,
-  "PLpgSQL": 4886,
   "Java": 130155,
   "Dart": 268730,
   "Ruby": 1474,
@@ -1960,8 +1960,8 @@
   },
   {
    "date": "2026-11-17",
-   "level": 0,
-   "count": 0
+   "level": 1,
+   "count": 4
   }
  ]
 }
