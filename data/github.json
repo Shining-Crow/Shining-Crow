@@ -1,5 +1,5 @@
 {
- "fetchedAt": "2026-11-18T07:20:30.336Z",
+ "fetchedAt": "2026-11-18T20:27:13.385Z",
  "user": {
   "login": "Shining-Crow",
   "name": "Shining Crow",
@@ -12,12 +12,12 @@
  "repos": [
   {
    "name": "Restaurant",
-   "description": "Italia Restaurant",
+   "description": null,
    "language": "TypeScript",
    "stars": 8,
-   "forks": 0,
+   "forks": 1,
    "url": "https://github.com/Shining-Crow/Restaurant",
-   "homepage": "https://amore-mio-alpha.vercel.app",
+   "homepage": "",
    "updatedAt": "2026-11-17T21:18:05Z",
    "topics": []
   },
@@ -29,7 +29,7 @@
    "forks": 0,
    "url": "https://github.com/Shining-Crow/Shining-Crow",
    "homepage": null,
-   "updatedAt": "2026-11-17T20:51:08Z",
+   "updatedAt": "2026-11-18T07:20:31Z",
    "topics": []
   },
   {
